@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  #__next {
+    @apply grid h-screen grid-rows-5 grid-cols-12;
+  }
+}
+
+@layer components {
+  main {
+    @apply h-screen w-screen;
+  }
+}

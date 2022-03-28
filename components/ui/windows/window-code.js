@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import CodeAutoTyping from "react-code-auto-typing";
-import { monokai } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { motion } from 'framer-motion';
+import CodeAutoTyping from 'react-code-auto-typing';
+import { monokai } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 function WindowCode() {
   const snippet = `function greet(name) {
@@ -12,16 +12,11 @@ function WindowCode() {
   return (
     <motion.div
       className=" w-[65vw] min-h-[60vh] rounded-md bg-slate-800"
-      animate={{ y: -800, x: 265, scale: 1 }}
+      animate={{ y: '5vh', x: '4vw', scale: 1 }}
       drag
-      dragConstraints={{
-        right: 1200,
-        left: 200,
-        bottom: 0,
-        top: -1000,
-      }}
+      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
       initial={{ y: 0, x: 0, scale: 0 }}
-      transition={{ duration: 0.4, ease: "easeIn", delay: 0.5 }}
+      transition={{ duration: 0.4, ease: 'easeIn', delay: 0.5 }}
     >
       <CodeAutoTyping
         className="min-h-full"
