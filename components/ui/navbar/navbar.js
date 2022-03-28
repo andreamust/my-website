@@ -25,9 +25,8 @@ function Navbar(props) {
       >
         {apps.map((app, index) => {
           return (
-            <Link href={`/${app.toLowerCase()}`}>
+            <Link key={`app000${index}`} href={`/${app.toLowerCase()}`}>
               <motion.li
-                key={`app000${index}`}
                 initial={{ opacity: 0, x: '50%', scale: 1.5 }}
                 animate={{ opacity: 1, duration: 2, x: 0, scale: 1 }}
                 transition={{
