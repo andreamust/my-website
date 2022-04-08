@@ -40,7 +40,7 @@ function NavApp(props) {
         initial={{ scale: 1 }}
         whileHover={{
           scale: 1.3,
-          transition: { duration: 0.3 },
+          transition: { duration: 0.15, ease: 'easeIn' },
         }}
         whileTap={{ scale: 1.2, color: 'gray' }}
         whileFocus={{ scale: 1.2 }}

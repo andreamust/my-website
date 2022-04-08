@@ -1,9 +1,6 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { useState } from 'react';
-import NavApp from './application';
+import NavbarButton from './navbar-button';
 
-const apps = ['About', 'Resume', 'Projects', 'Pubblications', 'Contact'];
+const apps = ['Home', 'Resume', 'Projects', 'Pubblications', 'Contact'];
 const navPosition = 'bottom';
 
 function Navbar(props) {
@@ -25,25 +22,7 @@ function Navbar(props) {
       >
         {apps.map((app, index) => {
           return (
-            <Link key={`app000${index}`} href={`/${app.toLowerCase()}`}>
-              <motion.li
-                initial={{ opacity: 0, x: '50%', scale: 1.5 }}
-                animate={{ opacity: 1, duration: 2, x: 0, scale: 1 }}
-                transition={{
-                  type: 'spring',
-                  damping: 25,
-                  stiffness: 120,
-                  delay: index / 6,
-                }}
-                className="flex flex-col flex-none w-10 h-10 items-center place-content-end"
-              >
-                <NavApp
-                  appName={app}
-                  appIndex={index}
-                  navPosition={navPosition}
-                />
-              </motion.li>
-            </Link>
+            <NavbarButton app={app} index={index} navPosition={navPosition} />
           );
         })}
       </ul>
