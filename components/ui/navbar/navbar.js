@@ -22,7 +22,12 @@ function Navbar(props) {
       >
         {apps.map((app, index) => {
           return (
-            <NavbarButton app={app} index={index} navPosition={navPosition} />
+            <NavbarButton
+              key={index}
+              app={app}
+              index={index}
+              navPosition={navPosition}
+            />
           );
         })}
       </ul>
