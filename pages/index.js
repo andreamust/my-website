@@ -10,9 +10,11 @@ export default function Home() {
       <CustomView condition={isMobile === false}>
         <BasicWindow
           title={'andreamust/terminal'}
-          height={'60vh'}
-          width={'65vw'}
-        />
+          height={'20vh'}
+          width={'6rem'}
+        >
+          <WindowCode />
+        </BasicWindow>
       </CustomView>
     </div>
   );

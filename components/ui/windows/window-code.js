@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import CodeAutoTyping from 'react-code-auto-typing';
 import { monokai } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { Fragment } from 'react/cjs/react.production.min';
 
 function WindowCode() {
   const snippet = `function greet(name) {
@@ -10,22 +11,13 @@ function WindowCode() {
   console.log(greet('Andrea'))`;
 
   return (
-    <motion.div
-      className=" w-[65vw] min-h-[60vh] rounded-md bg-slate-800"
-      animate={{ y: '5vh', x: '4vw', scale: 1 }}
-      drag
-      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-      initial={{ y: 0, x: 0, scale: 0 }}
-      transition={{ duration: 0.4, ease: 'easeIn', delay: 0.5 }}
+    <CodeAutoTyping
+      className="min-h-full"
+      language="bash"
+      syntaxHighlighterProps={{ style: monokai }}
     >
-      <CodeAutoTyping
-        className="min-h-full"
-        language="javascript"
-        syntaxHighlighterProps={{ style: monokai }}
-      >
-        {snippet}
-      </CodeAutoTyping>
-    </motion.div>
+      {snippet}
+    </CodeAutoTyping>
   );
 }
 
