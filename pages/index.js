@@ -6,12 +6,13 @@ import BasicWindow from '../components/ui/windows/basic-window';
 
 export default function Home() {
   return (
-    <div className="h-screen">
+    <div>
       <CustomView condition={isMobile === false}>
         <BasicWindow
-          title={'andreamust/terminal'}
+          title={'andrea-poltronieiri/terminal'}
           height={'20vh'}
-          width={'6rem'}
+          width={'70vw'}
+          animate={true}
         >
           <WindowCode />
         </BasicWindow>

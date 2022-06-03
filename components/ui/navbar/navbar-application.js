@@ -1,9 +1,10 @@
 import { GiBookshelf } from 'react-icons/gi';
-import { DiTerminal, DiPython, DiTrello, DiGithubBadge } from 'react-icons/di';
+import { FaTerminal } from 'react-icons/fa';
+import { DiTerminal, DiPython, DiTrello } from 'react-icons/di';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const IconNames = [DiTerminal, DiPython, DiTrello, GiBookshelf, DiGithubBadge];
+const IconNames = [DiTerminal, DiPython, DiTrello, GiBookshelf, FaTerminal];
 
 function NavApp(props) {
   const [viewBaloon, setViewBaloon] = useState(false);
@@ -46,7 +47,7 @@ function NavApp(props) {
         whileFocus={{ scale: 1.2 }}
       >
         <Icon
-          className="w-full h-full"
+          className="w-full h-full cursor-pointer"
           onMouseEnter={() => {
             setViewBaloon(props.appIndex);
           }}

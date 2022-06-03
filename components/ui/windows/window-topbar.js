@@ -17,7 +17,7 @@ const draw = {
 
 function WindowTopBar(props) {
   return (
-    <div className="flex flex-row bg-slate-200 h-1/6 rounded-t-md text-center text-base justify-between align-middle">
+    <div className="max-h-7 flex flex-row bg-slate-200 h-1/6 rounded-t-md text-center text-base justify-between align-middle">
       <div className="flex-auto">{props.title}</div>
       <div className="flex flex-row left-0 basis-1/12 self-center px-2">
         <motion.div

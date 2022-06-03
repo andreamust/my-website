@@ -6,7 +6,10 @@ function Layout(props) {
   return (
     <Fragment>
       <Navbar />
-      <main>{props.children}</main>
+      <main>
+        <TopBar />
+        {props.children}
+      </main>
     </Fragment>
   );
 }
