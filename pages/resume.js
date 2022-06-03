@@ -1,8 +1,13 @@
+import BasicWindow from '../components/ui/windows/basic-window';
+
 function Resume(props) {
   return (
-    <div>
-      <h1>Resume</h1>
-    </div>
+    <BasicWindow
+      title={'andrea-poltronieri/resume'}
+      width={'50vw'}
+      height={'70vh'}
+      animate={false}
+    ></BasicWindow>
   );
 }
 
