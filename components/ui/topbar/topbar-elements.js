@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
-import { BiSun, BiMoon, BiVolumeFull, BiVolumeMute } from 'react-icons/bi';
+import { BiVolumeFull, BiVolumeMute } from 'react-icons/bi';
 import Dropdown from './dropdown';
+import { useTheme } from 'next-themes';
+import ThemeChanger from './theme-changer';
 
 function TopBarElements(props) {
+  const { theme, setTheme } = useTheme();
+
   return (
     <motion.div className="flex flex-col h-max content-center">
       <div className=" flex flex-row ml-3 mr-5 justify-between">
@@ -15,9 +19,7 @@ function TopBarElements(props) {
           <button>
             <BiVolumeFull className="h-6 w-6" />
           </button>
-          <button>
-            <BiMoon className="h-6 w-6 hover:animate-spin" />
-          </button>
+          <ThemeChanger />
         </div>
       </div>
     </motion.div>

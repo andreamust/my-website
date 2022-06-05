@@ -1,12 +1,15 @@
 import CustomCursor from '../components/ui/layout/cursor';
 import Layout from '../components/ui/layout/layout';
 import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider defaultTheme="system">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
