@@ -1,4 +1,3 @@
-import { BiSun, BiMoon } from 'react-icons/bi';
 import { useTheme } from 'next-themes';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
