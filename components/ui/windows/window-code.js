@@ -11,26 +11,37 @@ function WindowCode() {
     whatdoido: 'I am a Ph.D. in Computer Science and Engineering',
     cd: (directory) => `changed path to ${directory}`,
     navigate: (page) => {
-      if (page in ['home', 'projects', 'resume', 'pubblications', 'contact']) {
-        router.push(`/${page}`);
-      } else {
-        ('Page not found. Try with a valid page.');
-      }
+      'redirecting to page: ${page}';
+      router.push(`/${page}`);
     },
   };
 
   // TODO: fix
   return (
-    <div className=" h-96 ">
-      {' '}
+    <div className=" h-full">
       <ReactTerminal
-        prompt="andreapoltronieri@website - %"
-        welcomeMessage={`Welcome to my website!
-        You can navigate it using the terminal or `}
+        prompt={'andreapoltronieri@website 🎸'}
+        welcomeMessage={
+          'Welcome to my website! You can navigate it using the terminal or normally.'
+        }
         commands={commands}
         showControlBar={false}
         showControlButtons={false}
-        theme={'dark'}
+        themes={{
+          customDarkTheme: {
+            themeBGColor: '#292727',
+            themeToolbarColor: '#DBDBDB',
+            themeColor: '#ffffff',
+            themePromptColor: '#00ff2a',
+          },
+          customLightTheme: {
+            themeBGColor: '#292727',
+            themeToolbarColor: '#DBDBDB',
+            themeColor: '#ffffff',
+            themePromptColor: '#ff00e1',
+          },
+        }}
+        theme={'customDarkTheme'}
       />
     </div>
   );

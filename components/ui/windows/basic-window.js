@@ -2,21 +2,20 @@ import { motion } from 'framer-motion';
 import WindowTopBar from './window-topbar';
 
 function BasicWindow(props) {
-  let width = `w-[${props.width}]`;
-  let height = `h-[${props.height}]`;
-  const merda = 'w-[70vw]';
-  console.log(width, height);
+  let width = props.width || 'w-[100%]';
+  let height = props.height || 'h-[100%]';
+
   if (props.animate === true) {
     return (
       <motion.div
         drag
         dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
-        className={`flex flex-col ${merda} ${width} ${height}`}
+        className={`flex flex-col ${width} ${height}`}
       >
         <motion.div
-          className={` h-[44vh] order-last flex flex-col w-full rounded-b-md bg-slate-800`}
+          className={` order-last flex flex-col w-full rounded-b-md bg-slate-800 ${height}`}
         >
-          <div className="h-5/6 rounded-md">{props.children}</div>
+          {props.children}
         </motion.div>
         <WindowTopBar title={props.title} />
       </motion.div>

@@ -11,8 +11,8 @@ export default function Home() {
       <CustomView condition={isMobile === false}>
         <BasicWindow
           title={'andrea-poltronieiri/terminal'}
-          height={'20vh'}
-          width={'70vw'}
+          height={'h-[50vh]'}
+          width={'w-[70vw]'}
           animate={true}
         >
           <TerminalContextProvider>
