@@ -3,6 +3,7 @@ import Image from 'next/image';
 import WindowCode from '../components/ui/windows/window-code';
 import { isMobile, CustomView } from 'react-device-detect';
 import BasicWindow from '../components/ui/windows/basic-window';
+import { TerminalContextProvider } from 'react-terminal';
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
           width={'70vw'}
           animate={true}
         >
-          <WindowCode />
+          <TerminalContextProvider>
+            <WindowCode />
+          </TerminalContextProvider>
         </BasicWindow>
       </CustomView>
     </div>

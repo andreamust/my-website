@@ -14,12 +14,12 @@
     "next": "12.1.0",
     "next-themes": "^0.2.0",
     "react": "17.0.2",
-    "react-code-auto-typing": "^1.0.5",
     "react-cursor-follow": "^2.0.0",
     "react-device-detect": "^2.1.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "react-syntax-highlighter": "^15.4.5",
+    "react-terminal": "^1.2.8",
     "react-toggle-dark-mode": "^1.0.4",
     "use-sound": "^4.0.1"
   },

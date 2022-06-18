@@ -6,7 +6,7 @@ function Resume(props) {
       title={'andrea-poltronieri/home'}
       width={'50vw'}
       height={'70vh'}
-      animate={false}
+      animate={true}
     ></BasicWindow>
   );
 }
