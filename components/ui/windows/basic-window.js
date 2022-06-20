@@ -10,10 +10,10 @@ function BasicWindow(props) {
       <motion.div
         drag
         dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
-        className={`flex flex-col ${width} ${height}`}
+        className={`flex flex-col ${width} ${height} max-${height} max-${width} z-20`}
       >
         <motion.div
-          className={` order-last flex flex-col w-full rounded-b-md bg-slate-800 ${height}`}
+          className={`order-last flex flex-col w-full rounded-b-md bg-slate-800 ${height}`}
         >
           {props.children}
         </motion.div>
