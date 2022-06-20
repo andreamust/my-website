@@ -9,7 +9,6 @@ const apps = [
   'Pubblications',
   'Contact',
 ];
-const navPosition = 'bottom';
 
 function Navbar(props) {
   const [isMobile, setIsMobile] = useState(false);
@@ -33,7 +32,7 @@ function Navbar(props) {
     <header
       className={
         'z-50 pb-2 ' +
-        (navPosition === 'bottom'
+        (props.position === 'bottom'
           ? 'row-start-5 col-start-2 col-end-12 lg:col-start-3 lg:col-end-11 xl:col-start-4 xl:col-end-10 h-16 self-end md:pl-14 md:pr-14'
           : 'flex-col col-start-12 row-start-2 row-end-5 w-16 ml-2 ')
       }
@@ -41,7 +40,7 @@ function Navbar(props) {
       <ul
         className={
           'bg-slate-200/[0.6] justify-around items-center rounded-xl h-full w-full ' +
-          (navPosition === 'bottom' ? 'flex flex-row' : 'flex flex-col')
+          (props.position === 'bottom' ? 'flex flex-row' : 'flex flex-col')
         }
       >
         {slicedApps.map((app, index) => {
@@ -50,7 +49,7 @@ function Navbar(props) {
               key={index}
               app={app}
               index={index}
-              navPosition={navPosition}
+              navPosition={props.position}
             />
           );
         })}
