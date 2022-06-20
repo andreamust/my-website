@@ -6,8 +6,8 @@ import ThemeChanger from './theme-changer';
 function TopBarElements(props) {
   let navPositionSwitch = props.navPosition === 'bottom' ? 'top' : 'bottom';
   return (
-    <motion.div className="flex flex-col h-max content-center">
-      <div className=" flex flex-row ml-3 mr-5 justify-between">
+    <motion.div className="flex flex-col h-max content-center z-50">
+      <div className=" flex flex-row ml-3 mr-5 justify-between z-50">
         <div className="flex flex-row gap-3 justify-center pl-3">
           <Dropdown>File</Dropdown>
           <Dropdown>Options</Dropdown>
