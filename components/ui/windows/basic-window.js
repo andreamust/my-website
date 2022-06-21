@@ -16,7 +16,7 @@ function BasicWindow(props) {
         dragMomentum={false}
         onDrag={(event, info) => console.log(info.point.x, info.point.y)}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`flex flex-col ${width} ${height}`}
+        className={`flex flex-col ${width} ${height} shadow-xl`}
       >
         <motion.div
           className={`order-last flex flex-col w-full rounded-b-md bg-slate-800 ${height}`}

@@ -13,10 +13,8 @@ function Layout(props) {
         showTerminal={terminal}
         showTerminalHandler={showTerminal}
       />
-      <main>
-        <TopBar navPosition={navPosition} navPositionHandler={setNavPosition} />
-        {props.children}
-      </main>
+      <TopBar navPosition={navPosition} navPositionHandler={setNavPosition} />
+      <main>{props.children}</main>
     </Fragment>
   );
 }

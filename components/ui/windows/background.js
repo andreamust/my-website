@@ -14,8 +14,11 @@ function Background(props) {
   return (
     <motion.div
       className="h-screen w-full"
-      variants={variants}
-      animate="inactive"
+      animate={{
+        backgroundColor: ['hsl(0, 0, 66)', 'hsl(0, 100, 100)', 'hsl(0, 0, 66)'],
+      }}
+      transition={{ repeat: Infinity, duration: 10 }}
+      whileHover={{ colorInterpolationFilters: 'hsl(0, 0, 0)' }}
     >
       {props.children}
     </motion.div>

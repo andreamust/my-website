@@ -28,6 +28,20 @@ function WindowCode() {
         API, api.mathjs.org.
       </span>
     ),
+    pubblications: (
+      <table>
+        <tr>
+          <th>Title</th>
+          <th> </th>
+          <th>Venue</th>
+        </tr>
+        <tr>
+          <td>pub1</td>
+          <td> </td>
+          <td>venue1</td>
+        </tr>
+      </table>
+    ),
     cd: (directory) => `changed path to ${directory}`,
     navigate: (page) =>
       validPages.includes(page)

@@ -1,13 +1,16 @@
 import BasicWindow from '../components/ui/windows/basic-window';
+import HomeHero from '../components/page-components/home/home-hero';
 
 function Resume(props) {
   return (
     <BasicWindow
       title={'andrea-poltronieri/home'}
-      width={'50vw'}
-      height={'70vh'}
+      width={'w-full'}
+      height={'h-full'}
       animate={true}
-    ></BasicWindow>
+    >
+      <HomeHero />
+    </BasicWindow>
   );
 }
 
