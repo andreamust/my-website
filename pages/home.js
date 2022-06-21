@@ -7,7 +7,7 @@ function Resume(props) {
       title={'andrea-poltronieri/home'}
       width={'w-full'}
       height={'h-full'}
-      animate={true}
+      animate={false}
     >
       <HomeHero />
     </BasicWindow>

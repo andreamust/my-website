@@ -6,7 +6,7 @@ import themes from './terminal/terminal-themes';
 function WindowCode() {
   const router = useRouter();
 
-  const validPages = ['home', 'about', 'contact'];
+  const validPages = ['home', 'resume', 'projects', 'pubblications', 'contact'];
 
   const commands = {
     whoami: 'Andrea Poltronieri',
@@ -44,9 +44,16 @@ function WindowCode() {
     ),
     cd: (directory) => `changed path to ${directory}`,
     navigate: (page) =>
-      validPages.includes(page)
-        ? router.push(`/${page}`)
-        : `Page not found: ${page}`,
+      validPages.includes(page.toLowerCase()) ||
+      validPages.includes(page.toLowerCase().slice(0, -1)) ? (
+        router.push(`/${page}`)
+      ) : (
+        <span>
+          Page not found: {page}
+          <br />
+          The available pages are: <b>{validPages.join(', ')}</b>
+        </span>
+      ),
   };
 
   return (
@@ -54,17 +61,24 @@ function WindowCode() {
       <ReactTerminal
         welcomeMessage={
           <span>
-            Welcome to my website! Type "help" to see a list of available
-            commands.
+            Welcome to my website! You can navigate it by using the terminal.{' '}
+            <br /> Type "help" to see a list of available commands.
             <br />
           </span>
         }
-        prompt={'\nandreapoltronieri@website 🎸'}
+        prompt={'andreapoltronieri@website 🎸'}
         commands={commands}
         showControlBar={false}
         showControlButtons={false}
         themes={themes}
         theme={'customDarkTheme'}
+        errorMessage={
+          <span>
+            Command not found!
+            <br />
+            Type "help" to see a list of available commands.
+          </span>
+        }
       />
     </div>
   );
