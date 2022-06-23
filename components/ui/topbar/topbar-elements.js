@@ -46,7 +46,7 @@ function TopBarElements(props) {
           </button>
           <button onClick={() => props.navPositionHandler(navPositionSwitch)}>
             <BsReverseLayoutSidebarInsetReverse
-              className={`h-6 w-6 ${
+              className={`h-6 w-6 md:inline hidden ${
                 navPositionSwitch === 'bottom'
                   ? ''
                   : 'rotate-90 transition-shadow'
