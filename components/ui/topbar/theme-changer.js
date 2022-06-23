@@ -7,11 +7,11 @@ function ThemeChanger() {
   const toggleDarkMode = (checked) => {
     checked ? setTheme('light') : setTheme('dark');
   };
-
+  console.log(theme);
   return (
     <DarkModeSwitch
       style={{ marginTop: '.6vh' }}
-      checked={theme === 'light' ? true : false}
+      checked={theme === 'dark' ? false : true}
       onChange={toggleDarkMode}
       size={25}
     />

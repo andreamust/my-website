@@ -39,7 +39,7 @@ function Navbar(props) {
     >
       <ul
         className={
-          'bg-slate-200/[0.6] justify-around items-center rounded-xl h-full w-full ' +
+          'bg-gray-300/[0.6] dark:bg-gray-500/[0.6] justify-around items-center rounded-xl h-full w-full ' +
           (props.position === 'bottom' ? 'flex flex-row' : 'flex flex-col')
         }
       >

@@ -12,7 +12,7 @@ function WindowTopBar(props) {
 
   return (
     <div
-      className="max-h-7 flex flex-row bg-slate-200 h-1/6 rounded-t-md text-center text-base justify-between align-middle"
+      className="max-h-7 flex flex-row bg-gray-200 dark:bg-gray-600 h-1/6 rounded-t-md text-center text-base justify-between align-middle"
       onDoubleClick={resizeWindow}
     >
       <div className="flex-auto">{props.title}</div>

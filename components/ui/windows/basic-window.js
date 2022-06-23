@@ -19,7 +19,7 @@ function BasicWindow(props) {
         className={`flex flex-col ${width} ${height} shadow-xl`}
       >
         <motion.div
-          className={`h-full order-last flex flex-col w-full rounded-b-md dark:bg-gray-700 bg-slate-50`}
+          className={`h-full order-last flex flex-col w-full rounded-b-md`}
         >
           {props.children}
         </motion.div>
@@ -36,11 +36,9 @@ function BasicWindow(props) {
     );
   } else if (props.animate === false) {
     return (
-      <div className={`flex flex-col ${width} ${height} dark`}>
-        <div
-          className={` h-full order-last flex flex-col w-full rounded-b-md dark:bg-gray-700 bg-gray-50`}
-        >
-          <div className="h-5/6 rounded-md">{props.children}</div>
+      <div className={`flex flex-col ${width} ${height}`}>
+        <div className={`h-full order-last flex flex-col w-full rounded-b-md`}>
+          {props.children}
         </div>
       </div>
     );

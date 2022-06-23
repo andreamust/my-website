@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function HomeHero(props) {
   return (
-    <div className="flex flex-row justify-center align-middle dark:bg-gray-700">
+    <div className="relative h-full flex flex-row justify-center align-middle  bg-gray-50 dark:bg-gray-400">
       <div className="flex flex-col justify-center items-center">
         <Image src="/images/ap.jpeg" alt="logo" width={200} height={200} />
       </div>
