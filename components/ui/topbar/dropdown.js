@@ -10,7 +10,7 @@ function Dropdown(props) {
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 active:bg-slate-500">
+        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 active:bg-gray-500">
           {props.children}
         </Menu.Button>
       </div>
@@ -24,14 +24,16 @@ function Dropdown(props) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-left absolute left-3 mt-1 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+        <Menu.Items className="origin-top-left absolute left-3 mt-1 w-56 rounded-md shadow-lg bg-white dark:bg-gray-500 z-50">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    active
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-700 dark:text-gray-200',
                     'block px-4 py-2 text-sm'
                   )}
                 >
@@ -44,7 +46,9 @@ function Dropdown(props) {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    active
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-700 dark:text-gray-200',
                     'block px-4 py-2 text-sm'
                   )}
                 >
@@ -57,7 +61,9 @@ function Dropdown(props) {
                 <a
                   href="#"
                   className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    active
+                      ? 'bg-gray-100 text-gray-900'
+                      : 'text-gray-700 dark:text-gray-200',
                     'block px-4 py-2 text-sm'
                   )}
                 >
@@ -71,7 +77,9 @@ function Dropdown(props) {
                   <button
                     type="submit"
                     className={classNames(
-                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                      active
+                        ? 'bg-gray-100 text-gray-900'
+                        : 'text-gray-700 dark:text-gray-200',
                       'block w-full text-left px-4 py-2 text-sm'
                     )}
                   >

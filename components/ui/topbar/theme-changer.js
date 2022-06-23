@@ -14,6 +14,8 @@ function ThemeChanger() {
       checked={theme === 'dark' ? false : true}
       onChange={toggleDarkMode}
       size={25}
+      moonColor="#000"
+      sunColor="#fff"
     />
   );
 }
