@@ -6,6 +6,8 @@ import { useState } from 'react';
 function Layout(props) {
   const [navPosition, setNavPosition] = useState('bottom');
   const [terminal, showTerminal] = useState(true);
+  const [sound, setSound] = useState(true);
+
   return (
     <Fragment>
       <Navbar
@@ -13,7 +15,12 @@ function Layout(props) {
         showTerminal={terminal}
         showTerminalHandler={showTerminal}
       />
-      <TopBar navPosition={navPosition} navPositionHandler={setNavPosition} />
+      <TopBar
+        navPosition={navPosition}
+        navPositionHandler={setNavPosition}
+        soundState={sound}
+        soundHandler={setSound}
+      />
       <main>{props.children}</main>
     </Fragment>
   );

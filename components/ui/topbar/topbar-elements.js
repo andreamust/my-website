@@ -3,15 +3,17 @@ import { BiVolumeFull, BiVolumeMute } from 'react-icons/bi';
 import Dropdown from './dropdown';
 import ThemeChanger from './theme-changer';
 import { BsReverseLayoutSidebarInsetReverse } from 'react-icons/bs';
-import { useSound } from 'use-sound';
-import { lightOn } from '../../../public/sounds/lamp_on.mp3';
-import { lightOff } from '../../../public/sounds/lamp_off.mp3';
+import useSound from 'use-sound';
+import lightOn from '../../../public/sounds/lamp_off.mp3';
+import lightOff from '../../../public/sounds/lamp_off.mp3';
 
 function TopBarElements(props) {
   let navPositionSwitch = props.navPosition === 'bottom' ? 'top' : 'bottom';
+  let SoundIcon = props.soundState ? BiVolumeFull : BiVolumeMute;
+
   const [playOn, { stop }] = useSound(lightOn);
   const [playOff] = useSound(lightOff);
-  console.log(lightOn);
+  console.log(lightOff);
 
   return (
     <motion.div className="flex flex-col h-max content-center z-50">
@@ -23,11 +25,14 @@ function TopBarElements(props) {
         </div>
         <div className="flex flex-row gap-4">
           <button
-            onClick={playOff}
+            onClick={() => {
+              playOff;
+              props.soundHandler(!props.soundState);
+            }}
             onMouseEnter={() => playOn()}
             onMouseLeave={() => stop()}
           >
-            <BiVolumeFull className="h-6 w-6" />
+            <SoundIcon className="h-6 w-6" />
           </button>
           <button onClick={() => props.navPositionHandler(navPositionSwitch)}>
             <BsReverseLayoutSidebarInsetReverse

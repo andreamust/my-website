@@ -9,6 +9,9 @@ const nextConfig = {
         options.defaultLoaders.babel,
         {
           loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
         },
       ],
     });

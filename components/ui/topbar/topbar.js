@@ -7,6 +7,8 @@ function TopBar(props) {
       <TopBarElements
         navPosition={props.navPosition}
         navPositionHandler={props.navPositionHandler}
+        soundHandler={props.soundHandler}
+        soundState={props.soundState}
       />
     </motion.div>
   );
