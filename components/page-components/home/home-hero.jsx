@@ -13,7 +13,7 @@ function HomeHero(props) {
         <h2 className="text-3xl text-center">Personal Website</h2>
       </div>
       <div className="relative pt-1 md:col-start-4 md:col-end-10 md:row-start-4 md:row-end-5 justify-center">
-        <label for="customRange1" className="form-label">
+        <label htmlFor="customRange1" className="form-label">
           Bio length
         </label>
         <input
