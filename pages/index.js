@@ -1,27 +1,29 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import WindowCode from '../components/ui/windows/window-terminal';
-import { isMobile, CustomView } from 'react-device-detect';
+import WindowTerminal from '../components/ui/windows/window-terminal';
 import BasicWindow from '../components/ui/windows/basic-window';
 import { TerminalContextProvider } from 'react-terminal';
 import Background from '../components/ui/windows/background';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
   return (
     <div>
       <Background>
-        <CustomView condition={isMobile === false}>
-          <BasicWindow
-            title={'andrea-poltronieiri/terminal'}
-            height={'h-[50vh]'}
-            width={'w-[70vw]'}
-            animate={true}
-          >
-            <TerminalContextProvider>
-              <WindowCode />
-            </TerminalContextProvider>
-          </BasicWindow>
-        </CustomView>
+        <BasicWindow
+          title={'andrea-poltronieiri/terminal'}
+          height={'h-[60vh]'}
+          width={'w-[65vw]'}
+          animate={true}
+          openState={isOpen}
+          openHandler={setIsOpen}
+        >
+          <TerminalContextProvider>
+            <WindowTerminal />
+          </TerminalContextProvider>
+        </BasicWindow>
       </Background>
     </div>
   );

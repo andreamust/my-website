@@ -3,7 +3,7 @@ import { ReactTerminal } from 'react-terminal';
 import { useRouter } from 'next/router';
 import themes from './terminal/terminal-themes';
 
-function WindowCode() {
+function WindowTerminal() {
   const router = useRouter();
 
   const validPages = ['home', 'resume', 'projects', 'pubblications', 'contact'];
@@ -84,4 +84,4 @@ function WindowCode() {
   );
 }
 
-export default WindowCode;
+export default WindowTerminal;

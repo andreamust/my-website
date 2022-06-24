@@ -6,7 +6,7 @@ import useWindowDimensions from '../../utils/scree-size';
 function BasicWindow(props) {
   let [width, setWidth] = useState(props.width || 'w-[100%]');
   let [height, setHeight] = useState(props.height || 'h-[100%]');
-  console.log(useWindowDimensions());
+  // console.log(useWindowDimensions());
 
   if (props.animate === true) {
     return (
@@ -14,9 +14,14 @@ function BasicWindow(props) {
         drag
         dragConstraints={{ left: 10, right: 370, top: 10, bottom: 350 }}
         dragMomentum={false}
-        onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+        // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`flex flex-col ${width} ${height} shadow-xl`}
+        className={`flex flex-col ${width} ${height} shadow-xl ${
+          props.openState === true ? 'invisible' : 'visible'
+        }`}
+        animate={{ x: 100, y: 100 }}
+        transition={{ type: 'spring', stiffness: 100 }}
+        initial={{ x: 0, y: 0 }}
       >
         <motion.div
           className={`h-full order-last flex flex-col w-full rounded-b-md`}
@@ -31,10 +36,12 @@ function BasicWindow(props) {
           currentHeight={height}
           baseHeight={props.height}
           heightHandler={setHeight}
+          openHandler={props.openHandler}
+          openState={props.openState}
         />
       </motion.div>
     );
-  } else if (props.animate === false) {
+  } else {
     return (
       <div className={`flex flex-col ${width} ${height}`}>
         <div className={`h-full order-last flex flex-col w-full rounded-b-md`}>
