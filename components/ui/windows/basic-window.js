@@ -1,26 +1,55 @@
 import { motion } from 'framer-motion';
 import WindowTopBar from './window-topbar';
+import { useState } from 'react';
+import useWindowDimensions from '../../utils/scree-size';
 
 function BasicWindow(props) {
-  const width = `w-[${props.width || '100%'}]`;
-  const height = `h-[${props.height || '100%'}]`;
-  return (
-    <motion.div
-      className={`flex flex-col w-[75vh]`}
-      animate={{ y: '5vh', x: '4vw', scale: 1 }}
-      drag
-      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-      initial={{ y: 0, x: 0, scale: 0 }}
-      transition={{ duration: 0.4, ease: 'easeIn', delay: 0.5 }}
-    >
-      <div
-        className={` h-[44vh] order-last flex flex-col w-full rounded-b-md bg-slate-800`}
+  let [width, setWidth] = useState(props.width || 'w-[100%]');
+  let [height, setHeight] = useState(props.height || 'h-[100%]');
+  // console.log(useWindowDimensions());
+
+  if (props.animate === true) {
+    return (
+      <motion.div
+        drag
+        dragConstraints={{ left: 10, right: 370, top: 10, bottom: 350 }}
+        dragMomentum={false}
+        // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+        className={`flex flex-col ${width} ${height} shadow-xl ${
+          props.openState === true ? 'invisible' : 'visible'
+        }`}
+        animate={{ x: 100, y: 100 }}
+        transition={{ type: 'spring', stiffness: 100 }}
+        initial={{ x: 0, y: 0 }}
       >
-        <div className="h-5/6 rounded-md">{props.children}</div>
+        <motion.div
+          className={`h-full order-last flex flex-col w-full rounded-b-md`}
+        >
+          {props.children}
+        </motion.div>
+        <WindowTopBar
+          title={props.title}
+          currentWidth={width}
+          baseWidth={props.width}
+          widthHandler={setWidth}
+          currentHeight={height}
+          baseHeight={props.height}
+          heightHandler={setHeight}
+          openHandler={props.openHandler}
+          openState={props.openState}
+        />
+      </motion.div>
+    );
+  } else {
+    return (
+      <div className={`flex flex-col ${width} ${height}`}>
+        <div className={`h-full order-last flex flex-col w-full rounded-b-md`}>
+          {props.children}
+        </div>
       </div>
-      <WindowTopBar title={props.title} />
-    </motion.div>
-  );
+    );
+  }
 }
 
 export default BasicWindow;

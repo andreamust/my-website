@@ -1,8 +1,13 @@
+import BasicWindow from '../../components/ui/windows/basic-window';
+
 function Pubblications(props) {
   return (
-    <div>
-      <h1>Pubblications</h1>
-    </div>
+    <BasicWindow
+      title={'andrea-poltronieri/pubblications'}
+      width={'50vw'}
+      height={'70vh'}
+      animate={false}
+    ></BasicWindow>
   );
 }
 

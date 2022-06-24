@@ -1,17 +1,30 @@
 import { GiBookshelf } from 'react-icons/gi';
-import { DiTerminal, DiPython, DiTrello, DiGithubBadge } from 'react-icons/di';
+import { IoHomeSharp, IoSchoolOutline } from 'react-icons/io5';
+import { DiTerminal, DiPython, DiCode } from 'react-icons/di';
+import {
+  RiHome2Line,
+  RiCodeSSlashFill,
+  RiChat4Line,
+  RiTerminalLine,
+} from 'react-icons/ri';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const IconNames = [DiTerminal, DiPython, DiTrello, GiBookshelf, DiGithubBadge];
-
+const IconNames = {
+  Terminal: RiTerminalLine,
+  Home: RiHome2Line,
+  Resume: IoSchoolOutline,
+  Projects: RiCodeSSlashFill,
+  Pubblications: GiBookshelf,
+  Contact: RiChat4Line,
+};
 function NavApp(props) {
   const [viewBaloon, setViewBaloon] = useState(false);
-  const Icon = IconNames[props.appIndex];
+  const Icon = IconNames[props.appName];
   return (
     <div
       className={
-        'flex gap-5 flex-none w-10 h-10 items-center ' +
+        'flex gap-5 flex-none w-8 h-8 sm:w-10 sm:h-10 items-center ' +
         (props.navPosition === 'bottom'
           ? 'flex-col place-content-end'
           : 'flex-row place-content-end')
@@ -46,7 +59,7 @@ function NavApp(props) {
         whileFocus={{ scale: 1.2 }}
       >
         <Icon
-          className="w-full h-full"
+          className="w-full h-full cursor-pointer"
           onMouseEnter={() => {
             setViewBaloon(props.appIndex);
           }}

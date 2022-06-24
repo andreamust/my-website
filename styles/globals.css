@@ -6,10 +6,10 @@
   #__next {
     @apply grid h-screen grid-rows-5 grid-cols-12 m-0 p-0 border-0;
   }
-}
-
-@layer components {
+  body {
+    @apply h-screen w-screen fixed;
+  }
   main {
-    @apply h-screen w-screen;
+    @apply h-screen w-screen pt-9;
   }
 }

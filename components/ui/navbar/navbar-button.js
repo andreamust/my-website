@@ -6,7 +6,7 @@ function NavbarButton(props) {
   return (
     <Link
       key={`app000${props.index}`}
-      href={`/${props.app.toLowerCase()}`}
+      href={props.app === 'Terminal' ? '/' : `/${props.app.toLowerCase()}`}
       passHref
     >
       <motion.li

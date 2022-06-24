@@ -1,8 +1,13 @@
+import BasicWindow from '../components/ui/windows/basic-window';
+
 function Contact(props) {
   return (
-    <div>
-      <h1>Contact</h1>
-    </div>
+    <BasicWindow
+      title={'andrea-poltronieri/contacts'}
+      width={'50vw'}
+      height={'70vh'}
+      animate={false}
+    ></BasicWindow>
   );
 }
 
