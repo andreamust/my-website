@@ -32,11 +32,11 @@ function TopBarElements(props) {
             onMouseEnter={() => playOn()}
             onMouseLeave={() => stop()}
           >
-            <SoundIcon className="h-6 w-6" />
+            <SoundIcon className="h-8 w-8 md:h-6 md:w-6" />
           </button>
           <button onClick={() => props.navPositionHandler(navPositionSwitch)}>
             <BsReverseLayoutSidebarInsetReverse
-              className={`h-6 w-6 md:inline hidden ${
+              className={`h-8 w-8 md:h-6 md:w-6 md:inline hidden ${
                 navPositionSwitch === 'bottom'
                   ? ''
                   : 'rotate-90 transition-shadow'

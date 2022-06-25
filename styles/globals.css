@@ -10,6 +10,6 @@
     @apply h-screen w-screen fixed;
   }
   main {
-    @apply h-screen w-screen pt-9;
+    @apply h-screen w-screen pt-12 md:pt-9;
   }
 }

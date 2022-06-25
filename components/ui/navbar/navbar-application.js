@@ -24,7 +24,7 @@ function NavApp(props) {
   return (
     <div
       className={
-        'flex gap-5 flex-none w-8 h-8 sm:w-10 sm:h-10 items-center ' +
+        'flex gap-5 flex-none w-10 h-10 items-center ' +
         (props.navPosition === 'bottom'
           ? 'flex-col place-content-end'
           : 'flex-row place-content-end')
