@@ -10,7 +10,7 @@ function ThemeChanger() {
 
   return (
     <DarkModeSwitch
-      checked={theme === 'dark' ? false : true}
+      checked={theme === 'light' ? true : false}
       onChange={toggleDarkMode}
       size={25}
       moonColor="#000"

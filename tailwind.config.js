@@ -8,4 +8,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  fontFamily: {
+    modern: ['modernist', 'sans-serif'],
+  },
 };

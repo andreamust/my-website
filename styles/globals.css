@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  @font-face {
+    font-family: 'modernist';
+    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Regular.otf');
+  }
   #__next {
     @apply grid h-screen grid-rows-5 grid-cols-12 m-0 p-0 border-0;
   }

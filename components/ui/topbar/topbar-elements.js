@@ -4,16 +4,17 @@ import Dropdown from './dropdown';
 import ThemeChanger from './theme-changer';
 import { BsReverseLayoutSidebarInsetReverse } from 'react-icons/bs';
 import useSound from 'use-sound';
-import lightOn from '../../../public/sounds/lamp_off.mp3';
-import lightOff from '../../../public/sounds/lamp_off.mp3';
+import { lightOn } from '../../../public/sounds/lamp_on.mp3';
+import { lightOff } from '../../../public/sounds/lamp_off.mp3';
 
 function TopBarElements(props) {
   let navPositionSwitch = props.navPosition === 'bottom' ? 'top' : 'bottom';
   let SoundIcon = props.soundState ? BiVolumeFull : BiVolumeMute;
 
-  const [playOn, { stop }] = useSound(lightOn);
+  const [playOn, { stop }] = useSound(lightOn, (onload) => {
+    console.log(2222222);
+  });
   const [playOff] = useSound(lightOff);
-  console.log(lightOff);
 
   return (
     <motion.div className="flex flex-col h-max content-center z-50">
