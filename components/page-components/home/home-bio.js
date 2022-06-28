@@ -7,13 +7,14 @@ function HomeBio(props) {
   return (
     <Fragment>
       <div className="relative pt-1 md:col-start-4 md:col-end-10 md:row-start-4 md:row-end-5 justify-center p-10 md:p-0">
-        <label htmlFor="customRange1" className="form-label">
+        <label htmlFor="customRange1" className="form-label font-modern">
           Bio length
         </label>
         <input
           type="range"
-          className="form-range appearance-none w-full h-6 p-0 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg"
+          className="form-range appearance-none w-full h-6 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg p-3"
           id="customRange1"
+          cursor="pointer"
           min={0}
           max={4}
           defaultValue={2}
@@ -21,7 +22,7 @@ function HomeBio(props) {
         />
       </div>
       <div className=" md:col-start-4 md:col-end-10 md:row-start-5 md:row-end-6 justify-center pb-20">
-        <p className=" text-center text-lg">{bios[rangeval]}</p>
+        <div className="p-10 text-center text-lg">{bios[rangeval]}</div>
       </div>
     </Fragment>
   );
