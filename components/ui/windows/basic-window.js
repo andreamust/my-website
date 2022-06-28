@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import WindowTopBar from './window-topbar';
 import { useState } from 'react';
-import useWindowDimensions from '../../utils/scree-size';
 
 function BasicWindow(props) {
   let [width, setWidth] = useState(props.width || 'w-[100%]');
@@ -43,7 +42,9 @@ function BasicWindow(props) {
     );
   } else {
     return (
-      <div className={`flex flex-col ${width} ${height}`}>
+      <div
+        className={`flex flex-col ${width} ${height} overflow-y-scroll overflow-x-hidden`}
+      >
         <div className={`h-full order-last flex flex-col w-full rounded-b-md`}>
           {props.children}
         </div>
