@@ -22,7 +22,7 @@
     @apply h-screen w-screen fixed;
   }
   main {
-    @apply h-screen w-screen pt-12 md:pt-9;
+    @apply h-screen w-screen pt-12 md:pt-9  selection:text-transparent;
   }
   a {
     @apply underline text-purple-600 hover:text-purple-800 visited:text-green-600;

@@ -10,8 +10,9 @@ function Resume(props) {
       height={'h-full'}
       animate={false}
     >
-      <HomeHero />
-      <HomeBio />
+      <HomeHero>
+        <HomeBio />
+      </HomeHero>
     </BasicWindow>
   );
 }

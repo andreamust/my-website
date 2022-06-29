@@ -1,24 +1,49 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const bios = {
-  0: <p className="font-modernMono">I'm a human being</p>,
+  0: (
+    <motion.p
+      className="font-modern"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      I'm a human being
+    </motion.p>
+  ),
   1: (
-    <p className="font-modern">
+    <motion.p
+      className="font-modern"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       I'm a PhD Student in Computer Science and Engineering
-    </p>
+    </motion.p>
   ),
   2: (
-    <p className="font-modern">
+    <motion.p
+      className="font-modern"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       I'm a PhD Student in Computer Science and Engineering at the University of
       Bologna. I'm currently working on the{' '}
       <Link href="https://polifonia-project.eu/">
         <a target={'_blank'}>Polifonia Project</a>
       </Link>
       .
-    </p>
+    </motion.p>
   ),
   3: (
-    <p className="font-modern">
+    <motion.p
+      className="font-modern"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       I'm a PhD Student in Computer Science and Engineering at the University of
       Bologna. I'm currently working on the{' '}
       <Link href="https://polifonia-project.eu/">
@@ -29,10 +54,15 @@ const bios = {
         <a target={'_blank'}>Semantic Web Laboratory (STLab)</a>
       </Link>{' '}
       of the Italian National Council for Research (CNR)
-    </p>
+    </motion.p>
   ),
   4: (
-    <p className="font-modern">
+    <motion.p
+      className="font-modern"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       I'm a PhD Student in Computer Science and Engineering at the University of
       Bologna. I'm currently working on the{' '}
       <Link href="https://polifonia-project.eu/">
@@ -45,7 +75,7 @@ const bios = {
       of the Italian National Council for Research (CNR). My main reasearch
       interest is about Music Information Retrieval (MIR) and Computational
       Musicology.
-    </p>
+    </motion.p>
   ),
 };
 
