@@ -45,7 +45,7 @@ function BasicWindow(props) {
       <div
         className={`flex flex-col ${width} ${height} overflow-y-scroll overflow-x-hidden`}
       >
-        <div className={`h-full order-last flex flex-col w-full rounded-b-md`}>
+        <div className={`h-full w-full order-last flex flex-col rounded-b-md`}>
           {props.children}
         </div>
       </div>
