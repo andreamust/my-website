@@ -14,7 +14,7 @@ function WindowTerminal() {
     help: (
       <span>
         <strong>clear</strong> - clears the console. <br />
-        <strong>navigate &lt;PAGE&gt;</strong> - Navigate to a website&aposs
+        <strong>navigate &lt;PAGE&gt;</strong> - Navigate to a website&aposs;
         page.
         <br />
         <strong>change_theme &lt;THEME&gt;</strong> - Changes the theme of the
@@ -63,7 +63,7 @@ function WindowTerminal() {
         welcomeMessage={
           <span>
             Welcome to my website! You can navigate it by using the terminal.{' '}
-            <br /> Type &quothelp&quot to see a list of available commands.
+            <br /> Type &quot;help&quot; to see a list of available commands.
             <br />
           </span>
         }
@@ -77,7 +77,7 @@ function WindowTerminal() {
           <span>
             Command not found!
             <br />
-            Type &quothelp&quot to see a list of available commands.
+            Type &quot;help&quot; to see a list of available commands.
           </span>
         }
       />

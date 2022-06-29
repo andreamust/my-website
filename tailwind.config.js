@@ -5,10 +5,16 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backdropBlur: {
+        xs: '2px',
+      },
+      fontFamily: {
+        modern: ['modernist', 'sans-serif'],
+        modernBold: ['modernist-bold', 'sans-serif'],
+        modernMono: ['modernist-mono', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
-  fontFamily: {
-    modern: ['modernist', 'sans-serif'],
-  },
 };

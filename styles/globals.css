@@ -4,8 +4,16 @@
 
 @layer components {
   @font-face {
+    font-family: 'modernist-bold';
+    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Bold.otf');
+  }
+  @font-face {
     font-family: 'modernist';
     src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Regular.otf');
+  }
+  @font-face {
+    font-family: 'modernist-mono';
+    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Mono.otf');
   }
   #__next {
     @apply grid h-screen grid-rows-5 grid-cols-12 m-0 p-0 border-0;
@@ -14,6 +22,9 @@
     @apply h-screen w-screen fixed;
   }
   main {
-    @apply h-screen w-screen pt-12 md:pt-9;
+    @apply h-screen w-screen pt-12 md:pt-9  selection:text-transparent;
+  }
+  a {
+    @apply underline text-purple-600 hover:text-purple-800 visited:text-green-600;
   }
 }
