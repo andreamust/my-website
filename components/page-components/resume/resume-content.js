@@ -1,5 +1,5 @@
 function ResumeContent(props) {
-  return <div></div>;
+  return <div className="flex-1">content</div>;
 }
 
 export default ResumeContent;
