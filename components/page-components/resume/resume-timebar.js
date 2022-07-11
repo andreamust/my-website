@@ -12,7 +12,7 @@ function ResumeTimebar(props) {
 
   const boxRef = useRef();
 
-  const k = boxRef.current.offsetLeft;
+  // const k = boxRef.current.offsetLeft;
   // X
   const [x, setX] = useState();
 
@@ -20,10 +20,6 @@ function ResumeTimebar(props) {
   const [y, setY] = useState();
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
-
-  useEffect(() => {
-    setHeight(ref.current.clientHeight);
-  });
 
   return (
     <div className="sticky flex-none h-full basis-2 flex flex-col justify-evenly">

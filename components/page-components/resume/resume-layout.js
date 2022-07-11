@@ -16,15 +16,13 @@ function ResumeLayout(props) {
   console.log('ciao', RESUME[2022]);
 
   return (
-    <div className="fixed flex md:flex-row h-full gap-20 p-14 pb-20">
-      <svg>
-        <line x1="0" y1="0" x2="500" y2="500" stroke="black" />
-      </svg>
+    <div className="fixed flex md:flex-row h-full p-14 pb-20">
       <ResumeTimebar
         data={Object.keys(RESUME)}
         year={year}
         yearHandler={setYear}
       />
+      console.log(el.getBoundingClientRect().width);
       <svg className=" basis-3/5">
         <line x1="-2" y1="25" x2="100%" y2="230" stroke="black" />
       </svg>
