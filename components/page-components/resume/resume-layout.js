@@ -1,7 +1,7 @@
 import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import ResumeYearTypeConnection from './resume-year-type';
 
 const RESUME = {
@@ -13,7 +13,10 @@ const RESUME = {
 function ResumeLayout(props) {
   const [year, setYear] = useState(2022);
   const [type, setType] = useState('work');
-  console.log('ciao', RESUME[2022]);
+  const getRect = (element) => {
+    if (!element) return null;
+    return element.getBoundingClientRect();
+  };
 
   return (
     <div className="fixed flex md:flex-row h-full p-14 pb-20">
@@ -22,8 +25,7 @@ function ResumeLayout(props) {
         year={year}
         yearHandler={setYear}
       />
-      console.log(el.getBoundingClientRect().width);
-      <svg className=" basis-3/5">
+      <svg className="basis-3/5">
         <line x1="-2" y1="25" x2="100%" y2="230" stroke="black" />
       </svg>
       <ResumeType type={type} typeHandler={setType} />
