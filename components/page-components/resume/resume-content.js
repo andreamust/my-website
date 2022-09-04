@@ -1,5 +1,12 @@
 function ResumeContent(props) {
-  return <div className="flex-1 pl-20">content</div>;
+  const contents = props.data;
+  return contents.map((content, index) => {
+    return (
+      <div key={index} className="flex-1">
+        {content}
+      </div>
+    );
+  });
 }
 
 export default ResumeContent;

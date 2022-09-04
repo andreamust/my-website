@@ -26,7 +26,7 @@ function Navbar(props) {
     window.addEventListener('resize', handleResize);
   });
 
-  let slicedApps = isMobile ? apps.slice(1, 7) : apps;
+  let slicedApps = isMobile ? apps.slice(0, 5) : apps;
 
   return (
     <header
