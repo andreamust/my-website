@@ -2,12 +2,12 @@ import NavbarButton from './navbar-button';
 import { useState, useEffect } from 'react';
 
 const apps = [
-  'Terminal',
   'Home',
   'Resume',
   'Projects',
   'Pubblications',
   'Contact',
+  'Terminal',
 ];
 
 function Navbar(props) {

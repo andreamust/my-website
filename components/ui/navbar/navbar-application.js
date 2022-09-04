@@ -18,6 +18,7 @@ const IconNames = {
   Pubblications: GiBookshelf,
   Contact: RiChat4Line,
 };
+
 function NavApp(props) {
   const [viewBaloon, setViewBaloon] = useState(false);
   const Icon = IconNames[props.appName];

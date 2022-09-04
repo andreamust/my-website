@@ -21,7 +21,7 @@ function ResumeLayout(props) {
   let timebarPositions = [];
 
   return (
-    <div className="fixed flex md:flex-row h-full p-14 pb-20 gap-24">
+    <div className="fixed flex md:flex-row h-full p-14 pb-20 gap-48 w-screen">
       <ResumeTimebar
         data={Object.keys(RESUME)}
         year={year}
