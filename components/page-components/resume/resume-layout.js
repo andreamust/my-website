@@ -1,21 +1,28 @@
 import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState } from 'react';
 
 function getResumeSet(data, type) {
   let set = new Set();
-  data.map((d) => set.add(d[type]));
+  let abc = [];
+  if (data.map((d) => typeof d.type)[0] === 'object' && type === 'type') {
+    data.map((d) => set.add(...d.type));
+  } else {
+    data.map((d) => set.add(d[type]));
+  }
   return Array.from(set);
 }
 
 function ResumeLayout(props) {
-  let resumeTypesList = getResumeSet(props.resume, 'type');
-  let resumeYearsList = getResumeSet(props.resume, 'yearStart');
+  const resumeTypesList = getResumeSet(props.resume, 'type');
+  const resumeYearsList = getResumeSet(props.resume, 'yearStart');
   const resumeContents = props.resume.map((c) => c.content);
 
+  console.log(resumeTypesList);
+
   const [year, setYear] = useState(resumeYearsList[0]);
-  const [type, setType] = useState('work');
+  const [type, setType] = useState(resumeTypesList[0]);
 
   let timebarPositions = [];
   return (

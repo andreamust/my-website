@@ -1,31 +1,21 @@
 function ResumeType(props) {
+  const types = props.data;
   return (
     <div className="h-full flex flex-col justify-center gap-9">
-      <div
-        className={`w-12 h-12 text-center rounded-full  ${
-          props.type === 'work' ? 'bg-red-400' : 'bg-blue-400'
-        }`}
-      >
-        <button onClick={() => props.typeHandler('work')}>
-          Work Experiene
-        </button>
-      </div>
-      <div
-        className={`w-12 h-12 text-center rounded-full  ${
-          props.type === 'education' ? 'bg-red-400' : 'bg-blue-400'
-        }`}
-      >
-        <button onClick={() => props.typeHandler('education')}>
-          Education
-        </button>
-      </div>
-      <div
-        className={`w-12 h-12 text-center rounded-full  ${
-          props.type === 'other' ? 'bg-red-400' : 'bg-blue-400'
-        }`}
-      >
-        <button onClick={() => props.typeHandler('other')}>Other</button>
-      </div>
+      {types.map((type, index) => {
+        return (
+          <div
+            key={index}
+            className={`w-12 h-12 text-center rounded-full  ${
+              props.type === type ? 'bg-red-400' : 'bg-blue-400'
+            }`}
+          >
+            <button onClick={() => props.typeHandler(type)}>
+              <p className="h-12 text-center">{type}</p>
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 }
