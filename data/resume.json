@@ -6,7 +6,7 @@
       "yearStart": 2021,
       "yearEnd": "present",
       "company": "UniBo",
-      "content": "content"
+      "content": "PhD student content"
     },
     {
       "title": "Research assistant",
@@ -14,7 +14,7 @@
       "yearStart": 2021,
       "yearEnd": 2021,
       "company": "UniBo",
-      "content": "content"
+      "content": "Research assistant content"
     },
     {
       "title": "MS DHDK",
@@ -22,7 +22,7 @@
       "yearStart": 2018,
       "yearEnd": 2020,
       "company": "UniBo",
-      "content": "content"
+      "content": "MS DHDK content"
     },
     {
       "title": "Conversation Designer",
@@ -30,7 +30,7 @@
       "yearStart": 2020,
       "yearEnd": 2021,
       "company": "Heres s.r.l.",
-      "content": "content"
+      "content": "Conversation Designer content"
     }
   ]
 }

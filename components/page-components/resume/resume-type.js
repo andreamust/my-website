@@ -6,6 +6,7 @@ function ResumeType(props) {
         return (
           <div
             key={index}
+            id={`type-${index}`}
             className={`w-12 h-12 text-center rounded-full  ${
               props.type === type ? 'bg-red-400' : 'bg-blue-400'
             }`}

@@ -4,22 +4,22 @@ import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 function ResumeTimebar(props) {
   let positions = props.positions;
 
-  const ticks = props.data;
+  const years = props.data;
 
   return (
     <Xwrapper>
       <div className="sticky flex-none h-full basis-2 flex flex-col justify-evenly">
-        {ticks.map((tick, index) => {
+        {years.map((year, index) => {
           return (
-            <Fragment key={tick}>
+            <Fragment key={year}>
               <div
-                id={`box`}
+                id={`year-${index}`}
                 className={`flex-1 w-12 max-h-12 text-center rounded-full ${
-                  props.year === tick ? ' bg-red-300' : ' bg-green-400'
+                  props.year === year ? ' bg-red-300' : ' bg-green-400'
                 }`}
               >
-                <button onClick={() => props.yearHandler(tick)}>
-                  <p className="h-12 text-center">{tick}</p>
+                <button onClick={() => props.yearHandler(year)}>
+                  <p className="h-12 text-center">{year}</p>
                 </button>
               </div>
             </Fragment>
