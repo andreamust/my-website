@@ -8,16 +8,23 @@ function ResumeTimebar(props) {
 
   return (
     <div className="sticky flex-none h-full basis-2 flex flex-col justify-evenly">
-      {years.map((year, index) => {
+      {years.map((year) => {
         return (
           <Fragment key={year}>
             <div
-              id={`year-${index}`}
+              id={`year-${year}`}
               className={`flex-1 w-12 max-h-12 text-center rounded-full ${
-                props.year === year ? ' bg-red-300' : ' bg-green-400'
+                props.year.toString().includes(year.toString())
+                  ? ' bg-red-300'
+                  : ' bg-green-400'
               }`}
             >
-              <button onClick={() => props.yearHandler(year)}>
+              <button
+                onClick={() => {
+                  props.yearHandler(year);
+                  console.log(year);
+                }}
+              >
                 <p className="h-12 text-center">{year}</p>
               </button>
             </div>

@@ -5,26 +5,38 @@ import { Fragment, useState } from 'react';
 import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 
 function getResumeSet(data, type) {
-  let set = new Set();
+  let list = [];
   if (data.map((d) => typeof d.type)[0] === 'object' && type === 'type') {
-    data.map((d) => set.add(...d.type));
+    data.map((d) => list.push(...d.type));
   } else {
-    data.map((d) => set.add(d[type]));
+    data.map((d) => list.push(d[type]));
   }
-  return Array.from(set);
+  return [...new Set(list)];
+}
+
+function filterResumeData(data, type, value) {
+  return data.filter((d) => d[type].toString().includes(value.toString()));
+}
+
+function parseTypes(data, type, value, targetValue) {
+  const filteredResume = filterResumeData(data, type, value);
+  return getResumeSet(filteredResume, targetValue);
 }
 
 function ResumeLayout(props) {
+  const resume = props.resume;
   // get resume elements
-  const resumeTypesList = getResumeSet(props.resume, 'type');
-  const resumeYearsList = getResumeSet(props.resume, 'yearStart');
-  const resumeContents = props.resume.map((c) => c.content);
+  const resumeTypesList = getResumeSet(resume, 'type');
+  const resumeYearsList = getResumeSet(resume, 'yearStart');
+  const resumeContents = resume.map((c) => c.content);
 
   // initialize state variables
-  const [year, setYear] = useState(resumeYearsList[0]);
-  const [type, setType] = useState(resumeTypesList[0]);
-
-  let timebarPositions = [];
+  let [year, setYear] = useState(resumeYearsList[0]);
+  let [type, setType] = useState();
+  //type === undefined && year === undefined
+  //? resumeYearsList[0]
+  //: parseTypes(resume, 'type', type, 'yearStart');
+  type = parseTypes(resume, 'yearStart', year, 'type');
 
   // update arrowws on dom changes
   const updateXarrow = useXarrow();
@@ -36,7 +48,6 @@ function ResumeLayout(props) {
           data={resumeYearsList.sort().reverse()}
           year={year}
           yearHandler={setYear}
-          positions={timebarPositions}
         />
         <ResumeType
           data={resumeTypesList.sort().reverse()}
@@ -44,23 +55,43 @@ function ResumeLayout(props) {
           typeHandler={setType}
         />
         <ResumeContent data={resumeContents} />
-        {resumeYearsList.map((year, yearIndex) => {
-          return resumeTypesList.map((type, typeIndex) => {
+        {resumeYearsList.map((yearArrow) => {
+          return resumeTypesList.map((typeArrow) => {
             return (
               <Xarrow
-                key={`${year}-${type}`}
-                start={`year-${yearIndex}`}
-                end={`type-${typeIndex}`}
-                color={`black`}
+                key={`${yearArrow}-${typeArrow}`}
+                start={`year-${yearArrow}`}
+                end={`type-${typeArrow}`}
+                color={
+                  year.toString().includes(yearArrow.toString()) &&
+                  type.includes(typeArrow)
+                    ? 'red'
+                    : 'black'
+                }
                 curveness={0}
                 showHead={false}
-                strokeWidth={1.4}
+                strokeWidth={
+                  year.toString().includes(yearArrow.toString()) &&
+                  type.includes(typeArrow)
+                    ? 1.9
+                    : 1.4
+                }
                 startAnchor={'right'}
                 endAnchor={'left'}
               />
             );
           });
         })}
+        <Xarrow
+          start={`year-0`}
+          end={`type-0`}
+          color={`red`}
+          curveness={0}
+          showHead={false}
+          strokeWidth={1.5}
+          startAnchor={'right'}
+          endAnchor={'left'}
+        />
       </Xwrapper>
     </div>
   );
