@@ -38,22 +38,21 @@ function ResumeLayout(props) {
   //: parseTypes(resume, 'type', type, 'yearStart');
   type = parseTypes(resume, 'yearStart', year, 'type');
 
-  // update arrowws on dom changes
-  const updateXarrow = useXarrow();
-
   return (
-    <div className="fixed flex md:flex-row h-full p-14 pb-20 gap-48 w-screen">
+    <div className="absolute flex md:flex-row h-full p-14 pb-20 gap-48 w-screen">
       <Xwrapper>
-        <ResumeTimebar
-          data={resumeYearsList.sort().reverse()}
-          year={year}
-          yearHandler={setYear}
-        />
-        <ResumeType
-          data={resumeTypesList.sort().reverse()}
-          type={type}
-          typeHandler={setType}
-        />
+        <div className="flex flex-row gap-52">
+          <ResumeTimebar
+            data={resumeYearsList.sort().reverse()}
+            year={year}
+            yearHandler={setYear}
+          />
+          <ResumeType
+            data={resumeTypesList.sort().reverse()}
+            type={type}
+            typeHandler={setType}
+          />
+        </div>
         <ResumeContent data={resumeContents} />
         {resumeYearsList.map((yearArrow) => {
           return resumeTypesList.map((typeArrow) => {
@@ -82,16 +81,33 @@ function ResumeLayout(props) {
             );
           });
         })}
-        <Xarrow
-          start={`year-0`}
-          end={`type-0`}
-          color={`red`}
-          curveness={0}
-          showHead={false}
-          strokeWidth={1.5}
-          startAnchor={'right'}
-          endAnchor={'left'}
-        />
+        {resumeTypesList.map((typeArrow) => {
+          return resumeContents.map((contentArrow, index) => {
+            console.log(typeArrow, contentArrow);
+            return (
+              <Xarrow
+                key={`${typeArrow}-${index}`}
+                start={`type-${typeArrow}`}
+                end={`content-${index}`}
+                color={
+                  year.toString().includes(contentArrow.toString()) &&
+                  type.includes(typeArrow)
+                    ? 'red'
+                    : 'black'
+                }
+                showHead={false}
+                strokeWidth={
+                  year.toString().includes(contentArrow.toString()) &&
+                  type.includes(typeArrow)
+                    ? 1.9
+                    : 1.4
+                }
+                startAnchor={'right'}
+                endAnchor={'left'}
+              />
+            );
+          });
+        })}
       </Xwrapper>
     </div>
   );

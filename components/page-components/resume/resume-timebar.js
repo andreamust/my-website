@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 
 function ResumeTimebar(props) {
   let positions = props.positions;
@@ -7,7 +6,7 @@ function ResumeTimebar(props) {
   const years = props.data;
 
   return (
-    <div className="sticky flex-none h-full basis-2 flex flex-col justify-evenly">
+    <div className=" flex-none h-full basis-2 flex flex-col justify-evenly">
       {years.map((year) => {
         return (
           <Fragment key={year}>
@@ -22,7 +21,6 @@ function ResumeTimebar(props) {
               <button
                 onClick={() => {
                   props.yearHandler(year);
-                  console.log(year);
                 }}
               >
                 <p className="h-12 text-center">{year}</p>
