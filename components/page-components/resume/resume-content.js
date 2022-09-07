@@ -6,12 +6,12 @@ function ResumeContent(props) {
   const updateXarrow = useXarrow();
   return (
     <div
-      className="relative flex flex-col gap-96 overflow-scroll no-scrollbar"
+      className="relative flex flex-col gap-96 overflow-scroll no-scrollbar h-screen w-full p-14"
       onScroll={updateXarrow}
     >
       {contents.map((content, index) => {
         return (
-          <div id={`content-${index}`} key={index} className="flex-1 ">
+          <div id={`content-${index}`} key={index} className="flex-1 pl-10">
             {content}
           </div>
         );

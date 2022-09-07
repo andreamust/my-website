@@ -6,7 +6,7 @@ function ResumeTimebar(props) {
   const years = props.data;
 
   return (
-    <div className=" flex-none h-full basis-2 flex flex-col justify-evenly">
+    <div className=" p-14 flex-none h-full basis-2 flex flex-col justify-evenly">
       {years.map((year) => {
         return (
           <Fragment key={year}>

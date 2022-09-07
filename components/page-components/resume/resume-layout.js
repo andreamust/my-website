@@ -3,6 +3,7 @@ import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
 import { Fragment, useState } from 'react';
 import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
+import { motion } from 'framer-motion';
 
 function getResumeSet(data, type) {
   let list = [];
@@ -18,7 +19,7 @@ function filterResumeData(data, type, value) {
   return data.filter((d) => d[type].toString().includes(value.toString()));
 }
 
-function parseTypes(data, type, value, targetValue) {
+function parseData(data, type, value, targetValue) {
   const filteredResume = filterResumeData(data, type, value);
   return getResumeSet(filteredResume, targetValue);
 }
@@ -33,23 +34,32 @@ function ResumeLayout(props) {
   // initialize state variables
   let [year, setYear] = useState(resumeYearsList[0]);
   let [type, setType] = useState();
-  //type === undefined && year === undefined
-  //? resumeYearsList[0]
-  //: parseTypes(resume, 'type', type, 'yearStart');
-  type = parseTypes(resume, 'yearStart', year, 'type');
+
+  let yearSelected = undefined;
+  let typeSelected = undefined;
+
+  yearSelected =
+    yearSelected !== year || yearSelected === undefined
+      ? year
+      : parseData(resume, 'type', typeSelected, 'yearStart');
+
+  typeSelected =
+    typeSelected !== type || (typeSelected === undefined && type != undefined)
+      ? type
+      : parseData(resume, 'yearStart', year, 'type');
 
   return (
-    <div className="absolute flex md:flex-row h-full p-14 pb-20 gap-48 w-screen">
+    <div className="absolute flex md:flex-row h-full pb-32 gap-48 w-screen">
       <Xwrapper>
         <div className="flex flex-row gap-52">
           <ResumeTimebar
             data={resumeYearsList.sort().reverse()}
-            year={year}
+            year={yearSelected}
             yearHandler={setYear}
           />
           <ResumeType
             data={resumeTypesList.sort().reverse()}
-            type={type}
+            type={typeSelected}
             typeHandler={setType}
           />
         </div>
@@ -62,48 +72,62 @@ function ResumeLayout(props) {
                 start={`year-${yearArrow}`}
                 end={`type-${typeArrow}`}
                 color={
-                  year.toString().includes(yearArrow.toString()) &&
-                  type.includes(typeArrow)
+                  yearSelected.toString().includes(yearArrow.toString()) && //TODO: change toString()
+                  typeSelected.includes(typeArrow)
                     ? 'red'
                     : 'black'
                 }
                 curveness={0}
                 showHead={false}
                 strokeWidth={
-                  year.toString().includes(yearArrow.toString()) &&
-                  type.includes(typeArrow)
+                  yearSelected.toString().includes(yearArrow.toString()) && //TODO: change toString()
+                  typeSelected.includes(typeArrow)
                     ? 1.9
                     : 1.4
                 }
                 startAnchor={'right'}
                 endAnchor={'left'}
+                dashness={
+                  yearSelected.toString().includes(yearArrow.toString()) &&
+                  typeSelected.includes(typeArrow)
+                    ? true
+                    : false
+                }
               />
             );
           });
         })}
-        {resumeTypesList.map((typeArrow) => {
-          return resumeContents.map((contentArrow, index) => {
-            console.log(typeArrow, contentArrow);
+        {resume.map((resumeEntry, index) => {
+          const { title, type, yearStart, yearEnd, company, content } =
+            resumeEntry;
+          return type.map((singleType) => {
             return (
               <Xarrow
-                key={`${typeArrow}-${index}`}
-                start={`type-${typeArrow}`}
+                key={`${singleType}-${index}`}
+                start={`type-${singleType}`}
                 end={`content-${index}`}
                 color={
-                  year.toString().includes(contentArrow.toString()) &&
-                  type.includes(typeArrow)
+                  yearSelected.toString().includes(yearStart.toString()) &&
+                  type.includes(singleType)
                     ? 'red'
                     : 'black'
                 }
+                curveness={0.25}
                 showHead={false}
                 strokeWidth={
-                  year.toString().includes(contentArrow.toString()) &&
-                  type.includes(typeArrow)
+                  yearSelected.toString().includes(yearStart.toString()) &&
+                  type.includes(singleType)
                     ? 1.9
                     : 1.4
                 }
                 startAnchor={'right'}
                 endAnchor={'left'}
+                dashness={
+                  yearSelected.toString().includes(yearStart.toString()) &&
+                  type.includes(singleType)
+                    ? true
+                    : false
+                }
               />
             );
           });

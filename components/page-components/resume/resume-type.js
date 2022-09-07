@@ -1,7 +1,7 @@
 function ResumeType(props) {
   const types = props.data;
   return (
-    <div className="h-full flex flex-col justify-center gap-9">
+    <div className=" p-14 h-full flex flex-col justify-center gap-9">
       {types.map((type, index) => {
         return (
           <div
