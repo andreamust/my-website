@@ -39,7 +39,8 @@ function ResumeLayout(props) {
   let typeSelected = undefined;
 
   yearSelected =
-    yearSelected !== year || yearSelected === undefined
+    (yearSelected !== year || yearSelected === undefined) &&
+    (typeSelected !== type || typeSelected === undefined)
       ? year
       : parseData(resume, 'type', typeSelected, 'yearStart');
 
