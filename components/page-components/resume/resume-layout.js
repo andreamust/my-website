@@ -1,7 +1,7 @@
 import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect, useRef, useCallback } from 'react';
 import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 import { motion } from 'framer-motion';
 
@@ -16,7 +16,7 @@ function getResumeSet(data, type) {
 }
 
 function filterResumeData(data, type, value) {
-  return data.filter((d) => d[type].toString().includes(value.toString()));
+  return data.filter((d) => d[type].toString().includes(value.toString())); // TODO: change toString()
 }
 
 function parseData(data, type, value, targetValue) {
@@ -32,22 +32,17 @@ function ResumeLayout(props) {
   const resumeContents = resume.map((c) => c.content);
 
   // initialize state variables
-  let [year, setYear] = useState(resumeYearsList[0]);
-  let [type, setType] = useState();
+  let [yearSelected, setYear] = useState(resumeYearsList[0]);
+  let [typeSelected, setType] = useState([
+    parseData(resume, 'yearStart', yearSelected, 'type'),
+  ]);
 
-  let yearSelected = undefined;
-  let typeSelected = undefined;
+  // update state variables
+  useEffect(() => {
+    setType(parseData(resume, 'yearStart', yearSelected, 'type'));
+  }, [yearSelected]);
 
-  yearSelected =
-    (yearSelected !== year || yearSelected === undefined) &&
-    (typeSelected !== type || typeSelected === undefined)
-      ? year
-      : parseData(resume, 'type', typeSelected, 'yearStart');
-
-  typeSelected =
-    typeSelected !== type || (typeSelected === undefined && type != undefined)
-      ? type
-      : parseData(resume, 'yearStart', year, 'type');
+  console.log('yearSelected', yearSelected);
 
   return (
     <div className="absolute flex md:flex-row h-full pb-32 gap-48 w-screen">
