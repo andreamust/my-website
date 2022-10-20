@@ -1,11 +1,19 @@
 {
   "resume": [
     {
+      "title": "Tutor",
+      "type": ["work"],
+      "yearStart": 2021,
+      "yearEnd": "present",
+      "company": "University of Bologna, Department of Modern Languages, Literatures, and Cultures - LILEC",
+      "content": "Tutor of the course Information Technology Skills (LM), for the Master’s degree courses of Italian Culture and Language for Foreigners and Modern, Post-Colonial and Comparative Literatures at the Department of Modern Languages, Literatures, and Cultures, held by Prof. Valentina Presutti. The main tutoring activities included: <ul><li>The preparation of slides and teaching materials for the course;</li></ul>"
+    },
+    {
       "title": "PhD student",
       "type": ["work", "study"],
       "yearStart": 2021,
-      "yearEnd": 0,
-      "company": "UniBo",
+      "yearEnd": "present",
+      "company": "University of Bologna",
       "content": "PhD student content"
     },
     {
@@ -13,7 +21,7 @@
       "type": ["other"],
       "yearStart": 2021,
       "yearEnd": 2021,
-      "company": "UniBo",
+      "company": "University of Bologna",
       "content": "Research assistant content"
     },
     {
@@ -21,7 +29,7 @@
       "type": ["study"],
       "yearStart": 2018,
       "yearEnd": 2020,
-      "company": "UniBo",
+      "company": "University of Bologna",
       "content": "MS DHDK content"
     },
     {
@@ -29,7 +37,7 @@
       "type": ["work"],
       "yearStart": 2020,
       "yearEnd": 2021,
-      "company": "Heres s.r.l.",
+      "company": "Heres S.r.l.",
       "content": "Conversation Designer content"
     }
   ]

@@ -44,7 +44,7 @@ function ResumeLayout(props) {
             yearHandler={setYear}
           />
         </div>
-        <ResumeContent data={resumeContents} />
+        <ResumeContent data={resume} />
         {resumeYearsList.map((yearArrow) => {
           return resumeTypesList.map((typeArrow) => {
             return (
