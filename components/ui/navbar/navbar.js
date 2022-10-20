@@ -2,12 +2,12 @@ import NavbarButton from './navbar-button';
 import { useState, useEffect } from 'react';
 
 const apps = [
-  'Terminal',
   'Home',
   'Resume',
   'Projects',
   'Pubblications',
   'Contact',
+  'Terminal',
 ];
 
 function Navbar(props) {
@@ -26,7 +26,7 @@ function Navbar(props) {
     window.addEventListener('resize', handleResize);
   });
 
-  let slicedApps = isMobile ? apps.slice(1, 7) : apps;
+  let slicedApps = isMobile ? apps.slice(0, 5) : apps;
 
   return (
     <header

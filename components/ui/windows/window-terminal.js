@@ -1,4 +1,3 @@
-import { Fragment } from 'react/cjs/react.production.min';
 import { ReactTerminal } from 'react-terminal';
 import { useRouter } from 'next/router';
 import themes from './terminal/terminal-themes';

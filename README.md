@@ -2,6 +2,9 @@
 
 This repository hosts the code for my new personal website.
 
+[![CodeQL](https://github.com/andreamust/my-website/actions/workflows/codeql.yml/badge.svg)](https://github.com/andreamust/my-website/actions/workflows/codeql.yml)
+[![Dependency Review](https://github.com/andreamust/my-website/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/andreamust/my-website/actions/workflows/dependency-review.yml)
+
 ## _Work in progress._
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

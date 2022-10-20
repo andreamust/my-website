@@ -1,0 +1,36 @@
+{
+  "resume": [
+    {
+      "title": "PhD student",
+      "type": ["work", "study"],
+      "yearStart": 2021,
+      "yearEnd": 0,
+      "company": "UniBo",
+      "content": "PhD student content"
+    },
+    {
+      "title": "Research assistant",
+      "type": ["other"],
+      "yearStart": 2021,
+      "yearEnd": 2021,
+      "company": "UniBo",
+      "content": "Research assistant content"
+    },
+    {
+      "title": "MS DHDK",
+      "type": ["study"],
+      "yearStart": 2018,
+      "yearEnd": 2020,
+      "company": "UniBo",
+      "content": "MS DHDK content"
+    },
+    {
+      "title": "Conversation Designer",
+      "type": ["work"],
+      "yearStart": 2020,
+      "yearEnd": 2021,
+      "company": "Heres s.r.l.",
+      "content": "Conversation Designer content"
+    }
+  ]
+}

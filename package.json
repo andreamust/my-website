@@ -20,6 +20,7 @@
     "react-syntax-highlighter": "^15.4.5",
     "react-terminal": "^1.2.8",
     "react-toggle-dark-mode": "^1.0.4",
+    "react-xarrows": "^2.0.2",
     "use-sound": "^4.0.1"
   },
   "devDependencies": {

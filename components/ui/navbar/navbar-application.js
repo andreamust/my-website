@@ -18,6 +18,7 @@ const IconNames = {
   Pubblications: GiBookshelf,
   Contact: RiChat4Line,
 };
+
 function NavApp(props) {
   const [viewBaloon, setViewBaloon] = useState(false);
   const Icon = IconNames[props.appName];
@@ -53,7 +54,13 @@ function NavApp(props) {
         initial={{ scale: 1 }}
         whileHover={{
           scale: 1.3,
-          transition: { duration: 0.15, ease: 'easeIn' },
+          transition: {
+            duration: 0.15,
+            ease: 'easeIn',
+            type: 'spring',
+            stiffness: 400,
+            damping: 10,
+          },
         }}
         whileTap={{ scale: 1.2, color: 'gray' }}
         whileFocus={{ scale: 1.2 }}
