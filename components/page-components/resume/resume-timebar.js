@@ -1,13 +1,10 @@
 import { Fragment } from 'react';
+import { parseData } from '../../utils/filtering';
 
 function ResumeTimebar(props) {
-  let positions = props.positions;
-
-  const years = props.data;
-
   return (
     <div className=" p-14 flex-none h-full basis-2 flex flex-col justify-evenly">
-      {years.map((year) => {
+      {props.years.map((year) => {
         return (
           <Fragment key={year}>
             <div
@@ -20,7 +17,10 @@ function ResumeTimebar(props) {
             >
               <button
                 onClick={() => {
-                  props.yearHandler(year);
+                  props.yearHandler([year]);
+                  props.typeHandler(
+                    parseData(props.data, 'yearStart', year, 'type')
+                  );
                 }}
               >
                 <p className="h-12 text-center">{year}</p>

@@ -1,8 +1,9 @@
+import { parseData } from '../../utils/filtering';
+
 function ResumeType(props) {
-  const types = props.data;
   return (
     <div className=" p-14 h-full flex flex-col justify-center gap-9">
-      {types.map((type, index) => {
+      {props.types.map((type, index) => {
         return (
           <div
             key={index}
@@ -11,7 +12,14 @@ function ResumeType(props) {
               props.type.includes(type) ? 'bg-red-400' : 'bg-blue-400'
             }`}
           >
-            <button onClick={() => props.typeHandler(type)}>
+            <button
+              onClick={() => {
+                props.typeHandler([type]);
+                props.yearHandler(
+                  parseData(props.data, 'type', type, 'yearStart')
+                );
+              }}
+            >
               <p className="h-12 text-center">{type}</p>
             </button>
           </div>
