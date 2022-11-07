@@ -1,36 +1,60 @@
 {
   "resume": [
     {
+      "title": "Tutor",
+      "type": ["work"],
+      "yearStart": 2021,
+      "yearEnd": "present",
+      "company": "University of Bologna, LILEC",
+      "content": "Tutor of the course *Information Technology Skills (LM)*, for the Master’s degree courses of Italian Culture and Language for Foreigners and Modern, Post-Colonial and Comparative Literatures at the Department of Modern Languages, Literatures, and Cultures, held by Prof. Valentina Presutti. The main tutoring activities included:\n * The preparation of slides and teaching materials for the course;\n * A lot of other stuff."
+    },
+    {
       "title": "PhD student",
       "type": ["work", "study"],
       "yearStart": 2021,
-      "yearEnd": 0,
-      "company": "UniBo",
-      "content": "PhD student content"
+      "yearEnd": "present",
+      "company": "University of Bologna",
+      "content": "Ph.D.financed by Polifonia, an European project founded by the *EU Horizon2020 Programme*.The main objective of the Ph.D. is to recognise and extract recurring musical patterns of different nature (melodic, harmonic, rhythmic) that have a musicological and/or perceptual relevance. By means of the interaction between technologies used in the field of Music Information Retrieval and the Semantic Web, the aim is to identify such patterns taking into account both signal-related aspects (DSP) and different types of symbolic notation.\n * Supervisor: Prof. [Valentina Presutti](https://www.unibo.it/sitoweb/valentina.presutti/en)."
     },
     {
       "title": "Research assistant",
       "type": ["other"],
       "yearStart": 2021,
       "yearEnd": 2021,
-      "company": "UniBo",
-      "content": "Research assistant content"
+      "company": "University of Bologna, LILEC",
+      "content": "Researcher within the project *ArCo4Science* (MiBACT). The research project involves the study of computational approach for analysing large repositories of music content expressed in heterogeneous formats with the aim of identifying and for- mally representing common and significant patterns that are indicative of music identity and culture."
     },
     {
-      "title": "MS DHDK",
+      "title": "Master in Digital Humanities and Digital Knowledge (DHDK)",
       "type": ["study"],
       "yearStart": 2018,
       "yearEnd": 2020,
-      "company": "UniBo",
-      "content": "MS DHDK content"
+      "company": "University of Bologna, FICLIT",
+      "content": "* Grade: 110/110 with honour\n * Dissertation title: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis\n * Supervisor: [Aldo Gangemi](https://www.unibo.it/sitoweb/aldo.gangemi)\n * Co-supervisor: [Albert Meroño Peñuela](https://www.albertmeronyo.org/)\n * Dissertation description: The dissertation aims to develop an ontology that can serve musicological research. This ontology proposes to make different types of musical representations interoperable and to describe an extended set of musicological features, previously extracted with algorithms implemented explicitly for this research."
+    },
+    {
+      "title": "Bachelor in Drama, Arts and Music Studies (DAMS)",
+      "type": ["study"],
+      "yearStart": 2015,
+      "yearEnd": 2018,
+      "company": "University of Bologna, DAR",
+      "content": "* Dissertation title: Il “caso Gobatti”, un esempio di “fanatismo” nei Teatri d'opera italiani di fine Ottocento\n * Supervisor: [Anna Scalfaro](https://www.unibo.it/sitoweb/anna.scalfaro/en)\n"
     },
     {
       "title": "Conversation Designer",
       "type": ["work"],
       "yearStart": 2020,
       "yearEnd": 2021,
-      "company": "Heres s.r.l.",
-      "content": "Conversation Designer content"
+      "company": "Heres S.r.l.",
+      "content": "Company working on chatbot development at enterprise-level. Within the company, I was responsible for the management and implementation of conversational flows and NLP algorithms.\n\n Responsabilities:\n * Design and development of conversational flows\n * Natural Language Processing algorithms development\n * Project management and customer relations\n * Research and product development."
+    },
+    {
+      "title": "Rock Guitar Academy - CCR Course",
+      "type": ["other", "study"],
+      "yearStart": 2012,
+      "yearEnd": 2015,
+      "company": "Rock Guitar Academy",
+      "content": "Diploma in rock and pop guitar. At the Rock Guitar Academy I could deepen my knowledge of guitar technique, composition, sight reading and music theory."
     }
   ]
 }

@@ -11,9 +11,7 @@ function TopBarElements(props) {
   let navPositionSwitch = props.navPosition === 'bottom' ? 'top' : 'bottom';
   let SoundIcon = props.soundState ? BiVolumeFull : BiVolumeMute;
 
-  const [playOn, { stop }] = useSound(lightOn, (onload) => {
-    console.log(2222222);
-  });
+  const [playOn] = useSound(lightOn);
   const [playOff] = useSound(lightOff);
 
   return (
@@ -28,11 +26,10 @@ function TopBarElements(props) {
         <div className="flex flex-row gap-4">
           <button
             onClick={() => {
-              playOff;
+              playOn;
               props.soundHandler(!props.soundState);
+              console.log('soundState', props.soundState);
             }}
-            onMouseEnter={() => playOn()}
-            onMouseLeave={() => stop()}
           >
             <SoundIcon className="h-8 w-8 md:h-6 md:w-6" />
           </button>
