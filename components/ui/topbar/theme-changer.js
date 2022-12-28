@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function ThemeChanger() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme('light');
 
   const toggleDarkMode = (checked) => {
     checked ? setTheme('light') : setTheme('dark');
@@ -10,7 +10,7 @@ function ThemeChanger() {
 
   return (
     <DarkModeSwitch
-      checked={theme === 'light' ? true : false}
+      checked={theme === 'dark' ? false : true}
       onChange={toggleDarkMode}
       size={25}
       moonColor="#000"

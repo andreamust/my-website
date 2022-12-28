@@ -26,9 +26,9 @@ function ResumeLayout(props) {
   //);
 
   return (
-    <div className="absolute flex md:flex-row h-full pb-32 gap-48 w-screen">
+    <div className="absolute flex md:flex-row h-full pb-32 gap-5 lg:gap-52 w-screen">
       <Xwrapper>
-        <div className="flex flex-row gap-52">
+        <div className="flex-1 flex flex-row gap-5 lg:gap-52 justify-evenly">
           <ResumeTimebar
             data={resume}
             years={resumeYearsList}
@@ -44,7 +44,7 @@ function ResumeLayout(props) {
             yearHandler={setYear}
           />
         </div>
-        <ResumeContent data={resume} />
+        <ResumeContent data={resume} year={yearSelected} type={typeSelected} />
         {resumeYearsList.map((yearArrow) => {
           return resumeTypesList.map((typeArrow) => {
             return (

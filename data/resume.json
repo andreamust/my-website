@@ -22,7 +22,7 @@
       "yearStart": 2021,
       "yearEnd": 2021,
       "company": "University of Bologna, LILEC",
-      "content": "Researcher within the project *ArCo4Science* (MiBACT).The research project involves the study of computational approach for analysing large repositories of music content expressed in heterogeneous formats with the aim of identifying and for- mally representing common and significant patterns that are indicative of music identity and culture."
+      "content": "Researcher within the project *ArCo4Science* (MiBACT). The research project involves the study of computational approach for analysing large repositories of music content expressed in heterogeneous formats with the aim of identifying and for- mally representing common and significant patterns that are indicative of music identity and culture."
     },
     {
       "title": "Master in Digital Humanities and Digital Knowledge (DHDK)",
@@ -47,6 +47,14 @@
       "yearEnd": 2021,
       "company": "Heres S.r.l.",
       "content": "Company working on chatbot development at enterprise-level. Within the company, I was responsible for the management and implementation of conversational flows and NLP algorithms.\n\n Responsabilities:\n * Design and development of conversational flows\n * Natural Language Processing algorithms development\n * Project management and customer relations\n * Research and product development."
+    },
+    {
+      "title": "Rock Guitar Academy - CCR Course",
+      "type": ["other", "study"],
+      "yearStart": 2012,
+      "yearEnd": 2015,
+      "company": "Rock Guitar Academy",
+      "content": "Diploma in rock and pop guitar. At the Rock Guitar Academy I could deepen my knowledge of guitar technique, composition, sight reading and music theory."
     }
   ]
 }

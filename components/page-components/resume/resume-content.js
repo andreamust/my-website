@@ -12,12 +12,19 @@ function ResumeContent(props) {
       onScroll={updateXarrow}
     >
       {resume.map((resumeEntry, index) => {
-        console.log('resumeEntry', resumeEntry);
         const { title, type, yearStart, yearEnd, company, content } =
           resumeEntry;
-        console.log('title', title);
         return (
-          <div id={`content-${index}`} key={index} className="flex-1 pl-10">
+          <div
+            id={`content-${index}`}
+            key={index}
+            className={`flex-1 pl-10 border-red-400 ${
+              Array.from(props.year).includes(yearStart) &&
+              props.type.some((t) => type.includes(t))
+                ? 'border-2'
+                : 'border-0'
+            } '}`}
+          >
             <div className="flex flex-col gap-1">
               <div className="flex flex-row gap-4 justify-between">
                 <h2 className=" text-xl font-modernBold">{title}</h2>
