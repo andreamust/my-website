@@ -3,7 +3,7 @@ import { parseData } from '../../utils/filtering';
 
 function ResumeTimebar(props) {
   return (
-    <div className=" p-14 flex-none h-full basis-2 flex flex-col justify-evenly">
+    <div className="flex-1 p-14 h-full basis-2 flex flex-col justify-evenly gap-2">
       {props.years.map((year) => {
         return (
           <Fragment key={year}>

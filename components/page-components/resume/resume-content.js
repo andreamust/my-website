@@ -34,7 +34,9 @@ function ResumeContent(props) {
               </div>
               <h3 className=" text-lg font-modernMono">{company}</h3>
             </div>
-            <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
+            <p className="pt-3">
+              <ReactMarkdown children={content} />
+            </p>
           </div>
         );
       })}

@@ -2,7 +2,7 @@ import { parseData } from '../../utils/filtering';
 
 function ResumeType(props) {
   return (
-    <div className=" p-14 h-full flex flex-col justify-center gap-9">
+    <div className="flex-1 p-14 h-full flex flex-col justify-center gap-9">
       {props.types.map((type, index) => {
         return (
           <div
