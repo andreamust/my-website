@@ -21,7 +21,7 @@ function HomeBio(props) {
           onChange={(event) => setRangeval(event.target.value)}
         />
       </div>
-      <div className=" md:col-start-4 md:col-end-10 md:row-start-5 md:row-end-6 justify-center pb-20 md:pb-0">
+      <div className="static md:col-start-4 md:col-end-10 md:row-start-5 md:row-end-6 justify-center pb-20 md:pb-0">
         <div className="p-10 text-center text-lg">{bios[rangeval]}</div>
       </div>
     </Fragment>

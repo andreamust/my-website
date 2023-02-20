@@ -3,7 +3,7 @@ import HomeIcons from './home-icons';
 
 function HomeHero(props) {
   return (
-    <div className="relative flex flex-col md:grid md:grid-cols-12 justify-center align-middle gap-5 md:gap-0 bg-gray-50 dark:bg-gray-400 md:h-full md:pb-24">
+    <div className="static flex flex-col md:grid md:grid-cols-12 justify-center align-middle gap-5 md:gap-0 bg-gray-50 dark:bg-gray-400 md:h-full md:pb-24">
       <div className="flex flex-col w-full justify-center flex-1 items-center md:col-start-4 lg:col-start-4 md:row-start-2 h-full pt-12">
         <div className="h-64 w-64">
           <Image
