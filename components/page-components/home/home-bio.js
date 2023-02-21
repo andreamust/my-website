@@ -6,7 +6,7 @@ function HomeBio(props) {
   const [rangeval, setRangeval] = useState(2);
   return (
     <Fragment>
-      <div className="relative pt-1 md:col-start-4 md:col-end-10 md:row-start-4 md:row-end-5 justify-center pl-10 pr-10 md:p-0">
+      <div className="relative max-w-3xl md:p-0">
         <label htmlFor="customRange1" className="form-label font-modern">
           Bio length
         </label>
