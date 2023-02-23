@@ -3,26 +3,28 @@ import HomeIcons from './home-icons';
 
 function HomeHero(props) {
   return (
-    <div className="relative flex flex-col md:grid md:grid-cols-12 justify-center align-middle gap-5 md:gap-0 bg-gray-50 dark:bg-gray-400 md:h-full md:pb-24">
-      <div className="flex flex-col w-full justify-center flex-1 items-center md:col-start-4 lg:col-start-4 md:row-start-2 h-full pt-12">
-        <div className="h-64 w-64">
-          <Image
-            src="/images/ap.jpeg"
-            alt="logo"
-            layout="responsive"
-            width={300}
-            height={300}
-          />
+    <div className="static flex flex-col bg-gray-50 dark:bg-gray-400 w-screen h-screen gap-10 items-center justify-center ">
+      <div className="flex flex-col md:flex-row items-center gap-2 md:pb-24 w-8/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
+        <div className="flex flex-col flex-initial w-1/2 items-center h-full pt-12">
+          <div className="h-64 w-64">
+            <Image
+              src="/images/ap.jpeg"
+              alt="logo"
+              layout="responsive"
+              width={300}
+              height={300}
+            />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col justify-center align-middle items-center md:col-start-7 lg:col-start-7 md:col-end-11 md:row-start-2 md:row-end-3 gap-7">
-        <h1 className="font-modernBold text-7xl leading-[3.8rem] text-center ml-9 mr-9 md:ml-0 md:mr-0">
-          Andrea Poltronieri
-        </h1>
-        <h2 className="text-3xl text-center font-modernMono ">
-          Personal Website
-        </h2>
-        <HomeIcons />
+        <div className="flex flex-col flex-initial w-1/2 justify-center align-middle items-center gap-7 max-w-xl ">
+          <h1 className="font-modernBold text-7xl leading-[3.8rem] text-center ml-9 mr-9 md:ml-0 md:mr-0">
+            Andrea Poltronieri
+          </h1>
+          <h2 className="text-3xl text-center font-modernMono ">
+            Personal Website
+          </h2>
+          <HomeIcons />
+        </div>
       </div>
       {props.children}
     </div>
