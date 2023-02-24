@@ -1,6 +1,5 @@
 import { useXarrow } from 'react-xarrows';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 function ResumeContent(props) {
   const resume = props.data;

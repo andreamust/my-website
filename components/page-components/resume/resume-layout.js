@@ -2,8 +2,7 @@ import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
 import { useState } from 'react';
-import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
-import { motion } from 'framer-motion';
+import Xarrow, { Xwrapper } from 'react-xarrows';
 import { parseData, getResumeSet } from '../../utils/filtering';
 
 function ResumeLayout(props) {
@@ -18,12 +17,23 @@ function ResumeLayout(props) {
   let [typeSelected, setType] = useState(
     parseData(resume, 'yearStart', yearSelected, 'type')
   );
-  let [filter, setFilter] = useState(false);
 
-  //console.log(
-  //  'resumeContents',
-  //  resume.filter((c) => c.yearStart === 2020)
-  //);
+  let contentId = resume.map((c, idx) => {
+    if (c.yearStart === yearSelected[0] && c.type.includes(typeSelected[0])) {
+      return `content-${idx}`;
+    }
+  });
+  contentId = contentId.filter((c) => c !== undefined)[0];
+
+  const handleClickScroll = () => {
+    const element = document.getElementById(contentId);
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  handleClickScroll();
 
   return (
     <div className="absolute flex md:flex-row h-full pb-32 gap-5 lg:gap-52 w-screen">
