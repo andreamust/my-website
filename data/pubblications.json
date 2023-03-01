@@ -1,0 +1,279 @@
+[
+  {
+    "URL": "https://archives.ismir.net/ismir2021/latebreaking/000020.pdf",
+    "author": [
+      {
+        "family": "Carriero",
+        "given": "Valentina Anita"
+      },
+      {
+        "family": "Ciroku",
+        "given": "Fiorela"
+      },
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Pandiani",
+        "given": "Delfina Sol Martinez"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "ISMIR late breaking demo",
+    "id": "carriero2021semanticintegration",
+    "issued": {
+      "date-parts": [[2021, 11]]
+    },
+    "title": "Semantic integration of MIR datasets with the polifonia ontology network",
+    "type": "paper-conference"
+  },
+  {
+    "URL": "http://ceur-ws.org/Vol-3011/pattern2.pdf",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Gangemi",
+        "given": "Aldo"
+      }
+    ],
+    "container-title": "Proceedings of the 12th workshop on ontology design and patterns (WOP 2021), online, october 24, 2021.",
+    "editor": [
+      {
+        "family": "Hammar",
+        "given": "Karl"
+      },
+      {
+        "family": "Shimizu",
+        "given": "Cogan"
+      },
+      {
+        "family": "Küçük McGinty",
+        "given": "Hande"
+      },
+      {
+        "family": "Asprino",
+        "given": "Luigi"
+      },
+      {
+        "family": "Carriero",
+        "given": "Valentina Anita"
+      }
+    ],
+    "id": "poltronieri2021musicnoteontology",
+    "issued": {
+      "date-parts": [[2021, 11]]
+    },
+    "title": "The music note ontology",
+    "type": "paper-conference"
+  },
+  {
+    "URL": "http://ceur-ws.org/Vol-3064/mdk5.pdf",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Gangemi",
+        "given": "Aldo"
+      }
+    ],
+    "container-title": "Proceedings of the 1st workshop on multisensory data and knowledge (MDK 2021), zaragoza, spain, september 1, 2021.",
+    "id": "poltronieri2021hamseontology",
+    "issued": {
+      "date-parts": [[2021]]
+    },
+    "title": "The HaMSE ontology: Using semantic technologies to support music representation interoperability and musicological analysis",
+    "title-short": "The HaMSE ontology",
+    "type": "paper-conference"
+  },
+  {
+    "URL": "https://hal.archives-ouvertes.fr/hal-03512869/",
+    "author": [
+      {
+        "family": "Peñuela",
+        "given": "Albert Meroño"
+      },
+      {
+        "family": "Guillotel-Nothmann",
+        "given": "Christophe"
+      },
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Pandiani",
+        "given": "Delfina Sol Martinez"
+      },
+      {
+        "family": "Carriero",
+        "given": "Valentina Anita"
+      },
+      {
+        "family": "Wigham",
+        "given": "Mari"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Ciroku",
+        "given": "Fiorela"
+      },
+      {
+        "family": "Rigaux",
+        "given": "Philippe"
+      }
+    ],
+    "id": "penuela2021d2report",
+    "issued": {
+      "date-parts": [[2021]]
+    },
+    "publisher": "King’s College London; University of Bologna; Netherlands Institute for Sound; Vision; CNRS; Data Archiving; Networked Services",
+    "title": "D2.1: Ontology-based knowledge graphs for music objects (V1. 0)",
+    "title-short": "D2.1",
+    "type": "report"
+  },
+  {
+    "URL": "https://ceur-ws.org/Vol-3278/paper2.pdf",
+    "author": [
+      {
+        "family": "Lazzari",
+        "given": "Nicolas"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "Proceedings of the 1st workshop on artificial intelligence and creativity",
+    "editor": [
+      {
+        "family": "De Filippo",
+        "given": "Allegra"
+      },
+      {
+        "family": "Milano",
+        "given": "Michela"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      },
+      {
+        "family": "Saffiotti",
+        "given": "Alessandro"
+      }
+    ],
+    "id": "lazzari2022pitchclass2vec",
+    "issued": {
+      "date-parts": [[2022, 11]]
+    },
+    "title": "Pitchclass2vec: Symbolic music structure segmentation with chord embeddings",
+    "title-short": "Pitchclass2vec",
+    "type": "paper-conference"
+  },
+  {
+    "URL": "https://www.albertmeronyo.org/wp-content/uploads/2022/11/WOP2022_paper_3461.pdf",
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "Proceedings of the 13th workshop on ontology design and patterns (WOP 2023), to be pubblished",
+    "editor": [
+      {
+        "family": "Svátek",
+        "given": "Vojtěch"
+      },
+      {
+        "family": "Carriero",
+        "given": "Valentina Anita"
+      },
+      {
+        "family": "Poveda",
+        "given": "María"
+      },
+      {
+        "family": "Kindermann",
+        "given": "Christian"
+      },
+      {
+        "family": "Zhou",
+        "given": "Lu"
+      }
+    ],
+    "id": "deberardinis2022annotation",
+    "issued": {
+      "date-parts": [[2022]]
+    },
+    "title": "The music annotation pattern",
+    "type": "paper-conference"
+  },
+  {
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "Scientific Data, Nature",
+    "id": "deberardinis2022choco",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "ChoCo: A chord corpus and a data transformation workflow for musical harmony knowledge graphs",
+    "title-short": "ChoCo",
+    "type": "article-journal"
+  }
+]
