@@ -15,7 +15,7 @@ function PubblicationsContent(props) {
           template: 'apa',
           lang: 'en-US',
         });
-        return <p>{output}</p>;
+        return <p key={cite.data[0].URL}>{output}</p>;
       })}
     </div>
   );
