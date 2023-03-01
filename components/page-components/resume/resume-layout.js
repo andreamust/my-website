@@ -37,7 +37,7 @@ function ResumeLayout(props) {
   }, [contentId]);
 
   return (
-    <div className="absolute flex md:flex-row h-full pb-32 gap-5 lg:gap-52 w-screen">
+    <div className="absolute flex md:flex-row h-full pb-32 pt-16 gap-5 lg:gap-52 w-screen">
       <Xwrapper>
         <div className="flex-1 flex flex-row gap-5 lg:gap-52 justify-evenly">
           <ResumeTimebar
