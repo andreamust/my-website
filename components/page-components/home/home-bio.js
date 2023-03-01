@@ -12,7 +12,7 @@ function HomeBio(props) {
         </label>
         <input
           type="range"
-          className="form-range appearance-none w-full h-6 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg p-2"
+          className="form-range appearance-none w-full h-4 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg p-2"
           id="customRange1"
           style={{ color: '#fff', border: 'none' }}
           min={0}
@@ -21,7 +21,7 @@ function HomeBio(props) {
           onChange={(event) => setRangeval(event.target.value)}
         />
       </div>
-      <div className="justify-center pb-20 md:pb-0 w-9/12 h-24">
+      <div className="justify-center mb-10 w-7/12 h-24">
         <div className="text-center text-lg">{bios[rangeval]}</div>
       </div>
     </Fragment>

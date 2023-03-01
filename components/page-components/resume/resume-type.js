@@ -9,7 +9,7 @@ function ResumeType(props) {
             key={index}
             id={`type-${type}`}
             className={`w-12 h-12 text-center rounded-full  ${
-              props.type.includes(type) ? 'bg-red-400' : 'bg-gray-400'
+              props.type.includes(type) ? 'bg-purple-400' : 'bg-gray-400'
             }`}
           >
             <button

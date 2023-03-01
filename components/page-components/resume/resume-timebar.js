@@ -11,7 +11,7 @@ function ResumeTimebar(props) {
               id={`year-${year}`}
               className={`flex-1 w-12 max-h-12 text-center align-middle rounded-full ${
                 props.year.toString().includes(year.toString())
-                  ? ' bg-red-400'
+                  ? ' bg-green-400'
                   : ' bg-gray-300'
               }`}
             >

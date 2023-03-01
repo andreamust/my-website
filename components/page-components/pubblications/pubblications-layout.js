@@ -1,8 +1,11 @@
-import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
+import PubbblicationsContent from './pubblications-content';
 
 function PubblicationsLayout(props) {
-  const updateXarrow = useXarrow();
-  return <div>More content</div>;
+  return (
+    <div className="flex flex-col w-screen h-screen items-center pt-24 pb-60 overflow-scroll">
+      <PubbblicationsContent pubblications={props.pubblications} />
+    </div>
+  );
 }
 
 export default PubblicationsLayout;

@@ -1,6 +1,5 @@
 import { useXarrow } from 'react-xarrows';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 function ResumeContent(props) {
   const resume = props.data;
@@ -23,18 +22,18 @@ function ResumeContent(props) {
               props.type.some((t) => type.includes(t))
                 ? 'border-2'
                 : 'border-0'
-            } '}`}
+            }`}
           >
             <div className="flex flex-col gap-1">
               <div className="flex flex-row gap-4 justify-between">
-                <h2 className=" text-xl font-modernBold">{title}</h2>
-                <h5 className=" text-lg font-modernBold">
+                <h2 className=" text-xl font-modernBold mt-4">{title}</h2>
+                <h5 className=" text-lg font-modernBold mr-5 mt-4">
                   {yearStart} - {yearEnd}
                 </h5>
               </div>
               <h3 className=" text-lg font-modernMono">{company}</h3>
             </div>
-            <p className="pt-3">
+            <p className="pt-3 mr-5 mb-4">
               <ReactMarkdown>{content}</ReactMarkdown>
             </p>
           </div>
