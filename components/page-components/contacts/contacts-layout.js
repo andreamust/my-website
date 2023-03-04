@@ -4,7 +4,7 @@ function ContactsLayout(props) {
   return (
     <div className="flex flex-col w-screen h-screen items-center  overflow-scroll">
       <div className="flex flex-col w-screen h-screen items-center">
-        <h1 className="font-modernBold text-4xl">Let's get in touch!</h1>
+        <h1 className="font-modernBold text-4xl">Let&apos;s get in touch!</h1>
         <div className="flex flex-row gap-48 pt-48">
           <div className="flex flex-col items-center gap-10">
             <h2 className="font-modernMono text-xl">Just email me</h2>
