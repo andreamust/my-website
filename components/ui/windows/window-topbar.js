@@ -45,7 +45,7 @@ function WindowTopBar(props) {
             boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
             transition: { duration: 0.1, ease: 'easeIn' },
           }}
-          onClick={() => router.push('/home')}
+          onClick={() => router.push('/')}
         ></motion.div>
       </div>
     </div>
