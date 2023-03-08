@@ -11,6 +11,7 @@ function WindowTopBar(props) {
     );
   };
 
+  const closePath = props.closePath ? props.closePath : '/';
   const router = useRouter();
 
   return (
@@ -19,16 +20,7 @@ function WindowTopBar(props) {
       onDoubleClick={resizeWindow}
     >
       <div className="flex-auto">{props.title}</div>
-      <div className="flex flex-row left-0 basis-1/12 self-center px-2">
-        <motion.div
-          className="flex-none bg-green-600 h-4 w-4 rounded-2xl self-end mx-[2px]"
-          whileHover={{
-            scale: 1.05,
-            boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
-            transition: { duration: 0.1, ease: 'easeIn' },
-          }}
-          onClick={() => props.openHandler(!props.openState)}
-        ></motion.div>
+      <div className="flex flex-row  basis-1/12 self-center px-2">
         <motion.div
           className="flex-none bg-yellow-300 h-4 w-4 rounded-2xl self-end mx-[2px]"
           whileHover={{
@@ -45,7 +37,7 @@ function WindowTopBar(props) {
             boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
             transition: { duration: 0.1, ease: 'easeIn' },
           }}
-          onClick={() => router.push('/')}
+          onClick={() => router.push(closePath)}
         ></motion.div>
       </div>
     </div>
