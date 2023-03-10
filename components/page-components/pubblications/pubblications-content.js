@@ -29,13 +29,13 @@ function PubblicationsContent(props) {
         const splitCitation = output.split('Poltronieri, A.');
         const splitTitle = splitCitation[1].split(title);
         return (
-          <Fragment>
+          <Fragment key={data.id}>
             {loadedYears.includes(year)
               ? ''
               : loadedYears.push(year) && (
                   <h2 className="text-2xl font-bold">{year}</h2>
                 )}
-            <div key={data.id} className="flex flex-row gap-7">
+            <div className="flex flex-row gap-7">
               <Link href={'/pubblications/?pubblication=' + data.id}>
                 <a>
                   <MdZoomOutMap className="w-6 h-6 fill-green-600 visited:fill-purple-400" />
