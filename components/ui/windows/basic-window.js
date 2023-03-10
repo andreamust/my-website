@@ -5,7 +5,6 @@ import { useState } from 'react';
 function BasicWindow(props) {
   let [width, setWidth] = useState(props.width || 'w-[100%]');
   let [height, setHeight] = useState(props.height || 'h-[100%]');
-  // console.log(useWindowDimensions());
 
   if (props.animate === true) {
     return (
@@ -15,7 +14,7 @@ function BasicWindow(props) {
         dragMomentum={false}
         // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`flex flex-col ${width} ${height} shadow-xl ${
+        className={`fixed flex flex-col ${width} ${height} shadow-xl ${
           props.openState === true ? 'invisible' : 'visible'
         }`}
         animate={{ x: 100, y: 100 }}
@@ -23,7 +22,7 @@ function BasicWindow(props) {
         initial={{ x: 0, y: 0 }}
       >
         <motion.div
-          className={`h-full order-last flex flex-col w-full rounded-b-md`}
+          className={`h-full order-last flex flex-col w-full rounded-b-md bg-white dark:bg-gray-500`}
         >
           {props.children}
         </motion.div>
@@ -37,6 +36,7 @@ function BasicWindow(props) {
           heightHandler={setHeight}
           openHandler={props.openHandler}
           openState={props.openState}
+          closePath={props.closePath}
         />
       </motion.div>
     );
