@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { useState } from 'react';
 import bios from './home-bio-content';
 
-function HomeBio(props) {
+function HomeBio() {
   const [rangeval, setRangeval] = useState(2);
   return (
     <Fragment>

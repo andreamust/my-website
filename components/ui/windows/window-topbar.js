@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 function WindowTopBar(props) {
   const resizeWindow = () => {
     props.widthHandler(
-      props.currentWidth >= props.baseWidth ? 'w-[100%]' : props.baseWidth
+      props.currentWidth >= props.baseWidth ? 'w-[95%]' : props.baseWidth
     );
     props.heightHandler(
       props.currentHeight <= props.baseHeight ? 'h-[89vh]' : props.baseHeight

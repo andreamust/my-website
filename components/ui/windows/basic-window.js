@@ -14,7 +14,7 @@ function BasicWindow(props) {
         dragMomentum={false}
         // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`absolute flex flex-col ${width} ${height} shadow-xl ${
+        className={`fixed flex flex-col ${width} ${height} shadow-xl ${
           props.openState === true ? 'invisible' : 'visible'
         }`}
         animate={{ x: 100, y: 100 }}

@@ -38,7 +38,8 @@
       "date-parts": [[2021, 11]]
     },
     "title": "Semantic integration of MIR datasets with the polifonia ontology network",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "abstract": "Integration between different data formats, and between data belonging to different collections, is an ongoing challenge in the MIR field. Semantic Web tools have proved to be promising resources for making different types of music information interoperable. However, the use of these technologies has so far been limited and scattered in the field. To address this, the Polifonia project 1 is developing an ontological ecosystem that can cover a wide variety of musical aspects (musical features, instruments, emotions, performances). In this paper, we present the Polifonia Ontology Network, an ecosystem that enables and fosters the transition towards Semantic MIR."
   },
   {
     "URL": "http://ceur-ws.org/Vol-3011/pattern2.pdf",
@@ -80,7 +81,8 @@
       "date-parts": [[2021, 11]]
     },
     "title": "The music note ontology",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "abstract": "In this paper we propose the Music Note Ontology, an ontology for modelling music notes and their realisation. The ontology addresses the relation between a note represented in a symbolic representation system, and its realisation, ie a musical performance. This work therefore aims to solve the modelling and representation issues that arise when analysing the relationships between abstract symbolic features and the corresponding physical features of an audio signal. The ontology is composed of three different Ontology Design Patterns (ODP), which model the structure of the score (Score Part Pattern), the note in the symbolic notation (Music Note Pattern) and its realisation (Musical Object Pattern)."
   },
   {
     "URL": "http://ceur-ws.org/Vol-3064/mdk5.pdf",
@@ -101,7 +103,8 @@
     },
     "title": "The HaMSE ontology: Using semantic technologies to support music representation interoperability and musicological analysis",
     "title-short": "The HaMSE ontology",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "abstract": "The use of Semantic Technologies - in particular the Semantic Web - has revealed to be a great tool for describing the cultural heritage domain and artistic practices. However, the panorama of ontologies for musicological applications seems to be limited and restricted to specific applications. In this research, we propose HaMSE, an ontology capable of describing musical features that can assist musicological research. More specifically, HaMSE proposes to address sues that have been affecting musicological research for decades: the representation of music and the relationship between quantitative and qualitative data. To do this, HaMSE allows the alignment between different music representation systems and describes a set of musicological features that can allow the music analysis at different granularity levels."
   },
   {
     "URL": "https://hal.archives-ouvertes.fr/hal-03512869/",
@@ -151,7 +154,8 @@
     "publisher": "King’s College London; University of Bologna; Netherlands Institute for Sound; Vision; CNRS; Data Archiving; Networked Services",
     "title": "D2.1: Ontology-based knowledge graphs for music objects (V1. 0)",
     "title-short": "D2.1",
-    "type": "report"
+    "type": "report",
+    "abstract": "This deliverable describes the results of the WP2 Musical Heritage Knowledge Graphs in its first 12 months with respect to the task T2. 1: Ontology-based knowledge graphs for music objects. The project, and specifically WP2 and T2. 1, uses knowledge engineering as a process and methodology to build ontologies and knowledge graphs that facilitate large-scale integration of various sources of musical heritage data. In this deliverable, we focus on music objects broadly understood as artefacts carrying musical content and meaning (recordings, music notation, musical theory, musical features) rather than contextual descriptions (eg composer, year of performance). New conceptualisations, in the form of ontologies, are needed to formalise the semantics of this domain and allow the creation of interoperable knowledge graphs from datasets. To achieve this, we apply a well-known ontology design methodology, eXtreme Design (XD), which emphasises:(i) ontology reuse and modularity through the design and use of Ontology Design Patterns (ODPs); and (ii) gathering a comprehensive inventory of ontological requirements through competency questions (CQs). To implement (i), we survey existing ontologies and ODP that are relevant to the domain, and existing datasets from Polifonia’s WP1 Pilots–building on the dataset survey work from WP1 [1]–and from the Music Information Retrieval (MIR) community; to implement (ii) we follow a thorough process of collecting and normalising CQs from the stories and personas that stem from the Pilots of WP1."
   },
   {
     "URL": "https://ceur-ws.org/Vol-3278/paper2.pdf",
@@ -194,7 +198,8 @@
     },
     "title": "Pitchclass2vec: Symbolic music structure segmentation with chord embeddings",
     "title-short": "Pitchclass2vec",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "abstract": "Structure perception is a fundamental aspect of music cognition in humans. Historically, the hierarchical organization of music into structures served as a narrative device for conveying meaning, creating expectancy, and evoking emotions in the listener. Thereby, musical structures play an essential role in music composition, as they shape the musical discourse through which the composer organises his ideas. In this paper, we present a novel music segmentation method, pitchclass2vec, based on symbolic chord annotations, which are embedded into continuous vector representations using both natural language processing techniques and custom-made encodings. Our algorithm is based on long-short term memory (LSTM) neural network and outperforms the state-of-the-art techniques based on symbolic chord annotations in the field."
   },
   {
     "URL": "https://www.albertmeronyo.org/wp-content/uploads/2022/11/WOP2022_paper_3461.pdf",
@@ -217,7 +222,7 @@
         "given": "Valentina"
       }
     ],
-    "container-title": "Proceedings of the 13th workshop on ontology design and patterns (WOP 2023), to be pubblished",
+    "container-title": "Proceedings of the 13th workshop on ontology design and patterns (WOP 2023)",
     "editor": [
       {
         "family": "Svátek",
@@ -245,7 +250,8 @@
       "date-parts": [[2022]]
     },
     "title": "The music annotation pattern",
-    "type": "paper-conference"
+    "type": "paper-conference",
+    "abstract": "The annotation of music content is a complex process to represent due to its inherent multifaceted, subjectivity, and interdisciplinary nature. Numerous systems and conventions for annotating music have been developed as independent standards over the past decades. Little has been done to make them interoperable, which jeopardises cross-corpora studies as it requires users to familiarise with a multitude of conventions. Most of these systems lack the semantic expressiveness needed to represent the complexity of the musical language and cannot model multi-modal annotations originating from audio and symbolic sources. In this article, we introduce the Music Annotation Pattern, an Ontology Design Pattern (ODP) to homogenise different annotation systems and to represent several types of musical objects (eg chords, patterns, structures). This ODP preserves the semantics of the object’s content at different levels and temporal granularity. Moreover, our ODP accounts for multi-modality upfront, to describe annotations derived from different sources, and it is the first to enable the integration of music datasets at a large scale."
   },
   {
     "author": [
@@ -268,12 +274,68 @@
       }
     ],
     "container-title": "Scientific Data, Nature",
-    "id": "deberardinis2022choco",
+    "id": "deberardinis2023choco",
     "issued": {
       "date-parts": [[2023]]
     },
     "title": "ChoCo: A chord corpus and a data transformation workflow for musical harmony knowledge graphs",
     "title-short": "ChoCo",
-    "type": "article-journal"
+    "type": "article-journal",
+    "abstract": "Various disconnected chord datasets are currently available for music analysis and information retrieval, but these are limited by either their size, non-openness, lack of timed information, and interoperability. Together with the lack of overlapping repertoire coverage, this limits cross-corpus studies on harmony over time and across genres, while hampering research in computational music analysis (chord recognition, pattern mining, computational creativity), where machine learning methods are notoriously eager for data. To address this gap, we propose the Chord Corpus (ChoCo), a large-scale dataset that semantically integrates harmonic data from 18 different sources in various representations and formats (Harte, Leadsheet, Roman numerals, ABC, etc.). We leverage JAMS (JSON Annotated Music Specification), a popular data structure for annotations in Music Information Retrieval, to effectively represent and enrich a variety of chord-related information (chord, key, mode, etc.) in a uniform way. On top of it, we propose a novel ontology modelling music annotations and involved entities (artists, scores, etc.), build a 30M triple knowledge graph, and find 4K+ links to other datasets (MIDI-LD, LED)."
+  },
+  {
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "The Web Conference 2023",
+    "id": "deberardinis2023harmory",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "The Harmonic Memory: a Knowledge Graph of harmonic patterns as a trustworthy framework for computational creativity",
+    "title-short": "Harmory",
+    "type": "paper-conference",
+    "abstract": "Computationally creative systems for music have recently achieved impressive results, fuelled by progress in generative machine learning. However, black-box approaches have raised fundamental concerns for ethics, accountability, explainability, and musical plausibility. To enable trustworthy machine creativity, we introduce the Harmonic Memory, a Knowledge Graph (KG) of harmonic patterns extracted from a large and heterogeneous musical corpus. By leveraging a cognitive model of tonal harmony, chord progressions are segmented into meaningful structures, and patterns emerge from their comparison via harmonic similarity. Akin to a music memory, the KG holds temporal connections between consecutive patterns, as well as salient similarity relationships. After demonstrating the validity of our choices, we provide examples of how this design enables novel pathways for combinational creativity. The memory provides a fully accountable and explainable framework to inspire and support creative professionals -- allowing for the discovery of progressions consistent with given criteria, the recomposition of harmonic sections, but also the co-creation of new progressions."
+  },
+  {
+    "author": [
+      {
+        "family": "Lazzari",
+        "given": "Nicolas"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "European Semantic Web Conference 2023",
+    "id": "lazzari2023grammar",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "Classifying sequences by combining context-free grammars and OWL ontologies",
+    "title-short": "Grammar",
+    "type": "paper-conference",
+    "abstract": "This paper introduces a pattern to formalise context-free grammars in OWL and how to use it for sequence classification. The proposed approach and existing methods are compared and discussed based on their complexity as well as their pragmatic applicability with examples in the music domain. "
   }
 ]
