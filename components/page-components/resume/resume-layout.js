@@ -29,7 +29,6 @@ function ResumeLayout(props) {
     const handleClickScroll = () => {
       const element = document.getElementById(contentId);
       if (element) {
-        // 👇 Will scroll smoothly to the top of the next section
         element.scrollIntoView({ behavior: 'smooth' });
       }
     };
@@ -58,70 +57,74 @@ function ResumeLayout(props) {
         <ResumeContent data={resume} year={yearSelected} type={typeSelected} />
         {resumeYearsList.map((yearArrow) => {
           return resumeTypesList.map((typeArrow) => {
-            return (
-              <Xarrow
-                key={`${yearArrow}-${typeArrow}`}
-                start={`year-${yearArrow}`}
-                end={`type-${typeArrow}`}
-                color={
-                  Array.from(yearSelected).includes(yearArrow) &&
-                  typeSelected.includes(typeArrow)
-                    ? 'red'
-                    : 'black'
-                }
-                curveness={0}
-                showHead={false}
-                strokeWidth={
-                  Array.from(yearSelected).includes(yearArrow) &&
-                  typeSelected.includes(typeArrow)
-                    ? 1.9
-                    : 1.4
-                }
-                startAnchor={'right'}
-                endAnchor={'left'}
-                dashness={
-                  Array.from(yearSelected).includes(yearArrow) &&
-                  typeSelected.includes(typeArrow)
-                    ? true
-                    : false
-                }
-              />
-            );
+            if (process.browser) {
+              return (
+                <Xarrow
+                  key={`${yearArrow}-${typeArrow}`}
+                  start={`year-${yearArrow}`}
+                  end={`type-${typeArrow}`}
+                  color={
+                    Array.from(yearSelected).includes(yearArrow) &&
+                    typeSelected.includes(typeArrow)
+                      ? 'red'
+                      : 'black'
+                  }
+                  curveness={0}
+                  showHead={false}
+                  strokeWidth={
+                    Array.from(yearSelected).includes(yearArrow) &&
+                    typeSelected.includes(typeArrow)
+                      ? 1.9
+                      : 1.4
+                  }
+                  startAnchor={'right'}
+                  endAnchor={'left'}
+                  dashness={
+                    Array.from(yearSelected).includes(yearArrow) &&
+                    typeSelected.includes(typeArrow)
+                      ? true
+                      : false
+                  }
+                />
+              );
+            }
           });
         })}
         {resume.map((resumeEntry, index) => {
           const { title, type, yearStart, yearEnd, company, content } =
             resumeEntry;
           return type.map((singleType) => {
-            return (
-              <Xarrow
-                key={`${singleType}-${index}`}
-                start={`type-${singleType}`}
-                end={`content-${index}`}
-                color={
-                  Array.from(yearSelected).includes(yearStart) &&
-                  typeSelected.includes(singleType)
-                    ? 'red'
-                    : 'black'
-                }
-                curveness={0.25}
-                showHead={false}
-                strokeWidth={
-                  Array.from(yearSelected).includes(yearStart) &&
-                  typeSelected.includes(singleType)
-                    ? 1.9
-                    : 1.4
-                }
-                startAnchor={'right'}
-                endAnchor={'left'}
-                dashness={
-                  Array.from(yearSelected).includes(yearStart) &&
-                  typeSelected.includes(singleType)
-                    ? true
-                    : false
-                }
-              />
-            );
+            if (process.browser) {
+              return (
+                <Xarrow
+                  key={`${singleType}-${index}`}
+                  start={`type-${singleType}`}
+                  end={`content-${index}`}
+                  color={
+                    Array.from(yearSelected).includes(yearStart) &&
+                    typeSelected.includes(singleType)
+                      ? 'red'
+                      : 'black'
+                  }
+                  curveness={0.25}
+                  showHead={false}
+                  strokeWidth={
+                    Array.from(yearSelected).includes(yearStart) &&
+                    typeSelected.includes(singleType)
+                      ? 1.9
+                      : 1.4
+                  }
+                  startAnchor={'right'}
+                  endAnchor={'left'}
+                  dashness={
+                    Array.from(yearSelected).includes(yearStart) &&
+                    typeSelected.includes(singleType)
+                      ? true
+                      : false
+                  }
+                />
+              );
+            }
           });
         })}
       </Xwrapper>

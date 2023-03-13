@@ -43,7 +43,7 @@ function BasicWindow(props) {
   } else {
     return (
       <div
-        className={`flex flex-col ${width} ${height} overflow-y-scroll overflow-x-hidden`}
+        className={`flex flex-col ${width} ${height} overflow-y-scroll overflow-x-hidden no-scrollbar`}
       >
         <div className={`h-full w-full order-last flex flex-col rounded-b-md`}>
           {props.children}

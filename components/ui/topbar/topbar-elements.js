@@ -19,9 +19,7 @@ function TopBarElements(props) {
       <div className=" flex flex-row ml-3 mr-5 justify-between z-50">
         <div className="invisible md:visible flex-row gap-3 justify-center pl-3 ">
           <Dropdown>Options</Dropdown>
-          <Dropdown>Navigate</Dropdown>
           <Dropdown>View</Dropdown>
-          <Dropdown>Help</Dropdown>
         </div>
         <div className="flex flex-row gap-4">
           <button

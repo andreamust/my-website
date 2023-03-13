@@ -7,6 +7,7 @@ function PubblicationsModal(props) {
   const authorList = content.author.map(
     (author) => author.family + ' ' + author.given
   );
+  console.log(authorList);
 
   const generateCitation = (format) => {
     setCitation('');
@@ -36,6 +37,14 @@ function PubblicationsModal(props) {
             ? content['container-title']
             : 'To be published'}
         </p>
+        {authorList[0] == 'Poltronieri Andrea' ? (
+          ''
+        ) : (
+          <>
+            <h3 className="text-xl font-modernBold">Note</h3>
+            <p className="text-md font-modern">Alphabetical order</p>
+          </>
+        )}
         <h3 className="text-xl font-modernBold">Abstract</h3>
         <p className="text-md font-modern">{content.abstract}</p>
         <h3 className="text-xl font-modernBold">Cite</h3>
