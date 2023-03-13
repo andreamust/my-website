@@ -7,7 +7,6 @@ function PubblicationsModal(props) {
   const authorList = content.author.map(
     (author) => author.family + ' ' + author.given
   );
-  console.log(authorList);
 
   const generateCitation = (format) => {
     setCitation('');
