@@ -5,9 +5,9 @@ export default function renderCitation(pubblication, template) {
   const data = cite.data[0];
   // remove url from data
   cite.data[0].URL = '';
-  const output = cite.format('bibliography', {
+  const output = cite.format(template, {
     format: 'text',
-    template: template,
+    template: 'apa',
     lang: 'en-US',
   });
   return { output, data };
