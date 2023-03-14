@@ -1,9 +1,10 @@
 import ProjectsContent from './projects-content';
 
 function ProjectsLayout(props) {
+  console.log(props.projects);
   return (
     <div className="flex flex-col w-screen h-screen items-center pt-24 pb-60 overflow-scroll">
-      <ProjectsContent pubblications={props.pubblications} />
+      <ProjectsContent projects={props} />
     </div>
   );
 }

@@ -4,15 +4,22 @@ import Dropdown from './dropdown';
 import ThemeChanger from './theme-changer';
 import { BsReverseLayoutSidebarInsetReverse } from 'react-icons/bs';
 import useSound from 'use-sound';
-import { lightOn } from '../../../public/sounds/lamp_on.mp3';
-import { lightOff } from '../../../public/sounds/lamp_off.mp3';
+import { useEffect } from 'react';
 
 function TopBarElements(props) {
   let navPositionSwitch = props.navPosition === 'bottom' ? 'top' : 'bottom';
   let SoundIcon = props.soundState ? BiVolumeFull : BiVolumeMute;
 
-  const [playOn] = useSound(lightOn);
-  const [playOff] = useSound(lightOff);
+  useEffect(() => {
+    const audio = new window.AudioContext();
+    audio.resume();
+  }, []);
+
+  const [playOn] = useSound('sounds/lamp_on.mp3', { volume: 1.0 });
+  const [playOff] = useSound('sounds/lamp_off.mp3', { volume: 1.0 });
+  const [playMove] = useSound('sounds/move.flac', { volume: 1.0 });
+  const [playSun] = useSound('sounds/sun.flac', { volume: 1.0 });
+  const [playOwl] = useSound('sounds/owl.wav', { volume: 1.0 });
 
   return (
     <motion.div className="flex flex-col h-max content-center z-50">
@@ -24,14 +31,18 @@ function TopBarElements(props) {
         <div className="flex flex-row gap-4">
           <button
             onClick={() => {
-              playOn;
               props.soundHandler(!props.soundState);
-              console.log('soundState', props.soundState);
+              props.soundState ? playOn() : playOff();
             }}
           >
             <SoundIcon className="h-8 w-8 md:h-6 md:w-6" />
           </button>
-          <button onClick={() => props.navPositionHandler(navPositionSwitch)}>
+          <button
+            onClick={() => {
+              props.navPositionHandler(navPositionSwitch);
+              props.soundState ? playMove() : '';
+            }}
+          >
             <BsReverseLayoutSidebarInsetReverse
               className={`h-8 w-8 md:h-6 md:w-6 md:inline hidden ${
                 navPositionSwitch === 'bottom'
@@ -40,7 +51,13 @@ function TopBarElements(props) {
               }`}
             />
           </button>
-          <button onClick={playOn}>
+          <button
+            onClick={() => {
+              if (props.soundState) {
+                playSun();
+              }
+            }}
+          >
             <ThemeChanger />
           </button>
         </div>

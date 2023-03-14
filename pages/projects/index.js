@@ -23,9 +23,9 @@ function Projects(props) {
 }
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'data', 'projects.json');
-  const pubblicationData = await fs.readFile(filePath);
-  const data = JSON.parse(pubblicationData);
-  return { props: { records: projects } };
+  const projectsData = await fs.readFile(filePath);
+  const data = JSON.parse(projectsData);
+  return { props: { projects: data.projects } };
 }
 
 export default Projects;
