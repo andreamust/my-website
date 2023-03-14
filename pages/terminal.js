@@ -6,25 +6,21 @@ import { TerminalContextProvider } from 'react-terminal';
 import Background from '../components/ui/windows/background';
 import { useState } from 'react';
 
-export default function Terminal() {
-  const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+export default function Terminal(props) {
+  const { openState, openHandler } = props;
+
   return (
-    <div>
-      <Background>
-        <BasicWindow
-          title={'andrea-poltronieiri/terminal'}
-          height={'h-[60vh]'}
-          width={'w-[65vw]'}
-          animate={true}
-          openState={isOpen}
-          openHandler={setIsOpen}
-        >
-          <TerminalContextProvider>
-            <WindowTerminal />
-          </TerminalContextProvider>
-        </BasicWindow>
-      </Background>
-    </div>
+    <BasicWindow
+      title={'andrea-poltronieiri/terminal'}
+      height={'h-[60vh]'}
+      width={'w-[65vw]'}
+      animate={true}
+      openState={openState}
+      openHandler={openHandler}
+    >
+      <TerminalContextProvider>
+        <WindowTerminal />
+      </TerminalContextProvider>
+    </BasicWindow>
   );
 }

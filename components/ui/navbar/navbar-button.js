@@ -3,11 +3,19 @@ import { motion } from 'framer-motion';
 import NavApp from './navbar-application';
 
 function NavbarButton(props) {
+  let targetPage = props.app === 'Home' ? '/' : `/${props.app.toLowerCase()}`;
+  targetPage = props.app === 'Terminal' ? '' : targetPage;
+
   return (
     <Link
       key={`app000${props.index}`}
-      href={props.app === 'Home' ? '/' : `/${props.app.toLowerCase()}`}
+      href={targetPage}
       passHref
+      onClick={() => {
+        if (props.app === 'Terminal') {
+          props.terminal ? props.showTerminal(false) : props.showTerminal(true);
+        }
+      }}
     >
       <motion.li
         initial={{ opacity: 0, x: '50%', scale: 1.5 }}

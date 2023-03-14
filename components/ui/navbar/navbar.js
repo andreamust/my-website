@@ -50,6 +50,8 @@ function Navbar(props) {
               app={app}
               index={index}
               navPosition={props.position}
+              terminal={props.terminal}
+              showTerminal={props.showTerminal}
             />
           );
         })}
