@@ -6,8 +6,8 @@ function ContactsLayout(props) {
       <h1 className="font-modernBold text-6xl text-center">
         Let&apos;s get in touch!
       </h1>
-      <div className="flex flex-col md:flex-row gap-16 md:gap-48 pt-20 md:pt-36 mb-32">
-        <div className="flex flex-col items-center gap-3 md:gap-10">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-36 pt-20 md:pt-32 mb-32">
+        <div className="flex flex-col items-center gap-3 md:gap-8">
           <h2 className=" flex font-modernMono text-xl self-center">
             Just email me
           </h2>
@@ -17,7 +17,7 @@ function ContactsLayout(props) {
             </p>
           </a>
         </div>
-        <div className="flex flex-col items-center gap-3 md:gap-10">
+        <div className="flex flex-col items-center gap-3 md:gap-8">
           <h2 className="font-modernMono text-xl">Or find me on</h2>
           <HomeIcons />
         </div>

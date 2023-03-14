@@ -13,6 +13,8 @@ function WindowTopBar(props) {
 
   const closePath = props.closePath ? props.closePath : '/';
   const router = useRouter();
+  const windowTerminal =
+    props.title.split('/')[1] === 'terminal' ? true : false;
 
   return (
     <div
@@ -37,7 +39,9 @@ function WindowTopBar(props) {
             boxShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
             transition: { duration: 0.1, ease: 'easeIn' },
           }}
-          onClick={() => router.push(closePath)}
+          onClick={() => {
+            windowTerminal ? props.showTerminal(false) : router.push(closePath);
+          }}
         ></motion.div>
       </div>
     </div>
