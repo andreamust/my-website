@@ -53,9 +53,7 @@ function TopBarElements(props) {
           </button>
           <button
             onClick={() => {
-              if (props.soundState) {
-                playSun();
-              }
+              props.soundState ? playSun() : '';
             }}
           >
             <ThemeChanger />
