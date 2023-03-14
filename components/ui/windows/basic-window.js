@@ -10,14 +10,10 @@ function BasicWindow(props) {
     return (
       <motion.div
         drag
-        dragConstraints={{ left: 10, right: 370, top: 10, bottom: 350 }}
-        dragMomentum={false}
-        // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+        dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+        dragMomentum={true}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`fixed flex flex-col ${width} ${height} shadow-xl ${
-          props.openState === true ? 'invisible' : 'visible'
-        }`}
-        animate={{ x: 100, y: 100 }}
+        className={`fixed flex flex-col z-50 ${width} ${height} shadow-xl`}
         transition={{ type: 'spring', stiffness: 100 }}
         initial={{ x: 0, y: 0 }}
       >
@@ -34,9 +30,8 @@ function BasicWindow(props) {
           currentHeight={height}
           baseHeight={props.height}
           heightHandler={setHeight}
-          openHandler={props.openHandler}
-          openState={props.openState}
           closePath={props.closePath}
+          showTerminal={props.showTerminal}
         />
       </motion.div>
     );

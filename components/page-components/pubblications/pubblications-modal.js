@@ -18,6 +18,7 @@ function PubblicationsModal(props) {
 
   return (
     <BasicWindow
+      title={content.id}
       width="w-[70%]"
       height="h-[60%]"
       animate={true}

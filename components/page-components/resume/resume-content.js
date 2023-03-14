@@ -7,7 +7,7 @@ function ResumeContent(props) {
   const updateXarrow = useXarrow();
   return (
     <div
-      className="relative flex flex-col gap-12 overflow-scroll no-scrollbar h-screen w-full p-14 pb-32"
+      className="relative flex flex-col gap-12 overflow-y-scroll no-scrollbar h-screen w-full p-14 pb-60"
       onScroll={updateXarrow}
     >
       {resume.map((resumeEntry, index) => {
@@ -17,7 +17,7 @@ function ResumeContent(props) {
           <div
             id={`content-${index}`}
             key={index}
-            className={`flex-1 pl-10 border-red-400 ${
+            className={`relative overflow-visible flex-1 pl-10 border-red-400 ${
               Array.from(props.year).includes(yearStart) &&
               props.type.some((t) => type.includes(t))
                 ? 'border-2'
