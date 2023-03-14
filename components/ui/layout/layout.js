@@ -23,9 +23,7 @@ function Layout(props) {
         soundHandler={setSound}
       />
       {terminal === true && (
-        <div className="absolute h-screen w-screen items-center justify-center align-middle">
-          <Terminal terminal={terminal} showTerminal={showTerminal} />
-        </div>
+        <Terminal terminal={terminal} showTerminal={showTerminal} />
       )}
       <main>{props.children}</main>
     </Fragment>
