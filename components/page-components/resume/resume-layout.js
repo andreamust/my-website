@@ -29,7 +29,6 @@ function ResumeLayout(props) {
     const handleClickScroll = () => {
       const element = document.getElementById(contentId);
       if (element) {
-        // 👇 Will scroll smoothly to the top of the next section
         element.scrollIntoView({ behavior: 'smooth' });
       }
     };

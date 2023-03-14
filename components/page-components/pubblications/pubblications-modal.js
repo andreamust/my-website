@@ -36,19 +36,27 @@ function PubblicationsModal(props) {
             ? content['container-title']
             : 'To be published'}
         </p>
+        {authorList[0] == 'Poltronieri Andrea' ? (
+          ''
+        ) : (
+          <>
+            <h3 className="text-xl font-modernBold">Note</h3>
+            <p className="text-md font-modern">Alphabetical order</p>
+          </>
+        )}
         <h3 className="text-xl font-modernBold">Abstract</h3>
         <p className="text-md font-modern">{content.abstract}</p>
         <h3 className="text-xl font-modernBold">Cite</h3>
         <div className="flex flex-row gap-7 items-center">
           <button
             className="text-lg bg-purple-600 hover:bg-purple-800 active:bg-green-400 hover:text-white font-bold py-2 px-4 rounded"
-            onClick={() => setCitation(generateCitation('apa'))}
+            onClick={() => setCitation(generateCitation('bibliography'))}
           >
             APA
           </button>
           <button
             className="text-lg bg-purple-600 hover:bg-purple-800 active:bg-green-400 hover:text-white font-bold py-2 px-4 rounded"
-            onClick={() => setCitation(generateCitation('bib'))}
+            onClick={() => setCitation(generateCitation('bibtex'))}
           >
             BibTex
           </button>
@@ -57,6 +65,12 @@ function PubblicationsModal(props) {
             onClick={() => setCitation(generateCitation('ris'))}
           >
             RIS
+          </button>
+          <button
+            className="text-lg bg-purple-600 hover:bg-purple-800 active:bg-green-400 hover:text-white font-bold py-2 px-4 rounded"
+            onClick={() => setCitation(generateCitation('ndjson'))}
+          >
+            NDJSON
           </button>
         </div>
         <p className="text-md font-modern">{citation}</p>

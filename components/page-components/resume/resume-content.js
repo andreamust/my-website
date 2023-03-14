@@ -33,9 +33,7 @@ function ResumeContent(props) {
               </div>
               <h3 className=" text-lg font-modernMono">{company}</h3>
             </div>
-            <p className="pt-3 mr-5 mb-4">
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </p>
+            <ReactMarkdown className="pt-3 mr-5 mb-4">{content}</ReactMarkdown>
           </div>
         );
       })}

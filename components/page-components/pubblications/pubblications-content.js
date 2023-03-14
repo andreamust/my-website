@@ -21,7 +21,7 @@ function PubblicationsContent(props) {
   return (
     <div className="flex flex-col items-center gap-10 w-7/12">
       {pubblications.reverse().map((pubblication) => {
-        let { output, data } = renderCitation(pubblication, 'apa');
+        let { output, data } = renderCitation(pubblication, 'bibliography');
         const year = data.issued['date-parts'][0][0];
         const title = data.title;
         const url = data.URL;
@@ -35,7 +35,7 @@ function PubblicationsContent(props) {
               : loadedYears.push(year) && (
                   <h2 className="text-2xl font-bold">{year}</h2>
                 )}
-            <div className="flex flex-row gap-7">
+            <div className="flex flex-row gap-7 items-center">
               <Link href={'/pubblications/?pubblication=' + data.id}>
                 <a>
                   <MdZoomOutMap className="w-6 h-6 fill-green-600 visited:fill-purple-400" />

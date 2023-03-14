@@ -62,7 +62,7 @@ function NavApp(props) {
             damping: 10,
           },
         }}
-        whileTap={{ scale: 1.2, color: 'gray' }}
+        whileTap={{ scale: 1.2 }}
         whileFocus={{ scale: 1.2 }}
       >
         <Icon
