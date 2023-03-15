@@ -1,8 +1,72 @@
 {
   "projects": [
     {
+      "title": "The Harmonic Memory",
+      "short_title": "Harmory",
+      "link": "https://github.com/smashub/harmory",
+      "description": "Harmory is a Knowledge Graph of interconnected harmonic patterns aimed to support creative applications in a fully transparent, accountable, and musically plausible way.",
+      "year": "2023",
+      "type": "resource",
+      "tags": [
+        "resource",
+        "knowledge graph",
+        "harmony",
+        "music",
+        "musicology",
+        "music information retrieval",
+        "music similarity",
+        "music segmentation"
+      ],
+      "image": "https://raw.githubusercontent.com/smashub/harmory/main/assets/harmory_wide.png",
+      "image_caption": "Harmory graph",
+      "paper": "TBD"
+    },
+    {
       "title": "The Chord Corpus",
-      "short_title": "ChoCo"
+      "short_title": "ChoCo",
+      "link": "https://github.com/smashub/choco",
+      "description": "ChoCo provides 20K+ timed chord annotations of scores and tracks, that were integrated, standardised, and semantically enriched from a number of repositories and databases, for a variety of genres and styles",
+      "year": "2023",
+      "type": "dataset",
+      "tags": [
+        "dataset",
+        "chord",
+        "annotation",
+        "music",
+        "audio",
+        "score",
+        "corpus",
+        "musicology",
+        "music information retrieval",
+        "machine learning",
+        "deep learning",
+        "multimodal",
+        "multimodality"
+      ],
+      "image": "https://raw.githubusercontent.com/smashub/choco/main/assets/lomir_workflow.png",
+      "image_caption": "ChoCo workflow",
+      "paper": "TBD"
+    },
+    {
+      "title": "Local Harmonic Agreement based on Recurrent Patterns",
+      "short_title": "LHARP",
+      "link": "https://github.com/polifonia-project/lharp",
+      "description": "LHARP is a method for harmonic similarity that emphasises shared repeated patterns among symbolic chord sequences, to accommodate a wide set of applications.",
+      "year": "2021",
+      "type": "algorithm",
+      "tags": [
+        "algorithm",
+        "chord",
+        "harmony",
+        "music",
+        "musicology",
+        "music information retrieval",
+        "music similarity",
+        "harmonic similarity"
+      ],
+      "image": "https://raw.githubusercontent.com/polifonia-project/lharp/master/etc/img/graph.png",
+      "image_caption": "LHARP graph",
+      "paper": "TBD"
     }
   ]
 }
