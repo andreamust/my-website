@@ -1,6 +1,5 @@
 import { GiBookshelf } from 'react-icons/gi';
-import { IoHomeSharp, IoSchoolOutline } from 'react-icons/io5';
-import { DiTerminal, DiPython, DiCode } from 'react-icons/di';
+import { IoSchoolOutline } from 'react-icons/io5';
 import {
   RiHome2Line,
   RiCodeSSlashFill,
