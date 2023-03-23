@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
+import Image from 'next/image';
 
 function ProjectsContent(props) {
   const projects = props.projects;
@@ -11,29 +12,44 @@ function ProjectsContent(props) {
           key={project.short_title}
           className="flex flex-col border-gray-900 w-10/12 h-full border-2"
         >
-          <div className="flex flex-row items-center justify-between p-4">
-            <h1 className="text-3xl font-modernBold text-gray-800 text-center">
-              {project.short_title}
-            </h1>
-            <h2 className="text-xl font-modernMono text-gray-800 text-right">
-              {project.title}
-            </h2>
-          </div>
-          <div className="flex flex-row items-center justify-between pl-10 pr-10">
-            <h3 className="flex-1 text-xl font-modernMono text-gray-800 text-center">
-              {project.year}
-            </h3>
-            <h4 className=" flex-1 text-xl font-modernMono text-gray-800 text-right">
-              {project.type}
-            </h4>
-            <Link href={project.link} className="flex-1 basis-10">
-              <div className="flex flex-row ">
-                <BsGithub className="w-10 align-middle" />
-                <p className="flex-1 text-md font-modernMono text-gray-800 text-right">
-                  Repository
-                </p>
+          <div className="flex flex-row items-center  p-4">
+            <Image
+              className="flex-1"
+              src={project.image}
+              width={230}
+              height={200}
+              alt={`image of the project ${project.short_title}`}
+            />
+            <div className="flex flex-col items-center justify-between w-full h-full">
+              <div className="flex flex-row items-center justify-between p-4 w-full">
+                <h1 className="text-3xl font-modernBold text-gray-800 text-center">
+                  {project.short_title}
+                </h1>
+                <h2 className="text-xl font-modernMono text-gray-800 text-right">
+                  {project.title}
+                </h2>
               </div>
-            </Link>
+              <div className="flex flex-row items-center justify-between w-full">
+                <h3 className="flex-1 basis-1/3 text-xl font-modernMono text-gray-800 text-center">
+                  {project.year}
+                </h3>
+                <h4 className="flex-1 basis-1/3 text-xl font-modernMono text-gray-800 text-center">
+                  {project.type}
+                </h4>
+                <div className="flex-1 basis-1/3 ">
+                  <Link href={project.link}>
+                    <a className="flex flex-row gap-2 ">
+                      <div className="w-6 align-middle flex-1 items-end">
+                        <BsGithub className="w-8" />
+                      </div>
+                      <p className="flex-1 text-md font-modernMono text-gray-800 text-right">
+                        Repository
+                      </p>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       ))}
