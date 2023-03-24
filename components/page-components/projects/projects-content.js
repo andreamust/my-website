@@ -1,10 +1,22 @@
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import ProjectsModal from './projects-modal';
 
 function ProjectsContent(props) {
   const projects = props.projects;
   const projectList = projects.projects;
+
+  const router = useRouter();
+
+  const findOpenProject = () => {
+    const project = projects.find(
+      (project) => project.id === router.query.project
+    );
+    return project;
+  };
+
   return (
     <div className="flex flex-col items-center gap-14">
       {projectList.projects.map((project) => (
@@ -50,6 +62,9 @@ function ProjectsContent(props) {
           </div>
         </div>
       ))}
+      {router.query.pubblication && (
+        <ProjectsModal content={findOpenProject()} router={router} />
+      )}
     </div>
   );
 }
