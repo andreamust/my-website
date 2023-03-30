@@ -30,6 +30,24 @@
   ul {
     @apply list-disc list-inside;
   }
+  p {
+    @apply font-modern text-gray-800 dark:text-gray-200;
+  }
+  h1 {
+    @apply font-modernBold text-gray-800 dark:text-gray-200;
+  }
+  h2 {
+    @apply font-modernBold text-gray-800 dark:text-gray-200;
+  }
+  h3 {
+    @apply font-modernBold text-gray-800 dark:text-gray-200;
+  }
+  h4 {
+    @apply font-modernBold text-gray-800 dark:text-gray-200;
+  }
+  h5 {
+    @apply font-modernBold text-gray-800 dark:text-gray-200;
+  }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

@@ -1,5 +1,5 @@
+import isMobile from '../../utils/mobile';
 import NavbarButton from './navbar-button';
-import { useState, useEffect } from 'react';
 
 const apps = [
   'Home',
@@ -11,27 +11,14 @@ const apps = [
 ];
 
 function Navbar(props) {
-  const [isMobile, setIsMobile] = useState(false);
-  //choose the screen size
-  const handleResize = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
+  const mobile = isMobile();
 
-  // create an event listener
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-  });
-
-  let slicedApps = isMobile ? apps.slice(0, 5) : apps;
+  let slicedApps = mobile ? apps.slice(0, 5) : apps;
 
   return (
     <header
       className={
-        'relative z-50 pb-2 ' +
+        'static z-50 pb-2 ' +
         (props.position === 'bottom'
           ? 'row-start-5 col-start-2 col-end-12 lg:col-start-3 lg:col-end-11 xl:col-start-4 xl:col-end-10 h-16 self-end md:pl-14 md:pr-14'
           : 'flex-col col-start-12 row-start-2 row-end-5 w-16 mr-3 justify-self-end')
