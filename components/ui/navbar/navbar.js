@@ -1,4 +1,4 @@
-import isMobile from '../../utils/mobile';
+import useMobile from '../../utils/mobile';
 import NavbarButton from './navbar-button';
 
 const apps = [
@@ -11,7 +11,7 @@ const apps = [
 ];
 
 function Navbar(props) {
-  const mobile = isMobile();
+  const mobile = useMobile();
 
   let slicedApps = mobile ? apps.slice(0, 5) : apps;
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function isMobile() {
+export default function useMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -14,5 +14,5 @@ export default function isMobile() {
     window.addEventListener('resize', handleResize);
   });
 
-  return isMobile;
+  return useMobile;
 }
