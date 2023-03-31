@@ -1,13 +1,15 @@
 import BasicWindow from '../../ui/windows/basic-window';
-import renderCitation from '../../utils/process-pubblications';
-import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function ProjectsModal(props) {
   const { content, router } = props;
 
+  console.log(content);
+
   return (
     <BasicWindow
-      title={content.id}
+      title={content.short_title}
       width="w-[70%]"
       height="h-[60%]"
       animate={true}
@@ -18,9 +20,19 @@ function ProjectsModal(props) {
     >
       <div className="flex flex-col gap-5 w-full p-12 overflow-scroll scroll-smooth no-scrollbar">
         <h1 className="text-2xl font-modernBold">{content.title}</h1>
-        <h3 className="text-xl font-modernBold">Authors</h3>
-        <p className="text-md font-modern">{authorList.join(', ')}</p>
-        <h3 className="text-xl font-modernBold">Published in</h3>
+        <div className="w-full h-full items-center">
+          <Image src={content.image} width={400} height={400} quality={100} />
+        </div>
+        <h3 className="text-xl font-modernBold">Year</h3>
+        <p className="text-md font-modern">{content.year}</p>
+        <h3 className="text-xl font-modernBold">Descritpion</h3>
+        <p className="text-md font-modern">{content.description}</p>
+        <h3 className="text-xl font-modernBold">Repository</h3>
+        <Link href={content.link}>
+          <p className="text-md font-modernMono">
+            <a>{content.link}</a>
+          </p>
+        </Link>
       </div>
     </BasicWindow>
   );
