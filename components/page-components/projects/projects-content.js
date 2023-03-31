@@ -5,17 +5,18 @@ import { useRouter } from 'next/router';
 import ProjectsModal from './projects-modal';
 
 function ProjectsContent(props) {
-  const projects = props.projects;
-  const projectList = projects.projects;
+  const projectList = props.projects.projects;
 
   const router = useRouter();
 
   const findOpenProject = () => {
-    const project = projects.find(
-      (project) => project.id === router.query.project
+    const project = projectList.projects.find(
+      (project) => project.short_title === router.query.project
     );
     return project;
   };
+
+  console.log(projectList);
 
   return (
     <div className="flex flex-col items-center gap-14">
@@ -62,7 +63,7 @@ function ProjectsContent(props) {
           </div>
         </div>
       ))}
-      {router.query.pubblication && (
+      {router.query.project && (
         <ProjectsModal content={findOpenProject()} router={router} />
       )}
     </div>
