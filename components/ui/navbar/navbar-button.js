@@ -10,6 +10,7 @@ function NavbarButton(props) {
       <button
         key={`app000${props.index}`}
         onClick={() => props.showTerminal(!props.terminal)}
+        aria-label="Open terminal"
       >
         <motion.li
           initial={{ opacity: 0, x: '50%', scale: 1.5 }}

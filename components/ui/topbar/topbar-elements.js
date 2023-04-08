@@ -47,6 +47,7 @@ function TopBarElements(props) {
               props.soundHandler(!props.soundState);
               props.soundState ? playOn() : playOff();
             }}
+            aria-label="Toggle sound"
           >
             <SoundIcon className="h-8 w-8 md:h-6 md:w-6" />
           </button>
@@ -55,6 +56,7 @@ function TopBarElements(props) {
               props.navPositionHandler(navPositionSwitch);
               props.soundState ? playMove() : '';
             }}
+            aria-label="Change navbar position"
           >
             <BsReverseLayoutSidebarInsetReverse
               className={`h-8 w-8 md:h-6 md:w-6 md:inline hidden ${
@@ -68,6 +70,7 @@ function TopBarElements(props) {
             onClick={() => {
               props.soundState ? playSun() : '';
             }}
+            aria-label="Change theme"
           >
             <ThemeChanger />
           </button>
