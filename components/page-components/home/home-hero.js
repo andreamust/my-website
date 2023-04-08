@@ -4,6 +4,7 @@ import useMobile from '../../utils/mobile';
 
 function HomeHero(props) {
   let mobile = useMobile();
+  console.log(mobile);
 
   return (
     <div className="flex flex-col bg-gray-50 dark:bg-gray-400 w-screen h-screen gap-7 items-center justify-center pb-24 sm:pb-0">

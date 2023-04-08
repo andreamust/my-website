@@ -19,14 +19,27 @@ function TopBarElements(props) {
   const [playOff] = useSound('sounds/lamp_off.mp3', { volume: 1.0 });
   const [playMove] = useSound('sounds/move.flac', { volume: 1.0 });
   const [playSun] = useSound('sounds/sun.flac', { volume: 1.0 });
-  const [playOwl] = useSound('sounds/owl.wav', { volume: 1.0 });
 
   return (
     <motion.div className="flex flex-col h-max content-center z-50">
       <div className=" flex flex-row ml-3 mr-5 justify-between z-50">
         <div className="invisible md:visible flex-row gap-3 justify-center pl-3 ">
-          <Dropdown>Options</Dropdown>
-          <Dropdown>View</Dropdown>
+          <Dropdown
+            dropdownElements={[
+              { name: 'Settings', link: '#' },
+              { name: 'Other', link: '#' },
+            ]}
+          >
+            Options
+          </Dropdown>
+          <Dropdown
+            dropdownElements={[
+              { name: 'Settings', link: '#' },
+              { name: 'Other', link: '#' },
+            ]}
+          >
+            View
+          </Dropdown>
         </div>
         <div className="flex flex-row gap-4">
           <button
@@ -34,6 +47,7 @@ function TopBarElements(props) {
               props.soundHandler(!props.soundState);
               props.soundState ? playOn() : playOff();
             }}
+            aria-label="Toggle sound"
           >
             <SoundIcon className="h-8 w-8 md:h-6 md:w-6" />
           </button>
@@ -42,6 +56,7 @@ function TopBarElements(props) {
               props.navPositionHandler(navPositionSwitch);
               props.soundState ? playMove() : '';
             }}
+            aria-label="Change navbar position"
           >
             <BsReverseLayoutSidebarInsetReverse
               className={`h-8 w-8 md:h-6 md:w-6 md:inline hidden ${
@@ -55,6 +70,7 @@ function TopBarElements(props) {
             onClick={() => {
               props.soundState ? playSun() : '';
             }}
+            aria-label="Change theme"
           >
             <ThemeChanger />
           </button>

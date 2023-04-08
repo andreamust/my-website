@@ -1,8 +1,18 @@
-import PubblicationsLayout from '../../components/page-components/pubblications/pubblications-layout';
 import BasicWindow from '../../components/ui/windows/basic-window';
 import fs from 'fs/promises';
 import path from 'path';
 import PageTitle from '../../components/ui/layout/page-title';
+import dynamic from 'next/dynamic';
+
+const PubblicationsLayout = dynamic(
+  () =>
+    import(
+      '../../components/page-components/pubblications/pubblications-layout'
+    ),
+  {
+    ssr: false,
+  }
+);
 
 function Pubblications(props) {
   const pubblications = props;

@@ -6,10 +6,11 @@ function classNames(...classes) {
 }
 
 function Dropdown(props) {
+  const dropdownElements = props.dropdownElements;
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 active:bg-gray-500">
+        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium dark:text-gray-200 active:bg-gray-500">
           {props.children}
         </Menu.Button>
       </div>
@@ -24,70 +25,24 @@ function Dropdown(props) {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="origin-top-left absolute left-3 mt-1 w-56 rounded-md shadow-lg bg-white dark:bg-gray-500 z-50">
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-700 dark:text-gray-200',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Account settings
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-700 dark:text-gray-200',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Support
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#"
-                  className={classNames(
-                    active
-                      ? 'bg-gray-100 text-gray-900'
-                      : 'text-gray-700 dark:text-gray-200',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  License
-                </a>
-              )}
-            </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item>
+          {dropdownElements &&
+            dropdownElements.map((element) => (
+              <Menu.Item key={element.name}>
                 {({ active }) => (
-                  <button
-                    type="submit"
+                  <a
+                    href={element.link}
                     className={classNames(
                       active
                         ? 'bg-gray-100 text-gray-900'
                         : 'text-gray-700 dark:text-gray-200',
-                      'block w-full text-left px-4 py-2 text-sm'
+                      'block px-4 py-2 text-sm'
                     )}
                   >
-                    Sign out
-                  </button>
+                    {element.name}
+                  </a>
                 )}
               </Menu.Item>
-            </form>
-          </div>
+            ))}
         </Menu.Items>
       </Transition>
     </Menu>
