@@ -16,8 +16,6 @@ function ProjectsContent(props) {
     return project;
   };
 
-  console.log(projectList);
-
   return (
     <div className="flex flex-col items-center gap-14">
       {projectList.projects.map((project) => (

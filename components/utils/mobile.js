@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 
 export default function useMobile() {
@@ -12,7 +14,7 @@ export default function useMobile() {
       }
     };
     window.addEventListener('resize', handleResize);
-  });
+  }, []);
 
   return useMobile;
 }
