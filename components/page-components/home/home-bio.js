@@ -6,7 +6,7 @@ function HomeBio() {
   const [rangeval, setRangeval] = useState(2);
   return (
     <Fragment>
-      <div className="relative">
+      <div className="relative hidden md:block">
         <label htmlFor="customRange1" className="form-label font-modern">
           Bio length
         </label>
@@ -21,7 +21,7 @@ function HomeBio() {
           onChange={(event) => setRangeval(event.target.value)}
         />
       </div>
-      <div className="justify-center mb-10 w-7/12 h-24">
+      <div className="justify-center mb-10 w-7/12 h-24 hidden md:block">
         <div className="text-center text-lg">{bios[rangeval]}</div>
       </div>
     </Fragment>

@@ -11,10 +11,6 @@ const apps = [
 ];
 
 function Navbar(props) {
-  const mobile = useMobile();
-
-  let slicedApps = mobile ? apps.slice(0, 5) : apps;
-
   return (
     <header
       className={
@@ -30,7 +26,7 @@ function Navbar(props) {
           (props.position === 'bottom' ? 'flex flex-row' : 'flex flex-col')
         }
       >
-        {slicedApps.map((app, index) => {
+        {apps.map((app, index) => {
           return (
             <NavbarButton
               key={index}
