@@ -1,4 +1,3 @@
-import useMobile from '../../utils/mobile';
 import NavbarButton from './navbar-button';
 
 const apps = [
