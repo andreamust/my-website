@@ -11,21 +11,19 @@ function Layout(props) {
 
   return (
     <Fragment>
-      <Navbar
-        position={navPosition}
-        terminal={terminal}
-        showTerminal={showTerminal}
-      />
       <TopBar
         navPosition={navPosition}
         navPositionHandler={setNavPosition}
         soundState={sound}
         soundHandler={setSound}
       />
-      {terminal === true && (
-        <Terminal terminal={terminal} showTerminal={showTerminal} />
-      )}
+      {terminal && <Terminal terminal={terminal} showTerminal={showTerminal} />}
       <main>{props.children}</main>
+      <Navbar
+        position={navPosition}
+        terminal={terminal}
+        showTerminal={showTerminal}
+      />
     </Fragment>
   );
 }
