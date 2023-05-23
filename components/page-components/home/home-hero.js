@@ -3,7 +3,7 @@ import HomeIcons from './home-icons';
 
 function HomeHero(props) {
   return (
-    <div className="flex flex-col bg-gray-50 dark:bg-gray-400 w-screen h-screen gap-7 items-center justify-center pb-24 sm:pb-0">
+    <div className="flex flex-col bg-gray-50 dark:bg-gray-400 w-screen h-full gap-7 items-center justify-center pb-24 sm:pb-0">
       <div className="flex flex-col md:flex-row items-center gap-2 pb-5 w-8/12 md:w-9/12 lg:w-7/12 xl:w-6/12 2xl:w-5/12">
         <div className="flex flex-col flex-initial w-1/2 items-center h-full pt-12">
           <div className="h-64 w-64">

@@ -7,16 +7,9 @@ import { Fragment } from 'react/cjs/react.production.min';
 function Home() {
   return (
     <Fragment>
-      <BasicWindow
-        title={'andrea-poltronieri/home'}
-        width={'w-full'}
-        height={'h-full'}
-        animate={false}
-      >
-        <HomeHero>
-          <HomeBio />
-        </HomeHero>
-      </BasicWindow>
+      <HomeHero>
+        <HomeBio />
+      </HomeHero>
     </Fragment>
   );
 }

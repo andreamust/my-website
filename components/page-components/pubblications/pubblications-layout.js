@@ -6,7 +6,7 @@ const renderLoader = () => <p>Loading</p>;
 function PubblicationsLayout(props) {
   return (
     <Suspense fallback={renderLoader()}>
-      <div className="flex flex-col w-screen h-screen items-center pt-24 pb-60 overflow-scroll">
+      <div className="flex flex-col items-center pt-20 pb-32">
         <PubbblicationsContent pubblications={props.pubblications} />
       </div>
     </Suspense>

@@ -7,15 +7,10 @@ import PageTitle from '../components/ui/layout/page-title';
 function Resume(props) {
   const { resume } = props;
   return (
-    <BasicWindow
-      title={'andrea-poltronieri/resume'}
-      width={'w-full'}
-      height={'h-full'}
-      animate={false}
-    >
+    <div className="flex flex-col h-full overflow-hidden">
       <PageTitle title={'Resume'} />
       <ResumeLayout resume={resume} />
-    </BasicWindow>
+    </div>
   );
 }
 export async function getStaticProps() {

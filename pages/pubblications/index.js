@@ -1,8 +1,8 @@
-import BasicWindow from '../../components/ui/windows/basic-window';
 import fs from 'fs/promises';
 import path from 'path';
 import PageTitle from '../../components/ui/layout/page-title';
 import dynamic from 'next/dynamic';
+import { Fragment } from 'react/cjs/react.production.min';
 
 const PubblicationsLayout = dynamic(
   () =>
@@ -17,15 +17,10 @@ const PubblicationsLayout = dynamic(
 function Pubblications(props) {
   const pubblications = props;
   return (
-    <BasicWindow
-      title={'andrea-poltronieri/pubblications'}
-      width={'50vw'}
-      height={'70vh'}
-      animate={false}
-    >
+    <Fragment>
       <PageTitle title={'Pubblications'} />
       <PubblicationsLayout pubblications={pubblications} />
-    </BasicWindow>
+    </Fragment>
   );
 }
 export async function getStaticProps() {
