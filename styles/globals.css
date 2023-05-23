@@ -16,13 +16,13 @@
     src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Mono.otf');
   }
   #__next {
-    @apply grid h-[calc(100dvh)]  grid-rows-5 grid-cols-12 m-0 p-0 border-0;
+    @apply grid h-screen  grid-rows-5 grid-cols-12 m-0 p-0 border-0;
   }
   body {
-    @apply h-[calc(100dvh)] w-screen;
+    @apply h-screen w-screen;
   }
   main {
-    @apply h-[calc(100dvh)] w-screen pt-12 md:pt-9 selection:text-transparent overflow-y-auto overflow-x-hidden;
+    @apply h-screen w-screen pt-12 md:pt-9 selection:text-transparent overflow-y-auto overflow-x-hidden;
   }
   a {
     @apply underline text-purple-600 hover:text-purple-800 visited:text-green-600;
