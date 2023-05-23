@@ -23,7 +23,7 @@ function ProjectsContent(props) {
           key={project.short_title}
           className="flex flex-col border-gray-900 w-10/12 h-full border-2"
         >
-          <div className="flex flex-row items-center p-4">
+          <div className="flex flex-row items-center p-4 pb-12">
             <Image
               className="flex-1"
               src={project.image}

@@ -1,4 +1,3 @@
-import useMobile from '../../utils/mobile';
 import NavbarButton from './navbar-button';
 
 const apps = [
@@ -11,14 +10,10 @@ const apps = [
 ];
 
 function Navbar(props) {
-  const mobile = useMobile();
-
-  let slicedApps = mobile ? apps.slice(0, 5) : apps;
-
   return (
     <header
       className={
-        'z-50 pb-2 ' +
+        'sticky inset-0 z-50 pb-2 ' +
         (props.position === 'bottom'
           ? 'row-start-5 col-start-2 col-end-12 lg:col-start-3 lg:col-end-11 xl:col-start-4 xl:col-end-10 h-16 self-end md:pl-14 md:pr-14'
           : 'flex-col col-start-12 row-start-2 row-end-5 w-16 mr-3 justify-self-end')
@@ -30,7 +25,7 @@ function Navbar(props) {
           (props.position === 'bottom' ? 'flex flex-row' : 'flex flex-col')
         }
       >
-        {slicedApps.map((app, index) => {
+        {apps.map((app, index) => {
           return (
             <NavbarButton
               key={index}

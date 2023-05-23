@@ -7,21 +7,21 @@ function NavbarButton(props) {
 
   if (props.app === 'Terminal') {
     return (
-      <button
+      <motion.li
+        initial={{ opacity: 0, x: '50%', scale: 1.5 }}
+        animate={{ opacity: 1, duration: 2, x: 0, scale: 1 }}
         key={`app000${props.index}`}
-        onClick={() => props.showTerminal(!props.terminal)}
-        aria-label="Open terminal"
+        transition={{
+          type: 'spring',
+          damping: 25,
+          stiffness: 120,
+          delay: props.index / 6,
+        }}
+        className="md:flex flex-col flex-none w-10 h-10 items-center place-content-end hidden"
       >
-        <motion.li
-          initial={{ opacity: 0, x: '50%', scale: 1.5 }}
-          animate={{ opacity: 1, duration: 2, x: 0, scale: 1 }}
-          transition={{
-            type: 'spring',
-            damping: 25,
-            stiffness: 120,
-            delay: props.index / 6,
-          }}
-          className="flex flex-col flex-none w-10 h-10 items-center place-content-end"
+        <button
+          onClick={() => props.showTerminal(!props.terminal)}
+          aria-label="Open terminal"
         >
           <NavApp
             appName={props.app}
@@ -29,8 +29,8 @@ function NavbarButton(props) {
             navPosition={props.navPosition}
             key={`app${props.index}`}
           />
-        </motion.li>
-      </button>
+        </button>
+      </motion.li>
     );
   } else {
     return (

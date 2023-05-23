@@ -2,7 +2,7 @@ import HomeIcons from '../home/home-icons';
 
 function ContactsLayout(props) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-full">
       <h1 className="font-modernBold text-6xl text-center">
         Let&apos;s get in touch!
       </h1>

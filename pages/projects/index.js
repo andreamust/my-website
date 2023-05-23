@@ -1,21 +1,16 @@
 import ProjectsLayout from '../../components/page-components/projects/projects-layout';
-import BasicWindow from '../../components/ui/windows/basic-window';
 import fs from 'fs/promises';
 import path from 'path';
 import PageTitle from '../../components/ui/layout/page-title';
+import { Fragment } from 'react/cjs/react.production.min';
 
 function Projects(props) {
   const projects = props;
   return (
-    <BasicWindow
-      title={'andrea-poltronieri/projects'}
-      width={'50vw'}
-      height={'70vh'}
-      animate={false}
-    >
+    <Fragment>
       <PageTitle title={'Projects'} />
       <ProjectsLayout projects={projects} />
-    </BasicWindow>
+    </Fragment>
   );
 }
 export async function getStaticProps() {
