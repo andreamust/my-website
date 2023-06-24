@@ -7,7 +7,7 @@ function ResumeContent(props) {
   const updateXarrow = useXarrow();
   return (
     <div
-      className="relative flex flex-col gap-12 overflow-y-scroll no-scrollbar h-screen w-full p-14 pb-60"
+      className="relative flex flex-col gap-12 overflow-y-scroll no-scrollbar h-screen w-full pl-14 pr-14 pb-32 pt-24"
       onScroll={updateXarrow}
     >
       {resume.map((resumeEntry, index) => {

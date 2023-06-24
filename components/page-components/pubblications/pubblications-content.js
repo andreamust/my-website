@@ -19,7 +19,7 @@ function PubblicationsContent(props) {
   const loadedYears = [];
 
   return (
-    <div className="flex flex-col items-center gap-10 w-7/12">
+    <div className="flex flex-col items-center gap-10 w-10/12 md:w-7/12">
       {pubblications.reverse().map((pubblication) => {
         let { output, data } = renderCitation(pubblication, 'bibliography');
         const year = data.issued['date-parts'][0][0];
