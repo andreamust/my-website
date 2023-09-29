@@ -14,7 +14,13 @@ function HomeBio() {
           type="range"
           className="form-range appearance-none w-full h-4 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg p-2"
           id="customRange1"
-          style={{ color: '#fff', border: 'none' }}
+          style={{
+            color: '#fff',
+            border: 'none',
+            height: '10px',
+            borderRadius: '10px',
+            background: 'linear-gradient(to right, #f12711, #f5af19)',
+          }}
           min={0}
           max={4}
           defaultValue={2}
