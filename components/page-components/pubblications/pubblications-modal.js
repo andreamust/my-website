@@ -47,6 +47,13 @@ function PubblicationsModal(props) {
         )}
         <h3 className="text-xl font-modernBold">Abstract</h3>
         <p className="text-md font-modern">{content.abstract}</p>
+        <h3 className="text-xl font-modernBold">Link</h3>
+        <button
+          className="text-lg bg-purple-600 hover:bg-purple-800 active:bg-green-400 hover:text-white font-bold py-2 px-4 rounded"
+          onClick={() => window.open(content.URL)}
+        >
+          Go to pubblication
+        </button>
         <h3 className="text-xl font-modernBold">Cite</h3>
         <div className="flex flex-row gap-7 items-center">
           <button

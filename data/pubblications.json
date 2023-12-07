@@ -96,7 +96,7 @@
         "given": "Aldo"
       }
     ],
-    "container-title": "Proceedings of the 1st workshop on multisensory data and knowledge (MDK 2021), zaragoza, spain, september 1, 2021.",
+    "container-title": "Proceedings of the 1st workshop on multisensory data and knowledge (MDK 2021), Zaragoza, Spain.",
     "id": "poltronieri2021hamseontology",
     "issued": {
       "date-parts": [[2021]]
@@ -222,7 +222,7 @@
         "given": "Valentina"
       }
     ],
-    "container-title": "Proceedings of the 13th workshop on ontology design and patterns (WOP 2023)",
+    "container-title": "Proceedings of the 13th workshop on ontology design and patterns - WOP 2023",
     "editor": [
       {
         "family": "Svátek",
@@ -254,6 +254,7 @@
     "abstract": "The annotation of music content is a complex process to represent due to its inherent multifaceted, subjectivity, and interdisciplinary nature. Numerous systems and conventions for annotating music have been developed as independent standards over the past decades. Little has been done to make them interoperable, which jeopardises cross-corpora studies as it requires users to familiarise with a multitude of conventions. Most of these systems lack the semantic expressiveness needed to represent the complexity of the musical language and cannot model multi-modal annotations originating from audio and symbolic sources. In this article, we introduce the Music Annotation Pattern, an Ontology Design Pattern (ODP) to homogenise different annotation systems and to represent several types of musical objects (eg chords, patterns, structures). This ODP preserves the semantics of the object’s content at different levels and temporal granularity. Moreover, our ODP accounts for multi-modality upfront, to describe annotations derived from different sources, and it is the first to enable the integration of music datasets at a large scale."
   },
   {
+    "URL": "https://www.nature.com/articles/s41597-023-02410-w",
     "author": [
       {
         "dropping-particle": "de",
@@ -284,6 +285,7 @@
     "abstract": "Various disconnected chord datasets are currently available for music analysis and information retrieval, but these are limited by either their size, non-openness, lack of timed information, and interoperability. Together with the lack of overlapping repertoire coverage, this limits cross-corpus studies on harmony over time and across genres, while hampering research in computational music analysis (chord recognition, pattern mining, computational creativity), where machine learning methods are notoriously eager for data. To address this gap, we propose the Chord Corpus (ChoCo), a large-scale dataset that semantically integrates harmonic data from 18 different sources in various representations and formats (Harte, Leadsheet, Roman numerals, ABC, etc.). We leverage JAMS (JSON Annotated Music Specification), a popular data structure for annotations in Music Information Retrieval, to effectively represent and enrich a variety of chord-related information (chord, key, mode, etc.) in a uniform way. On top of it, we propose a novel ontology modelling music annotations and involved entities (artists, scores, etc.), build a 30M triple knowledge graph, and find 4K+ links to other datasets (MIDI-LD, LED)."
   },
   {
+    "URL": "https://dl.acm.org/doi/abs/10.1145/3543507.3587428",
     "author": [
       {
         "dropping-particle": "de",
@@ -314,6 +316,7 @@
     "abstract": "Computationally creative systems for music have recently achieved impressive results, fuelled by progress in generative machine learning. However, black-box approaches have raised fundamental concerns for ethics, accountability, explainability, and musical plausibility. To enable trustworthy machine creativity, we introduce the Harmonic Memory, a Knowledge Graph (KG) of harmonic patterns extracted from a large and heterogeneous musical corpus. By leveraging a cognitive model of tonal harmony, chord progressions are segmented into meaningful structures, and patterns emerge from their comparison via harmonic similarity. Akin to a music memory, the KG holds temporal connections between consecutive patterns, as well as salient similarity relationships. After demonstrating the validity of our choices, we provide examples of how this design enables novel pathways for combinational creativity. The memory provides a fully accountable and explainable framework to inspire and support creative professionals -- allowing for the discovery of progressions consistent with given criteria, the recomposition of harmonic sections, but also the co-creation of new progressions."
   },
   {
+    "URL": "https://link.springer.com/chapter/10.1007/978-3-031-33455-9_10",
     "author": [
       {
         "family": "Lazzari",
@@ -337,5 +340,83 @@
     "title-short": "Grammar",
     "type": "paper-conference",
     "abstract": "This paper introduces a pattern to formalise context-free grammars in OWL and how to use it for sequence classification. The proposed approach and existing methods are compared and discussed based on their complexity as well as their pragmatic applicability with examples in the music domain. "
+  },
+  {
+    "URL": "https://ismir2023program.ismir.net/poster_283.html",
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Carriero",
+        "given": "Valentina"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "International Society for Music Information Retrieval Conference - ISMIR 2023",
+    "id": "deberardinis2023musicmeta",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "The Music Meta Ontology: A Flexible Semantic Model for the Interoperability of Music Metadata",
+    "title-short": "Music Meta Ontology",
+    "type": "paper-conference",
+    "abstract": "The semantic description of music metadata is a key requirement for the creation of music datasets that can be aligned, integrated, and accessed for information retrieval and knowledge discovery. It is nonetheless an open challenge due to the complexity of musical concepts arising from different genres, styles, and periods – standing to benefit from a lingua franca to accommodate various stakeholders (musicologists, librarians, data engineers, etc.). To initiate this transition, we introduce the Music Meta ontology, a rich and flexible semantic model to describe music metadata related to artists, compositions, performances, recordings, and links. We follow eXtreme Design methodologies and best practices for data engineering, to reflect the perspectives and the requirements of various stakeholders into the design of the model, while leveraging ontology design patterns and accounting for provenance at different levels (claims, links). After presenting the main features of Music Meta, we provide a first evaluation of the model, alignments to other schema (Music Ontology, DOREMUS, Wikidata), and support for data transformation."
+  },
+  {
+    "URL": "https://link.springer.com/chapter/10.1007/978-3-031-47243-5_17",
+    "author": [
+      {
+        "dropping-particle": "de",
+        "family": "Berardinis",
+        "given": "Jacopo"
+      },
+      {
+        "family": "Carriero",
+        "given": "Valentina"
+      },
+      {
+        "family": "Meroño-Peñuela",
+        "given": "Albert"
+      },
+      {
+        "family": "Jain",
+        "given": "Nitisha"
+      },
+      {
+        "family": "Lazzari",
+        "given": "Nicolas"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      }
+    ],
+    "container-title": "International Semantic Web Conference - ISWC 2023",
+    "id": "deberardinis2023pon",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "The Polifonia Ontology Network: Building a Semantic Backbone for Musical Heritage",
+    "title-short": "Polifonia Ontology Network",
+    "type": "paper-conference",
+    "abstract": "In the music domain, several ontologies have been proposed to annotate musical data, in both symbolic and audio form, and generate semantically rich Music Knowledge Graphs. However, current models lack interoperability and are insufficient for representing music history and the cultural heritage context in which it was generated; risking the propagation of recency and cultural biases to downstream applications. In this article, we propose the Polifonia Ontology Network (PON) for music cultural heritage, centred around four modules: Music Meta (metadata), Representation (content), Source (provenance) and Instrument (cultural objects). We design PON with a strong accent on cultural stakeholder requirements and competency questions (CQs), contributing an NLP-based toolkit to support knowledge engineers in generating, validating, and analysing them; and a novel, high-quality CQ dataset produced as a result. We show current and future use of these resources by internal project pilots, early adopters in the music industry, and opportunities for the Semantic Web and Music Information Retrieval communities."
   }
 ]

@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
+import Spinner from '../../utils/spinner';
 
 const PubbblicationsContent = lazy(() => import('./pubblications-content'));
-const renderLoader = () => <p>Loading</p>;
+const renderLoader = () => <Spinner />;
 
 function PubblicationsLayout(props) {
   return (

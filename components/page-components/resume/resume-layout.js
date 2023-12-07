@@ -1,12 +1,21 @@
 import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import Xarrow, { Xwrapper } from 'react-xarrows';
 import { parseData, getResumeSet } from '../../utils/filtering';
+import { useTheme } from 'next-themes';
+
+// const useIsomorphicLayoutEffect =
+//   typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 function ResumeLayout(props) {
   const resume = props.resume;
+
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+  let darkMode = currentTheme === 'dark' ? true : false;
+
   // get resume elements
   const resumeContents = resume.map((c) => c.content);
   const resumeTypesList = getResumeSet(resume, 'type').sort().reverse();
@@ -29,14 +38,14 @@ function ResumeLayout(props) {
     const handleClickScroll = () => {
       const element = document.getElementById(contentId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     };
     handleClickScroll();
   }, [contentId]);
 
   return (
-    <div className="fixed flex md:flex-row h-full pb-48 pt-24 gap-5 lg:gap-52 w-screen">
+    <div className="fixed flex md:flex-row h-full gap-5 lg:gap-52 w-screen">
       <Xwrapper>
         <div className="flex-1 flex flex-row gap-5 lg:gap-52 justify-evenly">
           <ResumeTimebar
@@ -66,6 +75,8 @@ function ResumeLayout(props) {
                   Array.from(yearSelected).includes(yearArrow) &&
                   typeSelected.includes(typeArrow)
                     ? 'red'
+                    : darkMode
+                    ? 'white'
                     : 'black'
                 }
                 curveness={0}
@@ -101,6 +112,8 @@ function ResumeLayout(props) {
                   Array.from(yearSelected).includes(yearStart) &&
                   typeSelected.includes(singleType)
                     ? 'red'
+                    : darkMode
+                    ? 'white'
                     : 'black'
                 }
                 curveness={0.25}
