@@ -70,7 +70,7 @@ function PubblicationsModal(props) {
         <div className="flex justify-between items-center">
           <div className="flex flex-row gap-4 items-center">
             <button
-              className="text-lg bg-lime hover:bg-purple-800 active:bg-green-400 font-bold py-2 px-4 rounded"
+              className="text-lg bg-lime hover:bg-cerise active:bg-green-400 font-bold py-2 px-4 rounded"
               onClick={() => setCitation(generateCitation('bibliography'))}
             >
               APA
