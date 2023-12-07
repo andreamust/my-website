@@ -63,9 +63,6 @@
   .circle-sketch-highlight {
     position: relative;
     left: 0.5em;
-    font-family: Libre Franklin;
-    font-size: 32px;
-    font-weight: 500;
   }
   .circle-sketch-highlight:before {
     content: '';
