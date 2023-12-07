@@ -17,7 +17,7 @@ function ResumeContent(props) {
           <div
             id={`content-${index}`}
             key={index}
-            className={`relative overflow-visible flex-1 pl-10 border-red-400 ${
+            className={`relative overflow-visible flex-1 pl-10 border-cerise ${
               Array.from(props.year).includes(yearStart) &&
               props.type.some((t) => type.includes(t))
                 ? 'border-2'

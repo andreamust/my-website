@@ -21,7 +21,7 @@ function ProjectsContent(props) {
       {projectList.projects.map((project) => (
         <div
           key={project.short_title}
-          className="flex flex-col border-gray-900 w-10/12 h-full border-2"
+          className="flex flex-col border-blackpalette-900 w-10/12 h-full border-2"
         >
           <div className="flex flex-row items-center p-4 pb-12">
             <Image
@@ -33,20 +33,20 @@ function ProjectsContent(props) {
             />
             <div className="flex flex-col items-center justify-between w-full h-full">
               <div className="flex flex-row items-center justify-between p-4 w-full">
-                <h1 className="text-3xl font-modernBold text-gray-800 text-center pl-10">
+                <h1 className="text-3xl font-modernBold text-blackpalette-900 text-center pl-10">
                   <Link href={'/projects/?project=' + project.short_title}>
                     <a>{project.short_title}</a>
                   </Link>
                 </h1>
-                <h2 className="text-xl font-modernMono text-gray-800 text-right">
+                <h2 className="text-xl font-modernMono text-blackpalette-900 text-right">
                   {project.title}
                 </h2>
               </div>
               <div className="flex flex-row items-center justify-between w-full">
-                <h3 className="flex-1 basis-1/3 text-xl font-modernMono text-gray-800 text-center">
+                <h3 className="flex-1 basis-1/3 text-xl font-modernMono text-blackpalette-900 text-center">
                   {project.year}
                 </h3>
-                <h4 className="flex-1 basis-1/3 text-lg font-modernMono text-gray-800 text-center">
+                <h4 className="flex-1 basis-1/3 text-lg font-modernMono text-blackpalette-900 text-center">
                   {project.type}
                 </h4>
                 <div className="flex-1 basis-1/3 h-full">

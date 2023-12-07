@@ -17,7 +17,7 @@ function NavbarButton(props) {
           stiffness: 120,
           delay: props.index / 6,
         }}
-        className="md:flex flex-col flex-none w-10 h-10 items-center place-content-end hidden"
+        className="md:flex flex-col flex-none w-10 h-10 items-center place-content-end hidden text-blackpalette-900 dark:text-whitepalette"
       >
         <button
           onClick={() => props.showTerminal(!props.terminal)}

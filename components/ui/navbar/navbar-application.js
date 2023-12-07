@@ -35,15 +35,15 @@ function NavApp(props) {
           viewBaloon === props.appIndex ? 'md:visible invisible' : 'invisible'
         } ${
           props.navPosition === 'bottom'
-            ? 'flex-none flex order-first min-w-[5vw] h-8 bg-slate-400 px-2 rounded-lg text-center place-content-center duration-155 justify-center items-center text-md'
-            : 'flex-none flex order-first min-w-[5vw] h-8 bg-slate-400 px-2 rounded-lg text-center place-content-center duration-155 justify-center items-center text-md'
+            ? 'flex-none flex order-first min-w-[5vw] h-8 bg-greypalette-600 px-2 rounded-lg text-center place-content-center duration-155 justify-center items-center text-md text-blackpalette-900'
+            : 'flex-none flex order-first min-w-[5vw] h-8 bg-greypalette-600 px-2 rounded-lg text-center place-content-center duration-155 justify-center items-center text-md text-blackpalette-900'
         } `}
       >
         <div
           className={
             props.navPosition === 'bottom'
-              ? 'absolute w-0 h-0 border-t-slate-400 border-8 border-transparent bottom-[110%]'
-              : 'absolute w-0 h-0 border-l-slate-400 border-[6px] border-transparent right-[120%]'
+              ? 'absolute w-0 h-0 border-t-greypalette-600 border-8 border-transparent bottom-[110%] text-blackpalette-900'
+              : 'absolute w-0 h-0 border-l-greypalette-600 border-[6px] border-transparent right-[120%] text-blackpalette-900'
           }
         />
         {props.appName}
