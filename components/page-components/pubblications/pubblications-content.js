@@ -20,11 +20,11 @@ function PubblicationsContent(props) {
 
   return (
     <div className="flex flex-col items-center gap-10 w-10/12 md:w-7/12">
-      {pubblications.reverse().map((pubblication) => {
+      {[...pubblications].reverse().map((pubblication) => {
         let { output, data } = renderCitation(pubblication, 'bibliography');
         const year = data.issued['date-parts'][0][0];
         const title = data.title;
-        const url = data.URL;
+        const url = data['URL'];
         // string pre-processing
         const splitCitation = output.split('Poltronieri, A.');
         const splitTitle = splitCitation[1].split(title);
@@ -48,7 +48,7 @@ function PubblicationsContent(props) {
                   Poltronieri, Andrea
                 </span>
                 {splitTitle[0]}
-                <span className=" font-modernBold"> {title}</span>
+                <span className="font-modernBold">{title}</span>
                 {splitTitle[1]}
               </p>
             </div>
