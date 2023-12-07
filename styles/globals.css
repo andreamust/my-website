@@ -19,34 +19,34 @@
     @apply grid h-screen  grid-rows-5 grid-cols-12 m-0 p-0 border-0;
   }
   body {
-    @apply h-screen w-screen;
+    @apply h-screen w-screen text-blackpalette-900 dark:text-greypalette-400 bg-whitepalette dark:bg-blackpalette-600;
   }
   main {
     @apply h-screen w-screen pt-12 md:pt-9 selection:text-transparent overflow-y-auto overflow-x-hidden;
   }
   a {
-    @apply underline text-purple-600 hover:text-purple-800 visited:text-green-600;
+    @apply underline text-cerise hover:font-bold;
   }
   ul {
     @apply list-disc list-inside;
   }
   p {
-    @apply font-modern text-gray-800 dark:text-gray-200;
+    @apply font-modern text-blackpalette-900 dark:text-greypalette-400;
   }
   h1 {
-    @apply font-modernBold text-gray-800 dark:text-gray-200;
+    @apply font-modernBold text-blackpalette-900 dark:text-lime;
   }
   h2 {
-    @apply font-modernBold text-gray-800 dark:text-gray-200;
+    @apply font-modernBold text-blackpalette-900 dark:text-cerise;
   }
   h3 {
-    @apply font-modernBold text-gray-800 dark:text-gray-200;
+    @apply font-modernBold text-blackpalette-900 dark:text-cerise;
   }
   h4 {
-    @apply font-modernBold text-gray-800 dark:text-gray-200;
+    @apply font-modernBold text-blackpalette-900 dark:text-cerise;
   }
   h5 {
-    @apply font-modernBold text-gray-800 dark:text-gray-200;
+    @apply font-modernBold text-blackpalette-900 dark:text-cerise;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -58,5 +58,45 @@
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .circle-sketch-highlight {
+    position: relative;
+    left: 0.5em;
+  }
+  .circle-sketch-highlight:before {
+    content: '';
+    z-index: -1;
+    left: -0.5em;
+    top: -0.1em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #b5f514;
+    position: absolute;
+    border-right-color: transparent;
+    width: 115%;
+    height: 110%;
+    transform: rotate(2deg);
+    opacity: 0.7;
+    border-radius: 50%;
+    padding: 0.1em 0.25em;
+  }
+  .circle-sketch-highlight:after {
+    content: '';
+    z-index: -1;
+    left: -0.5em;
+    top: 0.1em;
+    padding: 0.1em 0.25em;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #b5f514;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    width: 115%;
+    height: 110%;
+    transform: rotate(-1deg);
+    opacity: 0.7;
+    border-radius: 50%;
   }
 }

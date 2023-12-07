@@ -38,12 +38,15 @@ function PubblicationsContent(props) {
             <div className="flex flex-row gap-7 items-center">
               <Link href={'/pubblications/?pubblication=' + data.id}>
                 <a>
-                  <MdZoomOutMap className="w-6 h-6 fill-green-600 visited:fill-purple-400" />
+                  <MdZoomOutMap
+                    //zoom on hover and animate on click
+                    className="w-6 h-6 fill-cerise hover:scale-150 transform transition duration-500 ease-in-out"
+                  />
                 </a>
               </Link>
               <p className="font-modern">
                 {splitCitation[0]}
-                <span className=" font-modernBold text-green-600">
+                <span className="font-modernBold text-blackpalette-900 underline decoration-wavy decoration-lime decoration-2">
                   {' '}
                   Poltronieri, Andrea
                 </span>

@@ -74,10 +74,10 @@ function ResumeLayout(props) {
                 color={
                   Array.from(yearSelected).includes(yearArrow) &&
                   typeSelected.includes(typeArrow)
-                    ? 'red'
+                    ? '#C92CAC'
                     : darkMode
-                    ? 'white'
-                    : 'black'
+                    ? '#FFFDFD'
+                    : '#0C0E07'
                 }
                 curveness={0}
                 showHead={false}
@@ -111,10 +111,10 @@ function ResumeLayout(props) {
                 color={
                   Array.from(yearSelected).includes(yearStart) &&
                   typeSelected.includes(singleType)
-                    ? 'red'
+                    ? '#C92CAC'
                     : darkMode
-                    ? 'white'
-                    : 'black'
+                    ? '#FFFDFD'
+                    : '#0C0E07'
                 }
                 curveness={0.25}
                 showHead={false}

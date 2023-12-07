@@ -12,14 +12,16 @@ function HomeBio() {
         </label>
         <input
           type="range"
-          className="form-range appearance-none w-full h-4 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-gray-700 rounded-lg p-2"
+          className="form-range appearance-none w-full h-4 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none bg-blackpalette-900 rounded-lg p-2"
           id="customRange1"
           style={{
-            color: '#fff',
+            color: '#0C0E07',
             border: 'none',
             height: '10px',
             borderRadius: '10px',
-            background: 'linear-gradient(to right, #f12711, #f5af19)',
+            background: '#B5F514',
+            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+            accentColor: '#0C0E07',
           }}
           min={0}
           max={4}

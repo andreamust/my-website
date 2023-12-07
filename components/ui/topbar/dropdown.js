@@ -10,7 +10,7 @@ function Dropdown(props) {
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium dark:text-gray-200 active:bg-gray-500">
+        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium dark:text-whitepalette active:bg-lime">
           {props.children}
         </Menu.Button>
       </div>
@@ -24,7 +24,7 @@ function Dropdown(props) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="origin-top-left absolute left-3 mt-1 w-56 rounded-md shadow-lg bg-white dark:bg-gray-500 z-50">
+        <Menu.Items className="origin-top-left absolute left-3 mt-1 w-56 rounded-md shadow-lg bg-whitepalette dark:bg-greypalette-600 z-50">
           {dropdownElements &&
             dropdownElements.map((element) => (
               <Menu.Item key={element.name}>
@@ -33,8 +33,8 @@ function Dropdown(props) {
                     href={element.link}
                     className={classNames(
                       active
-                        ? 'bg-gray-100 text-gray-900'
-                        : 'text-gray-700 dark:text-gray-200',
+                        ? 'bg-whitepalette text-blackpalette-900'
+                        : 'text-blackpalette-900 dark:text-whitepalette',
                       'block px-4 py-2 text-sm'
                     )}
                   >

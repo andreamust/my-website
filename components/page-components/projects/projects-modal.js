@@ -5,8 +5,6 @@ import Link from 'next/link';
 function ProjectsModal(props) {
   const { content, router } = props;
 
-  console.log(content);
-
   return (
     <BasicWindow
       title={content.short_title}
