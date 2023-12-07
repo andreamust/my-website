@@ -46,7 +46,7 @@ function PubblicationsContent(props) {
               </Link>
               <p className="font-modern">
                 {splitCitation[0]}
-                <span className="font-modernBold text-blackpalette-900 underline decoration-wavy decoration-lime decoration-2">
+                <span className="font-modernBold text-blackpalette-900 dark:text-whitepalette underline decoration-wavy decoration-lime decoration-2">
                   {' '}
                   Poltronieri, Andrea
                 </span>

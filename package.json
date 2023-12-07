@@ -12,6 +12,7 @@
     "@citation-js/core": "^0.6.5",
     "@citation-js/plugin-bibtex": "^0.6.6",
     "@headlessui/react": "^1.6.4",
+    "@vercel/analytics": "^1.1.1",
     "citation-js": "^0.6.7",
     "file-loader": "^6.2.0",
     "framer-motion": "^6.2.8",
