@@ -2,6 +2,7 @@ import Layout from '../components/ui/layout/layout';
 import '../styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </ThemeProvider>
   );
 }
