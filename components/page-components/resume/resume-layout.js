@@ -1,9 +1,12 @@
 import ResumeTimebar from './resume-timebar';
 import ResumeContent from './resume-content';
 import ResumeType from './resume-type';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import Xarrow, { Xwrapper } from 'react-xarrows';
 import { parseData, getResumeSet } from '../../utils/filtering';
+
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 function ResumeLayout(props) {
   const resume = props.resume;
@@ -29,7 +32,7 @@ function ResumeLayout(props) {
     const handleClickScroll = () => {
       const element = document.getElementById(contentId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     };
     handleClickScroll();
