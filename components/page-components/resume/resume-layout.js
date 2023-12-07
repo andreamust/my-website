@@ -4,12 +4,18 @@ import ResumeType from './resume-type';
 import { useState, useEffect, useLayoutEffect } from 'react';
 import Xarrow, { Xwrapper } from 'react-xarrows';
 import { parseData, getResumeSet } from '../../utils/filtering';
+import { useTheme } from 'next-themes';
 
-const useIsomorphicLayoutEffect =
-  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+// const useIsomorphicLayoutEffect =
+//   typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 function ResumeLayout(props) {
   const resume = props.resume;
+
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+  let darkMode = currentTheme === 'dark' ? true : false;
+
   // get resume elements
   const resumeContents = resume.map((c) => c.content);
   const resumeTypesList = getResumeSet(resume, 'type').sort().reverse();
@@ -69,6 +75,8 @@ function ResumeLayout(props) {
                   Array.from(yearSelected).includes(yearArrow) &&
                   typeSelected.includes(typeArrow)
                     ? 'red'
+                    : darkMode
+                    ? 'white'
                     : 'black'
                 }
                 curveness={0}
@@ -104,6 +112,8 @@ function ResumeLayout(props) {
                   Array.from(yearSelected).includes(yearStart) &&
                   typeSelected.includes(singleType)
                     ? 'red'
+                    : darkMode
+                    ? 'white'
                     : 'black'
                 }
                 curveness={0.25}

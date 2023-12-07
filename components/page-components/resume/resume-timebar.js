@@ -24,7 +24,7 @@ function ResumeTimebar(props) {
                   );
                 }}
               >
-                <p className="text-center">{year}</p>
+                <p className="text-center dark:text-gray-900">{year}</p>
               </button>
             </div>
           </Fragment>

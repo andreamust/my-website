@@ -26,8 +26,10 @@ function ResumeContent(props) {
           >
             <div className="flex flex-col gap-1">
               <div className="flex flex-row gap-4 justify-between">
-                <h2 className=" text-xl font-modernBold mt-4">{title}</h2>
-                <h5 className=" text-lg font-modernBold mr-5 mt-4">
+                <h2 className="text-xl font-modernBold mt-4 max-w-md">
+                  {title}
+                </h2>
+                <h5 className="text-lg font-modernBold mr-5 mt-4">
                   {yearStart} - {yearEnd}
                 </h5>
               </div>

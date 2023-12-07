@@ -21,7 +21,7 @@ function ResumeType(props) {
                 );
               }}
             >
-              <p className="text-center">{type}</p>
+              <p className="text-center dark:text-gray-900">{type}</p>
             </button>
           </div>
         );
