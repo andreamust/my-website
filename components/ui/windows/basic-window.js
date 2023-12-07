@@ -18,7 +18,7 @@ function BasicWindow(props) {
         initial={{ x: 0, y: 0 }}
       >
         <motion.div
-          className={`h-full order-last flex flex-col w-full rounded-b-md bg-white dark:bg-gray-500`}
+          className={`h-full order-last flex flex-col w-full rounded-b-md bg-white dark:bg-gray-500 shadow-2xl`}
         >
           {props.children}
         </motion.div>

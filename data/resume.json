@@ -1,6 +1,14 @@
 {
   "resume": [
     {
+      "title": "Visiting Researcher",
+      "type": ["work", "study"],
+      "yearStart": 2023,
+      "yearEnd": "present",
+      "company": "Music Technology Group, Universitat Pompeu Fabra",
+      "content": "Visiting researcher at the Music Technology Group of the Universitat Pompeu Fabra, Barcelona, Spain. The research visit concerns the multimodal analysis of harmonic data (audio and symbolic) with the aim of creating a fundational model for muisc harmony understanding.\n * Supervisor: [Martín Rocamora](https://rocamora.uy/)\n"
+    },
+    {
       "title": "Tutor",
       "type": ["work"],
       "yearStart": 2021,
