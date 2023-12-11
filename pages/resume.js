@@ -3,14 +3,59 @@ import ResumeLayout from '../components/page-components/resume/resume-layout';
 import fs from 'fs/promises';
 import path from 'path';
 import PageTitle from '../components/ui/layout/page-title';
+import Head from 'next/head';
 
 function Resume(props) {
   const { resume } = props;
   return (
-    <div className="flex flex-col h-full overflow-hidden">
-      <PageTitle title={'Resume'} />
-      <ResumeLayout resume={resume} />
-    </div>
+    (
+      <Head>
+        <title>Resume | Andrea Poltronieri</title>
+        <meta
+          name="description"
+          content="Andrea Poltronieri's resume. A brief summary of my education and work experience."
+        />
+        <meta
+          name="keywords"
+          content="Andrea Poltronieri, Poltronieri Andrea, Resume, CV, Curriculum Vitae, Education, Work Experience, Skills"
+        />
+        <meta name="author" content="Andrea Poltronieri" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="og:title"
+          property="og:title"
+          content="Resume | Andrea Poltronieri"
+        />
+        <meta
+          name="og:description"
+          property="og:description"
+          content="Andrea Poltronieri's resume. A brief summary of my education and work experience."
+        />
+        <meta
+          name="og:image"
+          property="og:image"
+          content="https://andreapoltronieri.com/images/og-image.png"
+        />
+        <meta
+          name="og:url"
+          property="og:url"
+          content="https://andreapoltronieri.com/resume"
+        />
+        <meta
+          name="og:site_name"
+          property="og:site_name"
+          content="Andrea Poltronieri"
+        />
+        <meta name="og:type" property="og:type" content="website" />
+        <meta name="og:locale" property="og:locale" content="en_US" />
+      </Head>
+    ),
+    (
+      <div className="flex flex-col h-full overflow-hidden">
+        <PageTitle title={'Resume'} />
+        <ResumeLayout resume={resume} />
+      </div>
+    )
   );
 }
 export async function getStaticProps() {
