@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { parseData } from '../../utils/filtering';
+import { motion } from 'framer-motion';
 
 function ResumeTimebar(props) {
   return (
@@ -7,13 +8,37 @@ function ResumeTimebar(props) {
       {props.years.map((year) => {
         return (
           <Fragment key={year}>
-            <div
-              id={`year-${year}`}
-              className={`flex-1 w-12 max-h-12 text-center align-middle rounded-full ${
+            <motion.div
+              id={`year-${year}`} // zomm on hover and animate on click
+              className={`flex-1 w-12 max-h-12 text-center align-middle rounded-full  ${
                 props.year.toString().includes(year.toString())
                   ? ' bg-lime'
                   : ' bg-greypalette-600'
               }`}
+              // on hover bounce
+              whileHover={{
+                scale: 1.15,
+                transition: {
+                  duration: 0.15,
+                  ease: 'easeOut',
+                  type: 'spring',
+                  stiffness: 400,
+                  damping: 10,
+                },
+              }}
+              // on click bounce
+              whileTap={{
+                scale: 1,
+                transition: {
+                  duration: 0.15,
+                  ease: 'easeOut',
+                  type: 'spring',
+                  stiffness: 400,
+                  damping: 10,
+                },
+              }}
+              // on focus bounce
+              whileFocus={{ scale: 1 }}
             >
               <button
                 className="h-full w-full"
@@ -26,7 +51,7 @@ function ResumeTimebar(props) {
               >
                 <p className="text-center dark:text-blackpalette-900">{year}</p>
               </button>
-            </div>
+            </motion.div>
           </Fragment>
         );
       })}
