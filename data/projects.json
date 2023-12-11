@@ -36,7 +36,8 @@
       ],
       "image": "https://raw.githubusercontent.com/smashub/harmory/main/assets/harmory_wide.png",
       "image_caption": "Harmory graph",
-      "paper": "TBD"
+      "paper": "https://dl.acm.org/doi/pdf/10.1145/3543507.3587428",
+      "zenodo": "https://zenodo.org/records/8021211"
     },
     {
       "title": "The Chord Corpus",
@@ -83,9 +84,7 @@
         "harmonic similarity"
       ],
       "image": "https://raw.githubusercontent.com/polifonia-project/lharp/master/etc/img/graph.png",
-      "image_caption": "LHARP graph",
-      "paper": "https://dl.acm.org/doi/pdf/10.1145/3543507.3587428",
-      "zenodo": "https://zenodo.org/records/8021211"
+      "image_caption": "LHARP graph"
     }
   ]
 }
