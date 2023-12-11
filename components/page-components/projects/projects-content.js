@@ -26,7 +26,7 @@ function ProjectsContent(props) {
       {projectList.projects.map((project) => (
         <div
           key={project.short_title}
-          className="max-w-2xl w-full mx-auto h-48 border border-blackpalette-900 rounded overflow-hidden"
+          className="max-w-2xl w-full mx-auto h-48 border-blackpalette-900 dark:border-lime border-[1.5px] rounded overflow-hidden"
         >
           <div className="flex items-center p-4 h-full">
             <div className="w-36 h-36 flex-shrink-0">
@@ -42,7 +42,7 @@ function ProjectsContent(props) {
               <div className="flex justify-between pb-7">
                 <h1 className="text-2xl font-bold text-blackpalette-900 mb-2">
                   <Link href={`/projects/?project=${project.short_title}`}>
-                    <a>{project.short_title}</a>
+                    <a>{project.short_title.replace('_', '.')}</a>
                   </Link>
                 </h1>
                 {!isMobile && (
@@ -51,22 +51,22 @@ function ProjectsContent(props) {
                   </h2>
                 )}
               </div>
-              <div className="flex justify-between">
+              <div className="flex flex-col sm:flex-row justify-between">
                 <div>
                   <h3 className="text-lg font-bold text-blackpalette-900">
                     {project.year}
                   </h3>
-                  <h4 className="text-md font-bold text-blackpalette-900">
+                  <h4 className="text-md font-bold text-blackpalette-900 underline decoration-lime decoration-wavy">
                     {project.type}
                   </h4>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3 pt-4 sm:pt-0">
                   {project.zenodo && (
                     <a
                       href={project.zenodo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-6 h-6 fill-blackpalette-900 dark:fill-whitepalette hover:scale-150 transform transition duration-500 ease-in-out self-center"
+                      className="w-8 h-8 fill-blackpalette-900 dark:fill-whitepalette hover:scale-150 transform transition duration-500 ease-in-out self-center"
                     >
                       <SiZenodo className="w-full h-full" />
                     </a>

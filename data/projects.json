@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "The website you are looking at",
-      "short_title": "this.website",
+      "short_title": "this_website",
       "link": "https://github.com/andreamust/website/",
       "description": "This website is a collection of resources, tools, and datasets for music research and development. It has been developed in Next.js, and most of the components were developed from scratch. Still a work in progress!",
       "year": "2023",
