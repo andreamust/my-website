@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "title": "The website you are looking at",
+      "short_title": "this_website",
+      "link": "https://github.com/andreamust/website/",
+      "description": "This website is a collection of resources, tools, and datasets for music research and development. It has been developed in Next.js, and most of the components were developed from scratch. Still a work in progress!",
+      "year": "2023",
+      "type": "website",
+      "tags": [
+        "website",
+        "music",
+        "musicology",
+        "music information retrieval",
+        "music similarity"
+      ],
+      "image": "/images/this_website.png",
+      "image_caption": "This website"
+    },
+    {
       "title": "The Harmonic Memory",
       "short_title": "Harmory",
       "link": "https://github.com/smashub/harmory",
@@ -19,7 +36,8 @@
       ],
       "image": "https://raw.githubusercontent.com/smashub/harmory/main/assets/harmory_wide.png",
       "image_caption": "Harmory graph",
-      "paper": "TBD"
+      "paper": "https://dl.acm.org/doi/pdf/10.1145/3543507.3587428",
+      "zenodo": "https://zenodo.org/records/8021211"
     },
     {
       "title": "The Chord Corpus",
@@ -45,7 +63,8 @@
       ],
       "image": "https://raw.githubusercontent.com/smashub/choco/main/assets/lomir_workflow.png",
       "image_caption": "ChoCo workflow",
-      "paper": "TBD"
+      "paper": "https://www.nature.com/articles/s41597-023-02410-w",
+      "zenodo": "https://zenodo.org/records/7706751"
     },
     {
       "title": "Local Harmonic Agreement based on Recurrent Patterns",
@@ -65,8 +84,7 @@
         "harmonic similarity"
       ],
       "image": "https://raw.githubusercontent.com/polifonia-project/lharp/master/etc/img/graph.png",
-      "image_caption": "LHARP graph",
-      "paper": "TBD"
+      "image_caption": "LHARP graph"
     }
   ]
 }

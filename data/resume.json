@@ -14,7 +14,7 @@
       "yearStart": 2021,
       "yearEnd": "present",
       "company": "University of Bologna, LILEC",
-      "content": "Tutor of the course *Information Technology Skills (LM)*, for the Master’s degree courses of Italian Culture and Language for Foreigners and Modern, Post-Colonial and Comparative Literatures at the Department of Modern Languages, Literatures, and Cultures, held by Prof. Valentina Presutti. The main tutoring activities included:\n * The preparation of slides and teaching materials for the course;\n * A lot of other stuff."
+      "content": "Tutor of the course *Information Technology Skills (LM)*, for the Master’s degree courses of Italian Culture and Language for Foreigners and Modern, Post-Colonial and Comparative Literatures at the Department of Modern Languages, Literatures, and Cultures, held by Prof. Valentina Presutti. The main tutoring activities included:\n * The preparation of slides and teaching materials for the course;\n * Teaching classes; \n * Exam preparation."
     },
     {
       "title": "PhD student",
@@ -30,7 +30,15 @@
       "yearStart": 2021,
       "yearEnd": 2021,
       "company": "University of Bologna, LILEC",
-      "content": "Researcher within the project *ArCo4Science* (MiBACT). The research project involves the study of computational approach for analysing large repositories of music content expressed in heterogeneous formats with the aim of identifying and for- mally representing common and significant patterns that are indicative of music identity and culture."
+      "content": "Researcher within the project *ArCo4Science* (MiBACT). The research project involves the study of computational approach for analysing large repositories of music content expressed in heterogeneous formats with the aim of identifying and formally representing common and significant patterns that are indicative of music identity and culture."
+    },
+    {
+      "title": "Conversation Designer",
+      "type": ["work"],
+      "yearStart": 2020,
+      "yearEnd": 2021,
+      "company": "Heres S.r.l.",
+      "content": "Company working on chatbot development at enterprise-level. Within the company, I was responsible for the management and implementation of conversational flows and NLP algorithms.\n\n Responsabilities:\n * Design and development of conversational flows\n * Natural Language Processing algorithms development\n * Project management and customer relations\n * Research and product development."
     },
     {
       "title": "Master in Digital Humanities and Digital Knowledge (DHDK)",
@@ -47,14 +55,6 @@
       "yearEnd": 2018,
       "company": "University of Bologna, DAR",
       "content": "* Dissertation title: Il “caso Gobatti”, un esempio di “fanatismo” nei Teatri d'opera italiani di fine Ottocento\n * Supervisor: [Anna Scalfaro](https://www.unibo.it/sitoweb/anna.scalfaro/en)\n"
-    },
-    {
-      "title": "Conversation Designer",
-      "type": ["work"],
-      "yearStart": 2020,
-      "yearEnd": 2021,
-      "company": "Heres S.r.l.",
-      "content": "Company working on chatbot development at enterprise-level. Within the company, I was responsible for the management and implementation of conversational flows and NLP algorithms.\n\n Responsabilities:\n * Design and development of conversational flows\n * Natural Language Processing algorithms development\n * Project management and customer relations\n * Research and product development."
     },
     {
       "title": "Rock Guitar Academy - CCR Course",

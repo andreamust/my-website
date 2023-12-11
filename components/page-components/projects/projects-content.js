@@ -1,11 +1,16 @@
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
+import { SiZenodo } from 'react-icons/si';
+import { IoIosDocument } from 'react-icons/io';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import ProjectsModal from './projects-modal';
+import useMobile from '../../utils/mobile';
 
 function ProjectsContent(props) {
-  const projectList = props.projects.projects;
+  const isMobile = useMobile();
+
+  const projectList = props.projects.projects || []; // Ensure projectList is an array
 
   const router = useRouter();
 
@@ -17,44 +22,76 @@ function ProjectsContent(props) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-14">
+    <div className="flex flex-col items-center gap-8 mt-5 sm:mt-10">
       {projectList.projects.map((project) => (
         <div
           key={project.short_title}
-          className="flex flex-col border-blackpalette-900 w-10/12 h-full border-2"
+          className="max-w-2xl w-full mx-auto h-48 border-blackpalette-900 dark:border-lime border-[1.5px] rounded overflow-hidden"
         >
-          <div className="flex flex-row items-center p-4 pb-12">
-            <Image
-              className="flex-1"
-              src={project.image}
-              width={230}
-              height={200}
-              alt={`image of the project ${project.short_title}`}
-            />
-            <div className="flex flex-col items-center justify-between w-full h-full">
-              <div className="flex flex-row items-center justify-between p-4 w-full">
-                <h1 className="text-3xl font-modernBold text-blackpalette-900 text-center pl-10">
-                  <Link href={'/projects/?project=' + project.short_title}>
-                    <a>{project.short_title}</a>
+          <div className="flex items-center p-4 h-full">
+            <div className="w-36 h-36 flex-shrink-0">
+              <Image
+                className="object-cover w-full h-full rounded"
+                src={project.image}
+                alt={`Image of the project ${project.short_title}`}
+                width={230}
+                height={200}
+              />
+            </div>
+            <div className="flex flex-col flex-grow p-4 ml-5">
+              <div className="flex justify-between pb-7">
+                <h1 className="text-2xl font-bold text-blackpalette-900 mb-2">
+                  <Link href={`/projects/?project=${project.short_title}`}>
+                    <a>{project.short_title.replace('_', '.')}</a>
                   </Link>
                 </h1>
-                <h2 className="text-xl font-modernMono text-blackpalette-900 text-right">
-                  {project.title}
-                </h2>
+                {!isMobile && (
+                  <h2 className="text-lg font-bold text-blackpalette-900 text-right">
+                    {project.title}
+                  </h2>
+                )}
               </div>
-              <div className="flex flex-row items-center justify-between w-full">
-                <h3 className="flex-1 basis-1/3 text-xl font-modernMono text-blackpalette-900 text-center">
-                  {project.year}
-                </h3>
-                <h4 className="flex-1 basis-1/3 text-lg font-modernMono text-blackpalette-900 text-center">
-                  {project.type}
-                </h4>
-                <div className="flex-1 basis-1/3 h-full">
-                  <Link href={project.link}>
-                    <a className="flex flex-col">
-                      <BsGithub className="self-center w-7 h-7" />
+              <div className="flex flex-col sm:flex-row justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-blackpalette-900">
+                    {project.year}
+                  </h3>
+                  <h4 className="text-md font-bold text-blackpalette-900 underline decoration-lime decoration-wavy">
+                    {project.type}
+                  </h4>
+                </div>
+                <div className="flex gap-3 pt-4 sm:pt-0">
+                  {project.zenodo && (
+                    <a
+                      href={project.zenodo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 fill-blackpalette-900 dark:fill-whitepalette hover:scale-150 transform transition duration-500 ease-in-out self-center"
+                    >
+                      <SiZenodo className="w-full h-full" />
                     </a>
-                  </Link>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-6 h-6 fill-blackpalette-900 dark:fill-whitepalette hover:scale-150 transform transition duration-500 ease-in-out self-center"
+                    >
+                      <BsGithub className="w-full h-full" />
+                    </a>
+                  )}
+
+                  {project.paper && (
+                    <a
+                      href={project.paper}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-6 h-6 fill-blackpalette-900 dark:fill-whitepalette hover:scale-150 transform transition duration-500 ease-in-out self-center"
+                    >
+                      <IoIosDocument className="w-full h-full" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

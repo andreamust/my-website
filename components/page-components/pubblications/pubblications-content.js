@@ -33,7 +33,9 @@ function PubblicationsContent(props) {
             {loadedYears.includes(year)
               ? ''
               : loadedYears.push(year) && (
-                  <h2 className="text-2xl font-bold">{year}</h2>
+                  <h2 className="text-2xl font-bold circle-sketch-highlight">
+                    {year}
+                  </h2>
                 )}
             <div className="flex flex-row gap-7 items-center">
               <Link href={'/pubblications/?pubblication=' + data.id}>

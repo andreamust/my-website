@@ -18,7 +18,7 @@ function WindowTopBar(props) {
 
   return (
     <div
-      className="h-8 flex flex-row bg-greypalette-600 dark:bg-whitepalette dark:text-blackpalette-900 rounded-t-md text-center text-base justify-between align-middle"
+      className="h-8 flex flex-row bg-blackpalette-600 text-whitepalette dark:bg-whitepalette dark:text-blackpalette-900 rounded-t-md text-center text-base justify-between align-middle"
       onDoubleClick={resizeWindow}
     >
       <div className="flex-auto self-center">{props.title}</div>

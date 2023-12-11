@@ -5,12 +5,16 @@ import { useState, useEffect, useLayoutEffect } from 'react';
 import Xarrow, { Xwrapper } from 'react-xarrows';
 import { parseData, getResumeSet } from '../../utils/filtering';
 import { useTheme } from 'next-themes';
+import useMobile from '../../utils/mobile';
 
 // const useIsomorphicLayoutEffect =
 //   typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 function ResumeLayout(props) {
   const resume = props.resume;
+
+  // mobile handling
+  const isMobile = useMobile();
 
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
