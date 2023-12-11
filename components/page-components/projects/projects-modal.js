@@ -20,13 +20,17 @@ function ProjectsModal(props) {
       }}
     >
       <div className="flex flex-col gap-5 w-full p-12 overflow-scroll scroll-smooth no-scrollbar">
-        <h1 className="text-2xl font-modernBold underline decoration-wavy decoration-lime decoration-2">
+        <h1 className="text-2xl font-modernBold underline decoration-wavy dark:text-blackpalette-900 decoration-lime decoration-2">
           {content.title}
         </h1>
         <h3 className="text-xl font-modernBold">Year</h3>
-        <p className="text-md font-modern">{content.year}</p>
+        <p className="text-md font-modern dark:text-blackpalette-900">
+          {content.year}
+        </p>
         <h3 className="text-xl font-modernBold">Descritpion</h3>
-        <p className="text-md font-modern">{content.description}</p>
+        <p className="text-md font-modern dark:text-blackpalette-900">
+          {content.description}
+        </p>
         <h3 className="text-xl font-modernBold">Links</h3>
         <div className="flex flex-row gap-5">
           {content.link && (
