@@ -34,7 +34,7 @@ function PubblicationsModal(props) {
   return (
     <BasicWindow
       title={content.id}
-      width="w-[70%]"
+      width="w-[80%]"
       height="h-[70%]"
       animate={true}
       closePath="/pubblications/"
