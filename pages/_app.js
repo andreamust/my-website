@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
       <Head>
-        <title>Andrea Poltronieri's Website</title>
+        <title>Andrea Poltronieri Website</title>
         <meta
           name="description"
           content="Andrea Poltronieri's personal website"
