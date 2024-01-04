@@ -21,7 +21,7 @@ function HomeHero(props) {
             Andrea Poltronieri
           </h1>
           <h2 className="text-3xl text-center circle-sketch-highlight font-modernMono text-cerise">
-            Personal Website
+            Ph.D. Student
           </h2>
           <HomeIcons />
         </div>
