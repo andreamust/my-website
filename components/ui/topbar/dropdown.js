@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 
 function classNames(...classes) {
@@ -7,16 +7,33 @@ function classNames(...classes) {
 
 function Dropdown(props) {
   const dropdownElements = props.dropdownElements;
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleItemClick = (element) => {
+    setIsOpen(false);
+    if (element.link) {
+      // If a link is provided, navigate to it
+      window.location.href = element.link;
+    } else if (element.handler) {
+      // If a handler function is provided, call it
+      element.handler(element.state);
+    }
+  };
+
   return (
     <Menu as="div" className="relative inline-block text-left z-50">
       <div>
-        <Menu.Button className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium dark:text-whitepalette active:bg-lime">
+        <Menu.Button
+          className="inline-flex justify-center w-full rounded-sm shadow-sm px-4 py-2 text-sm font-medium dark:text-whitepalette active:bg-lime"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {props.children}
         </Menu.Button>
       </div>
 
       <Transition
         as={Fragment}
+        show={isOpen}
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0 scale-95"
         enterTo="transform opacity-100 scale-100"
@@ -29,8 +46,8 @@ function Dropdown(props) {
             dropdownElements.map((element) => (
               <Menu.Item key={element.name}>
                 {({ active }) => (
-                  <a
-                    href={element.link}
+                  <button
+                    onClick={() => handleItemClick(element)}
                     className={classNames(
                       active
                         ? 'bg-whitepalette text-blackpalette-900'
@@ -39,7 +56,7 @@ function Dropdown(props) {
                     )}
                   >
                     {element.name}
-                  </a>
+                  </button>
                 )}
               </Menu.Item>
             ))}

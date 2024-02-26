@@ -26,19 +26,26 @@ function TopBarElements(props) {
         <div className="invisible md:visible flex-row gap-3 justify-center pl-3 ">
           <Dropdown
             dropdownElements={[
-              { name: 'Settings', link: '#' },
-              { name: 'Other', link: '#' },
+              {
+                name: 'Change Nav Position',
+                handler: props.navPositionHandler,
+                state: navPositionSwitch,
+              },
+              {
+                name: `Sound ${props.soundState ? 'Off' : 'On'}`,
+                handler: props.soundHandler,
+                state: !props.soundState,
+              },
             ]}
           >
             Options
           </Dropdown>
           <Dropdown
             dropdownElements={[
-              { name: 'Settings', link: '#' },
-              { name: 'Other', link: '#' },
+              { name: 'Curriculum', link: 'cv/CV-Andrea_Poltronieri.pdf' },
             ]}
           >
-            View
+            Download
           </Dropdown>
         </div>
         <div className="flex flex-row gap-4">

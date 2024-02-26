@@ -1,5 +1,4 @@
 import { useTheme } from 'next-themes';
-import { useEffect } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 function ThemeChanger() {
