@@ -1,11 +1,15 @@
 import BasicWindow from '../components/ui/windows/basic-window';
 import ResumeLayout from '../components/page-components/resume/resume-layout';
+import ResumeLayoutMobile from '../components/page-components/resume/resume-layout-mobile';
 import fs from 'fs/promises';
 import path from 'path';
 import PageTitle from '../components/ui/layout/page-title';
 import Head from 'next/head';
+import useMobile from '../components/utils/mobile';
+import { Fragment } from 'react';
 
 function Resume(props) {
+  let isMobile = useMobile();
   const { resume } = props;
   return (
     (
@@ -53,7 +57,12 @@ function Resume(props) {
     (
       <div className="flex flex-col h-full overflow-hidden">
         <PageTitle title={'Resume'} />
-        <ResumeLayout resume={resume} />
+
+        {isMobile ? (
+          <ResumeLayoutMobile resume={resume} />
+        ) : (
+          <ResumeLayout resume={resume} />
+        )}
       </div>
     )
   );
