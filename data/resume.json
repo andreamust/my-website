@@ -1,10 +1,18 @@
 {
   "resume": [
     {
+      "title": "Computer Science Instructor",
+      "type": ["work"],
+      "yearStart": 2024,
+      "yearEnd": "present",
+      "company": "Aldini Valeriani Foundation",
+      "content": "Instructor for the course *Security of systems and infrastructures based on LINUX technologies* at the Aldini Valeriani Foundation, Bologna. The main topics of the course include:\n * Introduction to Linux\n * Bash scripting\n * Networks foundamentals\n * Security in Linux systems"
+    },
+    {
       "title": "Visiting Researcher",
       "type": ["work", "study"],
       "yearStart": 2023,
-      "yearEnd": "present",
+      "yearEnd": 2024,
       "company": "Music Technology Group, Universitat Pompeu Fabra",
       "content": "Visiting researcher at the Music Technology Group of the Universitat Pompeu Fabra, Barcelona, Spain. The research visit concerns the multimodal analysis of harmonic data (audio and symbolic) with the aim of creating a fundational model for muisc harmony understanding.\n * Supervisor: [Martín Rocamora](https://rocamora.uy/)\n"
     },
