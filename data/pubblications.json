@@ -418,5 +418,31 @@
     "title-short": "Polifonia Ontology Network",
     "type": "paper-conference",
     "abstract": "In the music domain, several ontologies have been proposed to annotate musical data, in both symbolic and audio form, and generate semantically rich Music Knowledge Graphs. However, current models lack interoperability and are insufficient for representing music history and the cultural heritage context in which it was generated; risking the propagation of recency and cultural biases to downstream applications. In this article, we propose the Polifonia Ontology Network (PON) for music cultural heritage, centred around four modules: Music Meta (metadata), Representation (content), Source (provenance) and Instrument (cultural objects). We design PON with a strong accent on cultural stakeholder requirements and competency questions (CQs), contributing an NLP-based toolkit to support knowledge engineers in generating, validating, and analysing them; and a novel, high-quality CQ dataset produced as a result. We show current and future use of these resources by internal project pilots, early adopters in the music industry, and opportunities for the Semantic Web and Music Information Retrieval communities."
+  },
+  {
+    "URL": "",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Presutti",
+        "given": "Valentina"
+      },
+      {
+        "family": "Rocamora",
+        "given": "Martín"
+      }
+    ],
+    "container-title": "Sound and Music Computing Conference - SMC 2024",
+    "id": "poltronieri2024chordsync",
+    "issued": {
+      "date-parts": [[2024]]
+    },
+    "title": "ChordSync: Conformer-Based Alignment of Chord Annotations to Music Audio",
+    "title-short": "ChordSync",
+    "type": "paper-conference",
+    "abstract": "In the Western music tradition, chords are the main constituent components of harmony, a fundamental dimension of music. Despite its relevance for several Music Information Retrieval (MIR) tasks, chord-annotated audio datasets are limited and need more diversity. One way to improve those resources is by leveraging the large number of chord annotations available online, but it requires aligning them with music audio. However, existing audio-to-score alignment techniques, which typically rely on Dynamic Time Warping (DTW), fail to address this challenge, as they require weak aligned data for precise synchronisation. In this paper, we introduce ChordSync, a novel conformer-based model designed to seamlessly align chord annotations with audio, eliminating the need for weak alignment. We also provide a pretrained model and a user-friendly library, enabling users to synchronise chord annotations with audio tracks effortlessly. In this way, ChordSync creates opportunities for harnessing crowd-sourced chord data for MIR, especially in audio chord estimation, thereby facilitating the generation of novel datasets. Additionally, our system extends its utility to music education, enhancing music learning experiences by providing accurately aligned annotations, thus enabling learners to engage in synchronised musical practices."
   }
 ]
