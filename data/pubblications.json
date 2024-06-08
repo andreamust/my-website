@@ -342,6 +342,23 @@
     "abstract": "This paper introduces a pattern to formalise context-free grammars in OWL and how to use it for sequence classification. The proposed approach and existing methods are compared and discussed based on their complexity as well as their pragmatic applicability with examples in the music domain. "
   },
   {
+    "URL": "https://link.springer.com/chapter/10.1007/978-3-031-43458-7_41",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      }
+    ],
+    "container-title": "European Semantic Web Conference 2023",
+    "id": "poltronieri2023knowledge",
+    "issued": {
+      "date-parts": [[2023]]
+    },
+    "title": "Knowledge-Based Multimodal Music Similarity",
+    "type": "paper-conference",
+    "abstract": "Music similarity is an essential aspect of music retrieval, recommendation systems, and music analysis. Moreover, similarity is of vital interest for music experts, as it allows studying analogies and influences among composers and historical periods. Current approaches to musical similarity rely mainly on symbolic content, which can be expensive to produce and is not always readily available. Conversely, approaches using audio signals typically fail to provide any insight about the reasons behind the observed similarity. This research addresses the limitations of current approaches by focusing on the study of musical similarity using both symbolic and audio content. The aim of this research is to develop a fully explainable and interpretable system that can provide end-users with more control and understanding of music similarity and classification systems."
+  },
+  {
     "URL": "https://ismir2023program.ismir.net/poster_283.html",
     "author": [
       {
@@ -444,5 +461,43 @@
     "title-short": "ChordSync",
     "type": "paper-conference",
     "abstract": "In the Western music tradition, chords are the main constituent components of harmony, a fundamental dimension of music. Despite its relevance for several Music Information Retrieval (MIR) tasks, chord-annotated audio datasets are limited and need more diversity. One way to improve those resources is by leveraging the large number of chord annotations available online, but it requires aligning them with music audio. However, existing audio-to-score alignment techniques, which typically rely on Dynamic Time Warping (DTW), fail to address this challenge, as they require weak aligned data for precise synchronisation. In this paper, we introduce ChordSync, a novel conformer-based model designed to seamlessly align chord annotations with audio, eliminating the need for weak alignment. We also provide a pretrained model and a user-friendly library, enabling users to synchronise chord annotations with audio tracks effortlessly. In this way, ChordSync creates opportunities for harnessing crowd-sourced chord data for MIR, especially in audio chord estimation, thereby facilitating the generation of novel datasets. Additionally, our system extends its utility to music education, enhancing music learning experiences by providing accurately aligned annotations, thus enabling learners to engage in synchronised musical practices."
+  },
+  {
+    "URL": "https://2024.eswc-conferences.org/wp-content/uploads/2024/05/77770034.pdf",
+    "author": [
+      {
+        "family": "Fathallah",
+        "given": "Noura"
+      },
+      {
+        "family": "Das",
+        "given": "Anupam"
+      },
+      {
+        "family": "De Giorgis",
+        "given": "Sara"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Haase",
+        "given": "Peter"
+      },
+      {
+        "family": "Kovriguina",
+        "given": "Larisa"
+      }
+    ],
+    "container-title": "International Semantic Web Conference - ISWC 2024",
+    "id": "fathallah2024neongpt",
+    "issued": {
+      "date-parts": [[2024]]
+    },
+    "title": "NeOn-GPT: A Large Language Model-Powered Pipeline for Ontology Learning",
+    "title-short": "NeOn-GPT",
+    "type": "paper-conference",
+    "abstract": "We address the task of ontology learning by combining the structured NeOn methodology framework with Large Language Models (LLMs) for translating natural language domain descriptions into Turtle syntax ontologies. The main contribution of the paper is a prompt pipeline tailored for domain-agnostic modeling, exemplified through the application to a domain-specific case study: the wine ontology. The resulting pipeline is used to develop NeOn-GPT, a workflow for automatic ontology modeling, and its proof of concept implementation, integrated on top of the metaphactory platform. NeOn-GPT leverages the systematic approach of the NeOn methodology and LLMs’ generative capabilities to facilitate a more efficient ontology development process. We evaluate the proposed approach by conducting comprehensive evaluations using the Stanford wine ontology as the gold standard. The obtained results show, that LLMs are not fully equipped to perform procedural tasks required for ontology development, and lack the reasoning skills and domain expertise needed. Overall, LLMs require integration with the workflow or trajectory tools for continuous knowledge engineering tasks. Nevertheless, LLMs can significantly alleviate the time and expertise needed. Our code base is publicly available for research and development purposes, accessible at: https://github.com/andreamust/NEON-GPT."
   }
 ]

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const bios = {
@@ -9,7 +8,7 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a human being
+      I&apos;m a human being.
     </motion.p>
   ),
   1: (
@@ -19,7 +18,7 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a PhD Student in Computer Science and Engineering
+      I&apos;m a PhD Student in Computer Science and Engineering.
     </motion.p>
   ),
   2: (
@@ -30,11 +29,8 @@ const bios = {
       transition={{ duration: 0.4 }}
     >
       I&apos;m a PhD Student in Computer Science and Engineering at the
-      University of Bologna. I&apos;m currently working on the{' '}
-      <Link href="https://polifonia-project.eu/">
-        <a target={'_blank'}>Polifonia Project</a>
-      </Link>
-      .
+      University of Bologna. My main reasearch interest is about Music
+      Information Retrieval (MIR) and Computational Musicology.
     </motion.p>
   ),
   3: (
@@ -46,7 +42,9 @@ const bios = {
     >
       I&apos;m a PhD Student in Computer Science and Engineering at the
       University of Bologna. My main reasearch interest is about Music
-      Information Retrieval (MIR) and Computational Musicology.
+      Information Retrieval (MIR) and Computational Musicology. More
+      specifically, I&apos;m interested in the multi-modal analysis of harmonic
+      data.
     </motion.p>
   ),
   4: (
@@ -60,11 +58,7 @@ const bios = {
       University of Bologna. My main reasearch interest is about Music
       Information Retrieval (MIR) and Computational Musicology. More
       specifically, I&apos;m interested in the multi-modal analysis of harmonic
-      data. I&apos;m currently working on the{' '}
-      <Link href="https://polifonia-project.eu/">
-        <a target={'_blank'}>Polifonia Project</a>
-      </Link>
-      .
+      data. I&apos;m also a musician and a composer.
     </motion.p>
   ),
 };
