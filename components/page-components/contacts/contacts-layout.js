@@ -1,4 +1,4 @@
-import HomeIcons from '../home/home-icons';
+import HomeIcons from "../home/home-icons";
 
 function ContactsLayout() {
   return (
@@ -11,9 +11,9 @@ function ContactsLayout() {
           <h2 className="circle-sketch-highlight flex font-modernMono text-xl self-center">
             Just email me
           </h2>
-          <a href="mailto:andrea.poltronieri2@unibo.it">
+          <a href="mailto:andrea.poltronieri@upf.edu">
             <p className="text-xl font-modernMono">
-              andrea.poltronieri2@unibo.it
+              andrea.poltronieri@upf.edu
             </p>
           </a>
         </div>
