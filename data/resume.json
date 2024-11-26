@@ -1,10 +1,18 @@
 {
   "resume": [
     {
-      "title": "Computer Science Instructor",
+      "title": "Research Engineer",
       "type": ["work"],
       "yearStart": 2024,
       "yearEnd": "present",
+      "company": "Music Technology Group, Universitat Pompeu Fabra",
+      "content": "Research engineer at the Music Technology Group of the Universitat Pompeu Fabra, Barcelona, Spain. The research activity concerns the development of a multimodal foundational model for music understanding.\n * Supervisor: [Martín Rocamora](https://rocamora.uy/)"
+    },
+    {
+      "title": "Computer Science Instructor",
+      "type": ["work"],
+      "yearStart": 2024,
+      "yearEnd": 2024,
       "company": "Aldini Valeriani Foundation",
       "content": "Instructor for the course *Security of systems and infrastructures based on LINUX technologies* at the Aldini Valeriani Foundation, Bologna. The main topics of the course include:\n * Introduction to Linux\n * Bash scripting\n * Networks foundamentals\n * Security in Linux systems"
     },
@@ -20,7 +28,7 @@
       "title": "Tutor",
       "type": ["work"],
       "yearStart": 2021,
-      "yearEnd": "present",
+      "yearEnd": 2025,
       "company": "University of Bologna, LILEC",
       "content": "Tutor of the course *Information Technology Skills (LM)*, for the Master’s degree courses of Italian Culture and Language for Foreigners and Modern, Post-Colonial and Comparative Literatures at the Department of Modern Languages, Literatures, and Cultures, held by Prof. Valentina Presutti. The main tutoring activities included:\n * The preparation of slides and teaching materials for the course;\n * Teaching classes; \n * Exam preparation."
     },
@@ -28,7 +36,7 @@
       "title": "PhD student",
       "type": ["work", "study"],
       "yearStart": 2021,
-      "yearEnd": "present",
+      "yearEnd": 2025,
       "company": "University of Bologna",
       "content": "Ph.D.financed by Polifonia, an European project founded by the *EU Horizon2020 Programme*.The main objective of the Ph.D. is to recognise and extract recurring musical patterns of different nature (melodic, harmonic, rhythmic) that have a musicological and/or perceptual relevance. By means of the interaction between technologies used in the field of Music Information Retrieval and the Semantic Web, the aim is to identify such patterns taking into account both signal-related aspects (DSP) and different types of symbolic notation.\n * Supervisor: Prof. [Valentina Presutti](https://www.unibo.it/sitoweb/valentina.presutti/en)."
     },
