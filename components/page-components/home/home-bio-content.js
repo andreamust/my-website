@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const bios = {
   0: (
@@ -18,7 +18,8 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a PhD Student in Computer Science and Engineering.
+      I&apos;m a researcher in the field of Music Information Retrieval and
+      Ph.D. candidate in Computer Science and Engineering.
     </motion.p>
   ),
   2: (
@@ -28,9 +29,10 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a PhD Student in Computer Science and Engineering at the
-      University of Bologna. My main reasearch interest is about Music
-      Information Retrieval (MIR) and Computational Musicology.
+      I&apos;m a research engineer at the Music Technology Group (MTG) of the
+      Pompeu Fabra University an a PhD candidate in Computer Science and
+      Engineering at the University of Bologna. My main reasearch interest is
+      about Music Information Retrieval (MIR) and Computational Musicology.
     </motion.p>
   ),
   3: (
@@ -40,11 +42,12 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a PhD Student in Computer Science and Engineering at the
-      University of Bologna. My main reasearch interest is about Music
-      Information Retrieval (MIR) and Computational Musicology. More
-      specifically, I&apos;m interested in the multi-modal analysis of harmonic
-      data.
+      I&apos;m a research engineer at the Music Technology Group (MTG) of the
+      Pompeu Fabra University an a PhD candidate in Computer Science and
+      Engineering at the University of Bologna. My main reasearch interest is
+      about Music Information Retrieval (MIR) and Computational Musicology. More
+      specifically, I&apos;m interested in the developement of foundational
+      models for music understanding.
     </motion.p>
   ),
   4: (
@@ -54,11 +57,12 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a PhD Student in Computer Science and Engineering at the
-      University of Bologna. My main reasearch interest is about Music
-      Information Retrieval (MIR) and Computational Musicology. More
-      specifically, I&apos;m interested in the multi-modal analysis of harmonic
-      data. I&apos;m also a musician and a composer.
+      I&apos;m a research engineer at the Music Technology Group (MTG) of the
+      Pompeu Fabra University an a PhD candidate in Computer Science and
+      Engineering at the University of Bologna. My main reasearch interest is
+      about Music Information Retrieval (MIR) and Computational Musicology. More
+      specifically, I&apos;m interested in the developement of foundational
+      models for music understanding. I&apos;m also a musician and a composer.
     </motion.p>
   ),
 };

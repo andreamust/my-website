@@ -1,22 +1,21 @@
-import BasicWindow from '../../ui/windows/basic-window';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
-import { SiZenodo } from 'react-icons/si';
-import { IoIosDocument } from 'react-icons/io';
+import BasicWindow from "../../ui/windows/basic-window";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { SiZenodo } from "react-icons/si";
+import { IoIosDocument } from "react-icons/io";
 
 function ProjectsModal(props) {
   const { content, router } = props;
 
   return (
     <BasicWindow
-      title={content.short_title.replace('_', '.')}
+      title={content.short_title.replace("_", ".")}
       width="w-[80%]"
       height="h-[70%]"
       animate={true}
       closePath="/projects/"
       onClose={() => {
-        router.push('/projects/');
+        router.push("/projects/");
       }}
     >
       <div className="flex flex-col gap-5 w-full p-12 overflow-scroll scroll-smooth no-scrollbar">

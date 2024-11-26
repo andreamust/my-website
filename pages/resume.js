@@ -1,12 +1,10 @@
-import BasicWindow from '../components/ui/windows/basic-window';
-import ResumeLayout from '../components/page-components/resume/resume-layout';
-import ResumeLayoutMobile from '../components/page-components/resume/resume-layout-mobile';
-import fs from 'fs/promises';
-import path from 'path';
-import PageTitle from '../components/ui/layout/page-title';
-import Head from 'next/head';
-import useMobile from '../components/utils/mobile';
-import { Fragment } from 'react';
+import ResumeLayout from "../components/page-components/resume/resume-layout";
+import ResumeLayoutMobile from "../components/page-components/resume/resume-layout-mobile";
+import fs from "fs/promises";
+import path from "path";
+import PageTitle from "../components/ui/layout/page-title";
+import Head from "next/head";
+import useMobile from "../components/utils/mobile";
 
 function Resume(props) {
   let isMobile = useMobile();
@@ -56,7 +54,7 @@ function Resume(props) {
     ),
     (
       <div className="flex flex-col h-full overflow-hidden">
-        <PageTitle title={'Resume'} />
+        <PageTitle title={"Resume"} />
 
         {isMobile ? (
           <ResumeLayoutMobile resume={resume} />
@@ -68,7 +66,7 @@ function Resume(props) {
   );
 }
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'data', 'resume.json');
+  const filePath = path.join(process.cwd(), "data", "resume.json");
   const resumeData = await fs.readFile(filePath);
   const data = JSON.parse(resumeData);
   return { props: { resume: data.resume } };

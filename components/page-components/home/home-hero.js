@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import HomeIcons from './home-icons';
+import Image from "next/image";
+import HomeIcons from "./home-icons";
 
 function HomeHero(props) {
   return (
@@ -22,7 +22,7 @@ function HomeHero(props) {
             Andrea Poltronieri
           </h1>
           <h2 className="text-3xl text-center circle-sketch-highlight font-modernMono text-cerise">
-            Ph.D. Student
+            MIR Researcher
           </h2>
           <HomeIcons />
         </div>

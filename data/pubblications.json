@@ -499,5 +499,42 @@
     "title-short": "NeOn-GPT",
     "type": "paper-conference",
     "abstract": "We address the task of ontology learning by combining the structured NeOn methodology framework with Large Language Models (LLMs) for translating natural language domain descriptions into Turtle syntax ontologies. The main contribution of the paper is a prompt pipeline tailored for domain-agnostic modeling, exemplified through the application to a domain-specific case study: the wine ontology. The resulting pipeline is used to develop NeOn-GPT, a workflow for automatic ontology modeling, and its proof of concept implementation, integrated on top of the metaphactory platform. NeOn-GPT leverages the systematic approach of the NeOn methodology and LLMs’ generative capabilities to facilitate a more efficient ontology development process. We evaluate the proposed approach by conducting comprehensive evaluations using the Stanford wine ontology as the gold standard. The obtained results show, that LLMs are not fully equipped to perform procedural tasks required for ontology development, and lack the reasoning skills and domain expertise needed. Overall, LLMs require integration with the workflow or trajectory tools for continuous knowledge engineering tasks. Nevertheless, LLMs can significantly alleviate the time and expertise needed. Our code base is publicly available for research and development purposes, accessible at: https://github.com/andreamust/NEON-GPT."
+  },
+  {
+    "URL": "https://www.fiz-karlsruhe.de/sites/default/files/FIZ/Dokumente/Forschung/ISE/Publications/Conferences-Workshops/WOP%40ISWC2024_OnePattern_ondraszek.pdf",
+    "author": [
+      {
+        "family": "Ondraszek",
+        "given": "Sarah Rebecca"
+      },
+      {
+        "family": "Sartini",
+        "given": "Bruno"
+      },
+      {
+        "family": "van Erp",
+        "given": "Marieke"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Lisena",
+        "given": "Pasquale"
+      },
+      {
+        "family": "Sack",
+        "given": "Harald"
+      }
+    ],
+    "container-title": "15th Workshop on Ontology Design and Patterns - WOP 2024",
+    "id": "ondraszek2024onepattern",
+    "issued": {
+      "date-parts": [[2024]]
+    },
+    "title": "One pattern to express them all? Towards Generalised Patterns for Ontology Design in the Digital Humanities",
+    "type": "paper-conference",
+    "abstract": "The digital humanities is a diverse area of research, encompassing just as diverse data as disciplines, thus posing particular challenges for ontology engineering. This paper pushes the application of ontology design patterns to solve these recurring challenges. It proposes a set of potential generalised patterns identified in various DH-related case studies, which address recurring modelling issues in the DH domain: annotations, knowledge provenance, or the interpretation of cultural artefacts. Functioning as a proofof-concept, the work showcases how patterns could improve interoperability and knowledge capturing in ontologies for the DH."
   }
 ]
