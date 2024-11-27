@@ -1,5 +1,5 @@
-import { useXarrow } from 'react-xarrows';
-import ReactMarkdown from 'react-markdown';
+import { useXarrow } from "react-xarrows";
+import ReactMarkdown from "react-markdown";
 
 function ResumeContent(props) {
   const resume = props.data;
@@ -7,7 +7,7 @@ function ResumeContent(props) {
   const updateXarrow = useXarrow();
   return (
     <div
-      className="relative flex flex-col gap-12 overflow-y-scroll no-scrollbar h-screen w-full pl-14 pr-14 pb-32 pt-24"
+      className="relative flex flex-col gap-12 overflow-y-scroll no-scrollbar h-screen w-full pl-6 pr-6 pb-32 pt-24 sm:pl-14 sm:pr-14"
       onScroll={updateXarrow}
     >
       {resume.map((resumeEntry, index) => {
@@ -20,8 +20,8 @@ function ResumeContent(props) {
             className={`relative overflow-visible flex-1 pl-10 pr-4 border-cerise ${
               Array.from(props.year).includes(yearStart) &&
               props.type.some((t) => type.includes(t))
-                ? 'border-2'
-                : 'border-0'
+                ? "border-2"
+                : "border-0"
             }`}
           >
             <div className="flex flex-col gap-1">
