@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function useMobile() {
-  const [useMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // Default to desktop view
 
   useEffect(() => {
+    // Detect screen size on client-side only
     const handleResize = () => {
-      if (window.innerWidth < 720) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 720);
     };
-    window.addEventListener('resize', handleResize);
+
+    handleResize(); // Run on mount to initialize state
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  return useMobile;
+  return isMobile;
 }
