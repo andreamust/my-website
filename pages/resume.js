@@ -5,10 +5,18 @@ import path from "path";
 import PageTitle from "../components/ui/layout/page-title";
 import Head from "next/head";
 import useMobile from "../components/utils/mobile";
+import { useEffect, useState } from "react";
 
 function Resume(props) {
   let isMobile = useMobile();
+
   const { resume } = props;
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Mark the component as hydrated
+  }, []);
+
   return (
     (
       <Head>
