@@ -10,11 +10,11 @@ function HomeIcons() {
           <FaGithub className="h-8 w-8 cursor-zoom-in drop-shadow-lg text-black dark:text-whitepalette" />
         </a>
       </Link>
-      <Link href={'https://www.unibo.it/sitoweb/andrea.poltronieri2'}>
+      {/* <Link href={'https://www.unibo.it/sitoweb/andrea.poltronieri2'}>
         <a target="_blank" aria-label="Link to university webpage">
           <FaUniversity className="h-8 w-8 cursor-zoom-in drop-shadow-lg text-black dark:text-whitepalette" />
         </a>
-      </Link>
+      </Link> */}
       <Link href={'https://www.linkedin.com/in/andrea-poltronieri21'}>
         <a target="_blank" aria-label="Link to LinkedIn account">
           <FaLinkedinIn className="h-8 w-8 cursor-zoom-in drop-shadow-lg text-black dark:text-whitepalette" />
