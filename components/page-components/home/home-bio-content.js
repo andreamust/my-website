@@ -18,8 +18,7 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a researcher in the field of Music Information Retrieval and
-      Ph.D. candidate in Computer Science and Engineering.
+      I&apos;m a researcher in Music Information Retrieval.
     </motion.p>
   ),
   2: (

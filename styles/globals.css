@@ -5,15 +5,15 @@
 @layer components {
   @font-face {
     font-family: 'modernist-bold';
-    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Bold.otf');
+    src: url('../public/fonts/space/SpaceGrotesk-Bold.ttf');
   }
   @font-face {
     font-family: 'modernist';
-    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Regular.otf');
+    src: url('../public/fonts/space/SpaceGrotesk-Regular.ttf');
   }
   @font-face {
     font-family: 'modernist-mono';
-    src: url('../public/fonts/Sk-Modernist/Sk-Modernist-Mono.otf');
+    src: url('../public/fonts/space/SpaceMono-Regular.ttf');
   }
   #__next {
     @apply grid h-screen  grid-rows-5 grid-cols-12 m-0 p-0 border-0;
