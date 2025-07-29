@@ -28,8 +28,10 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a research engineer at the Music Technology Group (MTG), Universitat Pompeu Fabra. 
-      My work focuses on Music Information Retrieval (MIR) and Computational Musicology.
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
+      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      Engineering from the University of Bologna. My main research interest is
+      about Music Information Retrieval (MIR) and Computational Musicology.
     </motion.p>
   ),
   3: (
@@ -39,9 +41,12 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a research engineer at the Music Technology Group (MTG), Universitat Pompeu Fabra. 
-      My research focuses on Music Information Retrieval (MIR) and Computational Musicology, 
-      with a particular interest in developing foundational models for music understanding.
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
+      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      Engineering from the University of Bologna. My main reasearch interest is
+      about Music Information Retrieval (MIR) and Computational Musicology. More
+      specifically, I&apos;m interested in the developement of foundational
+      models for music understanding.
     </motion.p>
   ),
   4: (
@@ -51,10 +56,13 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a research engineer at the Music Technology Group (MTG), Universitat Pompeu Fabra. 
-      My research focuses on Music Information Retrieval (MIR) and Computational Musicology, 
-      with a particular interest in developing foundational models for music understanding. 
-      I hold a Ph.D. in Computer Science and Engineering from the University of Bologna.
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
+      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      Engineering from the University of Bologna. My main reasearch interest is
+      about Music Information Retrieval (MIR) and Computational Musicology. More
+      specifically, I&apos;m interested in the developement of foundational
+      models for music understanding, combining audio and symbolic representations. 
+      I&apos;m also a musician and a composer.
     </motion.p>
   ),
 };
