@@ -3,19 +3,11 @@
    {
       "title": "Postdoctoral Researcher",
       "type": ["work"],
-      "yearStart": 2025,
+      "yearStart": 2024,
       "yearEnd": "present",
       "company": "Music Technology Group, Universitat Pompeu Fabra",
       "content": "Postdoctoral researcher at the Music Technology Group of the Universitat Pompeu Fabra, Barcelona, Spain. The research activity concerns the development of a multimodal foundational model for music understanding, combining audio and symbolic representations.\n * Supervisor: [Martín Rocamora](https://rocamora.uy/)"
     }, 
-    {
-      "title": "Research Engineer",
-      "type": ["work"],
-      "yearStart": 2024,
-      "yearEnd": 2025,
-      "company": "Music Technology Group, Universitat Pompeu Fabra",
-      "content": "Research engineer at the Music Technology Group of the Universitat Pompeu Fabra, Barcelona, Spain.\n * Supervisor: [Martín Rocamora](https://rocamora.uy/)"
-    },
     {
       "title": "Computer Science Instructor",
       "type": ["work"],

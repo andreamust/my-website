@@ -1,35 +1,47 @@
-import BasicWindow from '../../ui/windows/basic-window';
-import renderCitation from '../../utils/process-pubblications';
-import { useState } from 'react';
-import useMobile from '../../utils/mobile';
-import Head from 'next/head';
+import BasicWindow from "../../ui/windows/basic-window";
+import renderCitation from "../../utils/process-pubblications";
+import { useState } from "react";
+import useMobile from "../../utils/mobile";
+import Head from "next/head";
 
 function PubblicationsModal(props) {
   const mobile = useMobile();
-  const [copySuccess, setCopySuccess] = useState('');
+  const [copySuccess, setCopySuccess] = useState("");
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(citation).then(
       () => {
-        setCopySuccess('Copied!');
+        setCopySuccess("Copied!");
       },
       () => {
-        setCopySuccess('Failed to copy!');
+        setCopySuccess("Failed to copy!");
       }
     );
   };
   const { content, router } = props;
   const authorList = content.author.map(
-    (author) => author.family + ' ' + author.given
+    (author) => author.family + " " + author.given
   );
 
   const generateCitation = (format) => {
-    setCitation('');
+    setCitation("");
+    setSelectedFormat(format);
     const { output } = renderCitation(content, format);
     return output;
   };
 
   let [citation, setCitation] = useState();
+
+  const [selectedFormat, setSelectedFormat] = useState("");
+
+  const baseBtn =
+    "text-lg font-bold py-2 px-4 rounded transition-colors duration-200";
+  const formatBtn = (format) =>
+    `${baseBtn} ${
+      selectedFormat === format
+        ? "bg-cerise text-whitepalette"
+        : "bg-lime text-blackpalette-900 hover:bg-cerise hover:text-whitepalette active:bg-blackpalette-900"
+    }`;
 
   return (
     (
@@ -48,11 +60,11 @@ function PubblicationsModal(props) {
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="images/favicon.ico" />
         <meta name="citation_title" content={content.title} />
-        <meta name="citation_author" content={authorList.join(', ')} />
+        <meta name="citation_author" content={authorList.join(", ")} />
         <meta name="citation_publication_date" content={content.year} />
         <meta
           name="citation_journal_title"
-          content={content['container-title']}
+          content={content["container-title"]}
         />
         <meta name="citation_abstract" content={content.abstract} />
         <meta name="citation_pdf_url" content={content.URL} />
@@ -69,7 +81,7 @@ function PubblicationsModal(props) {
         animate={true}
         closePath="/pubblications/"
         onClose={() => {
-          router.push('/pubblications/');
+          router.push("/pubblications/");
         }}
       >
         <div className="flex flex-col gap-5 w-full p-12 overflow-scroll scroll-smooth no-scrollbar">
@@ -78,15 +90,15 @@ function PubblicationsModal(props) {
           </h1>
           <h3 className="text-xl font-modernBold">Authors</h3>
           <p className="text-md font-modern dark:text-blackpalette-900">
-            {authorList.join(', ')}
+            {authorList.join(", ")}
           </p>
           <h3 className="text-xl font-modernBold">Published in</h3>
           <p className="text-md font-modern italic dark:text-blackpalette-900">
-            {content['container-title']
-              ? content['container-title']
-              : 'To be published'}
+            {content["container-title"]
+              ? content["container-title"]
+              : "To be published"}
           </p>
-          {authorList[0] == 'Poltronieri Andrea' ? (
+          {/* {authorList[0] == 'Poltronieri Andrea' ? (
             ''
           ) : (
             <>
@@ -95,7 +107,7 @@ function PubblicationsModal(props) {
                 Alphabetical order
               </p>
             </>
-          )}
+          )} */}
           <h3 className="text-xl font-modernBold">Abstract</h3>
           <p className="text-md font-modern dark:text-blackpalette-900">
             {content.abstract}
@@ -109,43 +121,44 @@ function PubblicationsModal(props) {
           </button>
           <h3 className="text-xl font-modernBold">Cite</h3>
           <div className="flex justify-between items-center">
-            <div className="flex flex-row gap-4 items-center">
+            <div className="flex flex-row gap-4 items-center flex-wrap">
               <button
-                className="text-lg bg-lime hover:bg-cerise hover:text-whitepalette dark:text-blackpalette-900 font-bold py-2 px-4 rounded"
-                onClick={() => setCitation(generateCitation('bibliography'))}
+                className={formatBtn("bibliography")}
+                onClick={() => setCitation(generateCitation("bibliography"))}
               >
                 APA
               </button>
               <button
-                className="text-lg bg-lime hover:bg-cerise hover:text-whitepalette dark:text-blackpalette-900 font-bold py-2 px-4 rounded"
-                onClick={() => setCitation(generateCitation('bibtex'))}
+                className={formatBtn("bibtex")}
+                onClick={() => setCitation(generateCitation("bibtex"))}
               >
                 BibTex
               </button>
               <button
-                className="text-lg bg-lime hover:bg-cerise hover:text-whitepalette dark:text-blackpalette-900 font-bold py-2 px-4 rounded"
-                onClick={() => setCitation(generateCitation('ris'))}
+                className={formatBtn("ris")}
+                onClick={() => setCitation(generateCitation("ris"))}
               >
                 RIS
               </button>
               <button
-                className="text-lg bg-lime hover:bg-cerise hover:text-whitepalette dark:text-blackpalette-900 font-bold py-2 px-4 rounded"
-                onClick={() => setCitation(generateCitation('ndjson'))}
+                className={formatBtn("ndjson")}
+                onClick={() => setCitation(generateCitation("ndjson"))}
               >
                 NDJSON
               </button>
             </div>
-            <div className="flex justify-between items-center">
-              {citation && (
+            {citation && (
+              <div className="ml-4">
                 <button
-                  className="text-lg bg-greypalette-600 dark:bg-whitepalette hover:text-cerise dark:text-blackpalette-900 font-bold py-2 px-4 rounded ml-50"
+                  className={`${baseBtn} bg-greypalette-600 dark:bg-whitepalette hover:bg-lime active:bg-cerise hover:text-whitepalette dark:text-blackpalette-900`}
                   onClick={copyToClipboard}
                 >
-                  {copySuccess ? copySuccess : 'Copy'}
+                  {copySuccess || "Copy"}
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
+
           <p className="text-md font-modern dark:text-blackpalette-900">
             {citation}
           </p>

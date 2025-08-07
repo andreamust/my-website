@@ -536,5 +536,79 @@
     "title": "One pattern to express them all? Towards Generalised Patterns for Ontology Design in the Digital Humanities",
     "type": "paper-conference",
     "abstract": "The digital humanities is a diverse area of research, encompassing just as diverse data as disciplines, thus posing particular challenges for ontology engineering. This paper pushes the application of ontology design patterns to solve these recurring challenges. It proposes a set of potential generalised patterns identified in various DH-related case studies, which address recurring modelling issues in the DH domain: annotations, knowledge provenance, or the interpretation of cultural artefacts. Functioning as a proofof-concept, the work showcases how patterns could improve interoperability and knowledge capturing in ontologies for the DH."
-  }
+  },
+  {
+    "URL": "https://doi.org/10.5281/zenodo.15276293",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      }
+    ],
+    "container-title": "PhD Thesis, University of Bologna",
+    "id": "poltronieri2025phdthesis",
+    "issued": {
+      "date-parts": [[2025]]
+    },
+    "title": "Harmonising Music Information Retrieval with Semantics: from Data Integration to Multimodality",
+    "type": "thesis",
+    "abstract": "In the era of big data and machine learning, the fragmentation of musical datasets and the lack of standardised representations continue to hinder advancements in Music Information Retrieval (MIR). The multifaceted nature of music complicates both the representation of content - with small, task-specific datasets scattered across various formats, and context (metadata), where there is a lack of a consistent, structured terminology. These challenges increase the effort required for data collection and pre-processing, reduce reproducibility, and limit the scalability of MIR models. To address these issues, this thesis proposes a unified semantic model to foster interoperability and advance MIR tasks.\nA specific instance of this fragmentation can be found in harmonic annotations, where harmony - an essential musical dimension - is inconsistently represented across datasets, formats, and notational systems. Taking harmony as a use case and leveraging the proposed semantic model, this thesis develops a standardised workflow to harmonise previously disconnected datasets, enabling the creation of new, large-scale unified corpora. Building on these harmonised datasets, a key contribution of the thesis is the exploration of harmonic similarity, which is used to organise, explore, and reveal connections across diverse tracks, historical periods, and genres. To this end, we implement novel state-of-the-art harmonic similarity functions, advancing current research in MIR. Moreover, by utilising the created large, varied data collections, we uncover deeper relationships within music and explore how diverse stylistic excerpts can be used for generative tasks.\nWhile integrating symbolic data offers significant advantages, certain limitations persist. Primary challenges include the limited diversity of annotated data, often biased toward a narrow range of musical genres, and the inherent ambiguity and subjectivity in harmonic annotations. Such challenges have led MIR tasks like Audio Chord Estimation (ACE) to hit a \"glass ceiling,\" where neither increasing computational power nor the volume of data has led to improved results.\nTo address these issues, this thesis explores a multimodal approach aimed at enhancing the analysis and understanding of harmonic data by jointly leveraging audio and chord annotations. We first propose a novel method for enriching the dataset with audio annotations aligned to the existing symbolic data. Building on this foundation, we introduce a new model for ACE that embeds formalised music theory concepts such as consonance and dissonance, addressing both training and evaluation challenges in the field. This model aims to mitigate the limitations of chord vocabulary imbalance and annotation subjectivity, ultimately improving the state-of-the-art in audio-based harmonic analysis."
+    },
+    {
+    "URL": "https://www.arxiv.org/abs/2507.03482",
+    "author": [
+      {
+        "family": "Alonso-Jiménez",
+        "given": "Pablo"
+      },
+      {
+        "family": "Ramoneda",
+        "given": "Pedro"
+      },
+      {
+        "family": "Araz",
+        "given": "R. Oguz"
+      },
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Bogdanov",
+        "given": "Dmitry"
+      }
+    ],
+    "container-title": "Proceedings of the 32nd ACM International Conference on Multimedia (MM 2024)",
+    "id": "alonso2025omarrq",
+    "issued": {
+      "date-parts": [[2025]]
+    },
+    "title": "OMAR-RQ: Open Music Audio Representation Model Trained with Multi-Feature Masked Token Prediction",
+    "type": "paper-conference",
+    "abstract": "Developing open-source foundation models is essential for advancing research in music audio understanding and ensuring access to powerful, multipurpose representations for music information retrieval. We present OMAR-RQ, a model trained with self-supervision via masked token classification methodologies using a large-scale dataset with over 330,000 hours of music audio. We experiment with different input features and quantization options, and achieve state-of-the-art performance in music tagging, pitch estimation, chord recognition, beat tracking, segmentation, and difficulty estimation among open self-supervised models. We open-source our training and evaluation pipelines and model weights."
+  },
+  {
+  "URL": "",
+  "author": [
+    {
+      "family": "Poltronieri",
+      "given": "Andrea"
+    },
+    {
+      "family": "Serra",
+      "given": "Xavier"
+    },
+    {
+      "family": "Rocamora",
+      "given": "Martín"
+    }
+  ],
+  "container-title": "Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR 2025)",
+  "id": "poltronieri2025discordharmony",
+  "issued": {
+    "date-parts": [[2025]]
+  },
+  "title": "From Discord to Harmony: Decomposed Consonance Based Training for Improved Audio Chord Estimation",
+  "type": "paper-conference",
+  "abstract": "Audio Chord Estimation (ACE) holds a pivotal role in music information research, having garnered attention for over two decades due to its relevance for music transcription and analysis. Despite notable advancements, challenges persist in the task, particularly concerning unique characteristics of harmonic content, which have resulted in existing systems' performances reaching a glass ceiling. These challenges include annotator subjectivity, where varying interpretations among annotators lead to inconsistencies, and class imbalance within chord datasets, where certain chord classes are over-represented compared to others, posing difficulties in model training and evaluation. As a first contribution, this paper presents an evaluation of inter-annotator agreement in chord annotations, using metrics that extend beyond traditional binary measures. In addition, we propose a consonance-informed distance metric that reflects the perceptual similarity between harmonic annotations. Our analysis suggests that consonance-based distance metrics more effectively capture musically meaningful agreement between annotations. Expanding on these findings, we introduce a novel ACE conformer-based model that integrates consonance concepts into the model through consonance-based label smoothing. The proposed model also addresses class imbalance by separately estimating root, bass, and all note activations, enabling the reconstruction of chord labels from decomposed outputs."}
 ]
