@@ -1,5 +1,42 @@
 {
   "projects": [
+
+    {
+      "title": "Decomposed Consonance-based Training for Improved Audio Chord Estimation",
+      "short_title": "From Discord to Harmony",
+      "link": "https://github.com/andreamust/consonance-ACE",
+      "description": "This paper introduces a method addressing annotator subjectivity and class imbalance in audio chord estimation (ACE). It proposes a consonance-informed distance metric, consonance-based label smoothing, and a decomposed model estimating root, bass and note activations separately. :contentReference[oaicite:1]{index=1}",
+      "year": "2025",
+      "type": "algorithm",
+      "tags": [
+        "music information retrieval",
+        "audio chord estimation",
+        "deep learning",
+        "consonance",
+        "class imbalance"
+      ],
+      "image": "/images/from_discord_to_harmony.png",
+      "image_caption": "From Discord to Harmony model overview",
+      "paper": "https://arxiv.org/abs/2509.01588"
+    },
+    {
+      "title": "ChordSync: Conformer-Based Alignment of Chord Annotations to Music Audio",
+      "short_title": "ChordSync",
+      "link": "https://github.com/andreamust/ChordSync",  
+      "description": "A novel conformer-based model to align chord annotations to audio without requiring weak pre-alignment, enabling large-scale use of crowd-sourced chord data and improved chord estimation. :contentReference[oaicite:0]{index=0}",
+      "year": "2024",
+      "type": "algorithm",
+      "tags": [
+        "music information retrieval",
+        "chord estimation",
+        "alignment",
+        "deep learning",
+        "conformer"
+      ],
+      "image": "/images/chordsync.png",
+      "image_caption": "ChordSync logo",
+      "paper": "https://arxiv.org/abs/2408.00674"
+    },
     {
       "title": "The website you are looking at",
       "short_title": "this_website",
