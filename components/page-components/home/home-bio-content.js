@@ -28,8 +28,8 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
-      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of
+      the Pompeu Fabra University. I hold a Ph.D. in Computer Science and
       Engineering from the University of Bologna. My main research interest is
       about Music Information Retrieval (MIR) and Computational Musicology.
     </motion.p>
@@ -41,8 +41,8 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
-      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of
+      the Pompeu Fabra University. I hold a Ph.D. in Computer Science and
       Engineering from the University of Bologna. My main reasearch interest is
       about Music Information Retrieval (MIR) and Computational Musicology. More
       specifically, I&apos;m interested in the developement of foundational
@@ -56,13 +56,13 @@ const bios = {
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
     >
-      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of the
-      Pompeu Fabra University. I hold a Ph.D. in Computer Science and
+      I&apos;m a postdoctoral researcher at the Music Technology Group (MTG) of
+      the Pompeu Fabra University. I hold a Ph.D. in Computer Science and
       Engineering from the University of Bologna. My main reasearch interest is
       about Music Information Retrieval (MIR) and Computational Musicology. More
       specifically, I&apos;m interested in the developement of foundational
-      models for music understanding, combining audio and symbolic representations. 
-      I&apos;m also a musician and a composer.
+      models for music understanding, combining audio and symbolic
+      representations. I&apos;m also a guitarist.
     </motion.p>
   ),
 };
