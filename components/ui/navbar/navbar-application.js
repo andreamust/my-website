@@ -14,7 +14,7 @@ const IconNames = {
   Home: RiHome2Line,
   Resume: IoSchoolOutline,
   Projects: RiCodeSSlashFill,
-  Pubblications: GiBookshelf,
+  Publications: GiBookshelf,
   Contact: RiChat4Line,
 };
 

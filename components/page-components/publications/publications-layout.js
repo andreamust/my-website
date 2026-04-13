@@ -1,17 +1,17 @@
 import { lazy, Suspense } from 'react';
 import Spinner from '../../utils/spinner';
 
-const PubbblicationsContent = lazy(() => import('./pubblications-content'));
+const PublicationsContent = lazy(() => import('./publications-content'));
 const renderLoader = () => <Spinner />;
 
-function PubblicationsLayout(props) {
+function PublicationsLayout(props) {
   return (
     <Suspense fallback={renderLoader()}>
       <div className="flex flex-col items-center pt-20 pb-32">
-        <PubbblicationsContent pubblications={props.pubblications} />
+        <PublicationsContent publications={props.publications} />
       </div>
     </Suspense>
   );
 }
 
-export default PubblicationsLayout;
+export default PublicationsLayout;

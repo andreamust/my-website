@@ -1,10 +1,10 @@
 import BasicWindow from "../../ui/windows/basic-window";
-import renderCitation from "../../utils/process-pubblications";
+import renderCitation from "../../utils/process-publications";
 import { useState } from "react";
 import useMobile from "../../utils/mobile";
 import Head from "next/head";
 
-function PubblicationsModal(props) {
+function PublicationsModal(props) {
   const mobile = useMobile();
   const [copySuccess, setCopySuccess] = useState("");
 
@@ -49,7 +49,7 @@ function PubblicationsModal(props) {
         <title>{content.id} | Andrea Poltronieri</title>
         <meta
           name="description"
-          content="Andrea Poltronieri's personal website - Pubblications"
+          content="Andrea Poltronieri's personal website - Publications"
         />
         <meta
           name="keywords"
@@ -79,9 +79,9 @@ function PubblicationsModal(props) {
         width="w-[80%]"
         height="h-[70%]"
         animate={true}
-        closePath="/pubblications/"
+        closePath="/publications/"
         onClose={() => {
-          router.push("/pubblications/");
+          router.push("/publications/");
         }}
       >
         <div className="flex flex-col gap-5 w-full p-12 overflow-scroll scroll-smooth no-scrollbar">
@@ -117,7 +117,7 @@ function PubblicationsModal(props) {
             className="text-lg bg-cerise active:bg-lime text-whitepalette active:text-blackpalette-900 font-bold py-2 px-4 rounded"
             onClick={() => window.open(content.URL)}
           >
-            Go to pubblication
+            Go to publication
           </button>
           <h3 className="text-xl font-modernBold">Cite</h3>
           <div className="flex justify-between items-center">
@@ -168,4 +168,4 @@ function PubblicationsModal(props) {
   );
 }
 
-export default PubblicationsModal;
+export default PublicationsModal;

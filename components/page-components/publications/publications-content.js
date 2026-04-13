@@ -1,27 +1,27 @@
 import { MdZoomOutMap } from "react-icons/md";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import PubblicationsModal from "./pubblications-modal";
+import PublicationsModal from "./publications-modal";
 import { Fragment } from "react";
-import renderCitation from "../../utils/process-pubblications";
+import renderCitation from "../../utils/process-publications";
 
-function PubblicationsContent(props) {
-  const pubblications = props.pubblications.records;
+function PublicationsContent(props) {
+  const publications = props.publications.records;
   const router = useRouter();
 
-  const findOpenPubblication = () => {
-    const pubblication = pubblications.find(
-      (pubblication) => pubblication.id === router.query.pubblication
+  const findOpenPublication = () => {
+    const publication = publications.find(
+      (publication) => publication.id === router.query.publication
     );
-    return pubblication;
+    return publication;
   };
 
   const loadedYears = [];
 
   return (
     <div className="flex flex-col items-start gap-10 w-10/12 md:w-7/12">
-      {[...pubblications].reverse().map((pubblication) => {
-        let { output, data } = renderCitation(pubblication, "bibliography");
+      {[...publications].reverse().map((publication) => {
+        let { output, data } = renderCitation(publication, "bibliography");
         const year = data.issued["date-parts"][0][0];
         const title = data.title;
         // string pre-processing
@@ -37,13 +37,11 @@ function PubblicationsContent(props) {
                   </h2>
                 )}
             <div className="flex flex-row gap-7 items-center">
-              <Link href={"/pubblications/?pubblication=" + data.id}>
-                <a>
-                  <MdZoomOutMap
-                    //zoom on hover and animate on click
-                    className="w-6 h-6 fill-cerise hover:scale-150 transform transition duration-500 ease-in-out"
-                  />
-                </a>
+              <Link href={"/publications/?publication=" + data.id}>
+                <MdZoomOutMap
+                  //zoom on hover and animate on click
+                  className="w-6 h-6 fill-cerise hover:scale-150 transform transition duration-500 ease-in-out"
+                />
               </Link>
               <p className="font-modern">
                 {splitCitation[0]}
@@ -59,11 +57,11 @@ function PubblicationsContent(props) {
           </Fragment>
         );
       })}
-      {router.query.pubblication && (
-        <PubblicationsModal content={findOpenPubblication()} router={router} />
+      {router.query.publication && (
+        <PublicationsModal content={findOpenPublication()} router={router} />
       )}
     </div>
   );
 }
 
-export default PubblicationsContent;
+export default PublicationsContent;

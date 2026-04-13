@@ -4,7 +4,7 @@ const apps = [
   'Home',
   'Resume',
   'Projects',
-  'Pubblications',
+  'Publications',
   'Contact',
   'Terminal',
 ];

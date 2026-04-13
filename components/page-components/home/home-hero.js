@@ -10,9 +10,8 @@ function HomeHero(props) {
             <Image
               src="/images/ap.jpeg"
               alt="logo"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               priority={true}
             />
           </div>

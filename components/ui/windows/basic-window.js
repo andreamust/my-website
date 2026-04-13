@@ -13,9 +13,9 @@ function BasicWindow(props) {
         dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
         dragMomentum={true}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        className={`fixed flex flex-col z-50 ${width} ${height} shadow-xl`}
+        className={`fixed flex flex-col z-50 top-1/2 left-1/2 ${width} ${height} shadow-xl`}
         transition={{ type: 'spring', stiffness: 100 }}
-        initial={{ x: 0, y: 0 }}
+        initial={{ x: '-50%', y: '-50%' }}
       >
         <motion.div
           className={`h-full order-last flex flex-col w-full rounded-b-md bg-whitepalette dark:bg-greypalette-600 shadow-2xl`}
