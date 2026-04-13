@@ -14,69 +14,47 @@ function Resume(props) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); // Mark the component as hydrated
+    setIsClient(true);
   }, []);
 
   return (
-    (
+    <>
       <Head>
-        <title>Resume | Andrea Poltronieri</title>
+        <title>Resume — Andrea Poltronieri</title>
         <meta
           name="description"
-          content="Andrea Poltronieri's resume. A brief summary of my education and work experience."
+          content="Academic resume of Andrea Poltronieri: education, research positions, publications, and skills in music information retrieval and computer science."
         />
         <meta
           name="keywords"
-          content="Andrea Poltronieri, Poltronieri Andrea, Resume, CV, Curriculum Vitae, Education, Work Experience, Skills"
+          content="Andrea Poltronieri resume, CV, curriculum vitae, music information retrieval, computer science, University of Bologna"
         />
-        <meta name="author" content="Andrea Poltronieri" />
-        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://andreapoltronieri.com/resume" />
+        <meta property="og:title" content="Resume — Andrea Poltronieri" />
         <meta
-          name="og:title"
-          property="og:title"
-          content="Resume | Andrea Poltronieri"
-        />
-        <meta
-          name="og:description"
           property="og:description"
-          content="Andrea Poltronieri's resume. A brief summary of my education and work experience."
+          content="Academic resume of Andrea Poltronieri: education, research positions, and skills in music information retrieval."
         />
-        <meta
-          name="og:image"
-          property="og:image"
-          content="https://andreapoltronieri.com/images/og-image.png"
-        />
-        <meta
-          name="og:url"
-          property="og:url"
-          content="https://andreapoltronieri.com/resume"
-        />
-        <meta
-          name="og:site_name"
-          property="og:site_name"
-          content="Andrea Poltronieri"
-        />
-        <meta name="og:type" property="og:type" content="website" />
-        <meta name="og:locale" property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://andreapoltronieri.com/resume" />
+        <meta property="og:image" content="https://andreapoltronieri.com/images/ap.jpeg" />
       </Head>
-    ),
-    (
       <div className="flex flex-col h-full overflow-hidden">
         <PageTitle title={"Resume"} />
-
         {isMobile ? (
           <ResumeLayoutMobile resume={resume} />
         ) : (
           <ResumeLayout resume={resume} />
         )}
       </div>
-    )
+    </>
   );
 }
+
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "data", "resume.json");
   const resumeData = await fs.readFile(filePath);
   const data = JSON.parse(resumeData);
   return { props: { resume: data.resume } };
 }
+
 export default Resume;

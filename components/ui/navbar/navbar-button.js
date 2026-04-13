@@ -34,7 +34,7 @@ function NavbarButton(props) {
     );
   } else {
     return (
-      <Link key={`app000${props.index}`} href={targetPage} passHref>
+      <Link key={`app000${props.index}`} href={targetPage} className="no-underline hover:font-normal text-inherit">
         <motion.li
           onClick={() => props.showTerminal(false)}
           initial={{ opacity: 0, x: '50%', scale: 1.5 }}

@@ -1,6 +1,5 @@
 {
   "projects": [
-
     {
       "title": "Decomposed Consonance-based Training for Improved Audio Chord Estimation",
       "short_title": "From Discord to Harmony",
@@ -22,7 +21,7 @@
     {
       "title": "ChordSync: Conformer-Based Alignment of Chord Annotations to Music Audio",
       "short_title": "ChordSync",
-      "link": "https://github.com/andreamust/ChordSync",  
+      "link": "https://github.com/andreamust/ChordSync",
       "description": "A novel conformer-based model to align chord annotations to audio without requiring weak pre-alignment, enabling large-scale use of crowd-sourced chord data and improved chord estimation. :contentReference[oaicite:0]{index=0}",
       "year": "2024",
       "type": "algorithm",

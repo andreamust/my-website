@@ -29,7 +29,7 @@ function HomeBio() {
           onChange={(event) => setRangeval(event.target.value)}
         />
       </div>
-      <div className="justify-center mb-10 w-7/12 h-24 hidden md:block">
+      <div className="justify-center mb-10 w-11/12 lg:w-9/12 xl:w-7/12 min-h-[6rem] hidden md:block">
         <div className="text-center text-lg">{bios[rangeval]}</div>
       </div>
     </Fragment>

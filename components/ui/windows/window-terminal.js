@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 function WindowTerminal() {
   const router = useRouter();
 
-  const validPages = ['home', 'resume', 'projects', 'pubblications', 'contact'];
+  const validPages = ['home', 'resume', 'projects', 'publications', 'contact'];
 
   // theme changer
   let [theme, setTheme] = useState('dark');

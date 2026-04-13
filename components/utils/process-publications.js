@@ -1,7 +1,7 @@
 import Cite from 'citation-js';
 
-export default function renderCitation(pubblication, template) {
-  const cite = new Cite(pubblication);
+export default function renderCitation(publication, template) {
+  const cite = new Cite(publication);
   const data = cite.data[0];
   // remove url from data
   cite.data[0].URL = '';

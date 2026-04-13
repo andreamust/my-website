@@ -42,7 +42,7 @@ function ProjectsContent(props) {
               <div className="flex justify-between pb-7">
                 <h1 className="text-2xl font-bold text-blackpalette-900 mb-2">
                   <Link href={`/projects/?project=${project.short_title}`}>
-                    <a>{project.short_title.replace('_', '.')}</a>
+                    {project.short_title.replace('_', '.')}
                   </Link>
                 </h1>
                 {!isMobile && (

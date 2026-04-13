@@ -28,14 +28,14 @@ function ResumeContent(props) {
             }`}
           >
             {/* Header Section */}
-            <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 sm:justify-between items-start">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-4 sm:justify-between items-start">
               {/* Title */}
-              <h2 className="text-lg font-bold text-gray-900 leading-snug sm:text-xl sm:max-w-lg">
+              <h2 className="text-lg font-bold text-gray-900 leading-snug sm:text-xl min-w-0">
                 {title}
               </h2>
 
               {/* Boxes: Year */}
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 flex-shrink-0">
                 {/* Year Box */}
                 <div className="bg-lime text-gray-900 font-modernMono text-xs font-semibold px-2 py-1 rounded-md whitespace-nowrap sm:text-sm sm:px-4 sm:py-1.5">
                   {yearStart} - {yearEnd || "Present"}

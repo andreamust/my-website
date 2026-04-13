@@ -1,25 +1,35 @@
 import HomeHero from "../components/page-components/home/home-hero";
 import HomeBio from "../components/page-components/home/home-bio";
 import Head from "next/head";
-import { Fragment } from "react/cjs/react.production.min";
+import { Fragment } from "react";
 
 function Home() {
   return (
     <Fragment>
       <Head>
-        <title>Andrea Poltronieri Website</title>
-        <meta name="description" content="Andrea Poltronieri Website" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta property="og:title" content="Andrea Poltronieri Website" />
-        <meta property="og:description" content="Andrea Poltronieri Website" />
-        <meta property="og:image" content="/favicon.ico" />
+        <title>Andrea Poltronieri — MIR Researcher</title>
+        <meta
+          name="description"
+          content="Andrea Poltronieri is a Music Information Retrieval researcher at the University of Bologna, working on computational musicology, semantic web, and AI."
+        />
+        <meta
+          name="keywords"
+          content="Andrea Poltronieri, music information retrieval, computational musicology, semantic web, ontology, machine learning, University of Bologna"
+        />
+        <link rel="canonical" href="https://andreapoltronieri.com" />
+        <meta property="og:title" content="Andrea Poltronieri — MIR Researcher" />
+        <meta
+          property="og:description"
+          content="Andrea Poltronieri is a Music Information Retrieval researcher at the University of Bologna, working on computational musicology, semantic web, and AI."
+        />
         <meta property="og:url" content="https://andreapoltronieri.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@andreapoltronieri" />
-        <meta name="twitter:creator" content="@andreapoltronieri" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#000000" />
+        <meta property="og:image" content="https://andreapoltronieri.com/images/ap.jpeg" />
+        <meta name="twitter:title" content="Andrea Poltronieri — MIR Researcher" />
+        <meta
+          name="twitter:description"
+          content="Andrea Poltronieri is a Music Information Retrieval researcher at the University of Bologna."
+        />
+        <meta name="twitter:image" content="https://andreapoltronieri.com/images/ap.jpeg" />
       </Head>
       <HomeHero>
         <HomeBio />

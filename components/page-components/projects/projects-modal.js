@@ -26,7 +26,7 @@ function ProjectsModal(props) {
         <p className="text-md font-modern dark:text-blackpalette-900">
           {content.year}
         </p>
-        <h3 className="text-xl font-modernBold">Descritpion</h3>
+        <h3 className="text-xl font-modernBold">Description</h3>
         <p className="text-md font-modern dark:text-blackpalette-900">
           {content.description}
         </p>
@@ -34,25 +34,19 @@ function ProjectsModal(props) {
         <div className="flex flex-row gap-5">
           {content.link && (
             <p className="text-md font-modern">
-              <Link href={content.link}>
-                <a target="_blank" aria-label="Link to project">
-                  <FaGithub className="h-10 w-10 drop-shadow-lg dark:text-lime text-cerise" />
-                </a>
+              <Link href={content.link} target="_blank" aria-label="Link to project">
+                <FaGithub className="h-10 w-10 drop-shadow-lg dark:text-lime text-cerise" />
               </Link>
             </p>
           )}
           {content.paper && (
-            <Link href={content.paper}>
-              <a target="_blank" aria-label="Link to paper">
-                <IoIosDocument className="h-10 w-10 drop-shadow-lg dark:text-lime text-cerise" />
-              </a>
+            <Link href={content.paper} target="_blank" aria-label="Link to paper">
+              <IoIosDocument className="h-10 w-10 drop-shadow-lg dark:text-lime text-cerise" />
             </Link>
           )}
           {content.zenodo && (
-            <Link href={content.zenodo}>
-              <a target="_blank" aria-label="Link to data">
-                <SiZenodo className="h-12 w-12 drop-shadow-lg dark:text-lime text-cerise" />
-              </a>
+            <Link href={content.zenodo} target="_blank" aria-label="Link to data">
+              <SiZenodo className="h-12 w-12 drop-shadow-lg dark:text-lime text-cerise" />
             </Link>
           )}
         </div>

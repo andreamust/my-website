@@ -553,8 +553,8 @@
     "title": "Harmonising Music Information Retrieval with Semantics: from Data Integration to Multimodality",
     "type": "thesis",
     "abstract": "In the era of big data and machine learning, the fragmentation of musical datasets and the lack of standardised representations continue to hinder advancements in Music Information Retrieval (MIR). The multifaceted nature of music complicates both the representation of content - with small, task-specific datasets scattered across various formats, and context (metadata), where there is a lack of a consistent, structured terminology. These challenges increase the effort required for data collection and pre-processing, reduce reproducibility, and limit the scalability of MIR models. To address these issues, this thesis proposes a unified semantic model to foster interoperability and advance MIR tasks.\nA specific instance of this fragmentation can be found in harmonic annotations, where harmony - an essential musical dimension - is inconsistently represented across datasets, formats, and notational systems. Taking harmony as a use case and leveraging the proposed semantic model, this thesis develops a standardised workflow to harmonise previously disconnected datasets, enabling the creation of new, large-scale unified corpora. Building on these harmonised datasets, a key contribution of the thesis is the exploration of harmonic similarity, which is used to organise, explore, and reveal connections across diverse tracks, historical periods, and genres. To this end, we implement novel state-of-the-art harmonic similarity functions, advancing current research in MIR. Moreover, by utilising the created large, varied data collections, we uncover deeper relationships within music and explore how diverse stylistic excerpts can be used for generative tasks.\nWhile integrating symbolic data offers significant advantages, certain limitations persist. Primary challenges include the limited diversity of annotated data, often biased toward a narrow range of musical genres, and the inherent ambiguity and subjectivity in harmonic annotations. Such challenges have led MIR tasks like Audio Chord Estimation (ACE) to hit a \"glass ceiling,\" where neither increasing computational power nor the volume of data has led to improved results.\nTo address these issues, this thesis explores a multimodal approach aimed at enhancing the analysis and understanding of harmonic data by jointly leveraging audio and chord annotations. We first propose a novel method for enriching the dataset with audio annotations aligned to the existing symbolic data. Building on this foundation, we introduce a new model for ACE that embeds formalised music theory concepts such as consonance and dissonance, addressing both training and evaluation challenges in the field. This model aims to mitigate the limitations of chord vocabulary imbalance and annotation subjectivity, ultimately improving the state-of-the-art in audio-based harmonic analysis."
-    },
-    {
+  },
+  {
     "URL": "https://www.arxiv.org/abs/2507.03482",
     "author": [
       {
@@ -588,27 +588,81 @@
     "abstract": "Developing open-source foundation models is essential for advancing research in music audio understanding and ensuring access to powerful, multipurpose representations for music information retrieval. We present OMAR-RQ, a model trained with self-supervision via masked token classification methodologies using a large-scale dataset with over 330,000 hours of music audio. We experiment with different input features and quantization options, and achieve state-of-the-art performance in music tagging, pitch estimation, chord recognition, beat tracking, segmentation, and difficulty estimation among open self-supervised models. We open-source our training and evaluation pipelines and model weights."
   },
   {
-  "URL": "",
-  "author": [
-    {
-      "family": "Poltronieri",
-      "given": "Andrea"
+    "URL": "",
+    "author": [
+      {
+        "family": "Poltronieri",
+        "given": "Andrea"
+      },
+      {
+        "family": "Serra",
+        "given": "Xavier"
+      },
+      {
+        "family": "Rocamora",
+        "given": "Martín"
+      }
+    ],
+    "container-title": "Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR 2025)",
+    "id": "poltronieri2025discordharmony",
+    "issued": {
+      "date-parts": [[2025]]
     },
-    {
-      "family": "Serra",
-      "given": "Xavier"
-    },
-    {
-      "family": "Rocamora",
-      "given": "Martín"
-    }
-  ],
-  "container-title": "Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR 2025)",
-  "id": "poltronieri2025discordharmony",
-  "issued": {
-    "date-parts": [[2025]]
+    "title": "From Discord to Harmony: Decomposed Consonance Based Training for Improved Audio Chord Estimation",
+    "type": "paper-conference",
+    "abstract": "Audio Chord Estimation (ACE) holds a pivotal role in music information research, having garnered attention for over two decades due to its relevance for music transcription and analysis. Despite notable advancements, challenges persist in the task, particularly concerning unique characteristics of harmonic content, which have resulted in existing systems' performances reaching a glass ceiling. These challenges include annotator subjectivity, where varying interpretations among annotators lead to inconsistencies, and class imbalance within chord datasets, where certain chord classes are over-represented compared to others, posing difficulties in model training and evaluation. As a first contribution, this paper presents an evaluation of inter-annotator agreement in chord annotations, using metrics that extend beyond traditional binary measures. In addition, we propose a consonance-informed distance metric that reflects the perceptual similarity between harmonic annotations. Our analysis suggests that consonance-based distance metrics more effectively capture musically meaningful agreement between annotations. Expanding on these findings, we introduce a novel ACE conformer-based model that integrates consonance concepts into the model through consonance-based label smoothing. The proposed model also addresses class imbalance by separately estimating root, bass, and all note activations, enabling the reconstruction of chord labels from decomposed outputs."
   },
-  "title": "From Discord to Harmony: Decomposed Consonance Based Training for Improved Audio Chord Estimation",
-  "type": "paper-conference",
-  "abstract": "Audio Chord Estimation (ACE) holds a pivotal role in music information research, having garnered attention for over two decades due to its relevance for music transcription and analysis. Despite notable advancements, challenges persist in the task, particularly concerning unique characteristics of harmonic content, which have resulted in existing systems' performances reaching a glass ceiling. These challenges include annotator subjectivity, where varying interpretations among annotators lead to inconsistencies, and class imbalance within chord datasets, where certain chord classes are over-represented compared to others, posing difficulties in model training and evaluation. As a first contribution, this paper presents an evaluation of inter-annotator agreement in chord annotations, using metrics that extend beyond traditional binary measures. In addition, we propose a consonance-informed distance metric that reflects the perceptual similarity between harmonic annotations. Our analysis suggests that consonance-based distance metrics more effectively capture musically meaningful agreement between annotations. Expanding on these findings, we introduce a novel ACE conformer-based model that integrates consonance concepts into the model through consonance-based label smoothing. The proposed model also addresses class imbalance by separately estimating root, bass, and all note activations, enabling the reconstruction of chord labels from decomposed outputs."}
+  {
+    "id": "weck2026hummusqa",
+    "title": "HumMusQA: A Human-written Music Understanding QA Benchmark Dataset",
+    "author": [
+      { "family": "Weck", "given": "Benno" },
+      { "family": "Puentes", "given": "Pablo" },
+      { "family": "Poltronieri", "given": "Andrea" },
+      { "family": "Prabhu", "given": "Satyajeet" },
+      { "family": "Bogdanov", "given": "Dmitry" }
+    ],
+    "container-title": "Proceedings of the 4th Workshop on NLP for Music and Audio (NLP4MusA 2026)",
+    "type": "paper-conference",
+    "issued": { "date-parts": [[2026]] },
+    "URL": "https://aclanthology.org/2026.nlp4musa-1.9/",
+    "abstract": "The evaluation of music understanding in Large Audio-Language Models (LALMs) requires a rigorously defined benchmark that truly tests whether models can perceive and interpret music, a standard that current data methodologies frequently fail to meet.This paper introduces a meticulously structured approach to music evaluation, proposing a new dataset of 320 hand-written questions curated and validated by experts with musical training, arguing that such focused, manual curation is superior for probing complex audio comprehension.To demonstrate the use of the dataset, we benchmark six state-of-the-art LALMs and additionally test their robustness to uni-modal shortcuts."
+  },
+  {
+    "id": "ibanez2026evaluating",
+    "title": "Evaluating Disentangled Representations for Controllable Music Generation",
+    "author": [
+      { "family": "Ibáñez-Martínez", "given": "Laura" },
+      { "family": "Nkama", "given": "Chukwuemeka" },
+      { "family": "Poltronieri", "given": "Andrea" },
+      { "family": "Serra", "given": "Xavier" },
+      { "family": "Rocamora", "given": "Martín" }
+    ],
+    "container-title": "Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
+    "type": "paper-conference",
+    "issued": { "date-parts": [[2026]] },
+    "URL": "https://arxiv.org/abs/2602.10058",
+    "abstract": "Recent approaches in music generation rely on disentangled representations, often labeled as structure and timbre or local and global, to enable controllable synthesis. Yet the underlying properties of these embeddings remain underexplored. In this work, we evaluate such disentangled representations in a set of music audio models for controllable generation using a probing-based framework that goes beyond standard downstream tasks. The selected models reflect diverse unsupervised disentanglement strategies, including inductive biases, data augmentations, adversarial objectives, and staged training procedures. Our analysis spans four key axes: informativeness, equivariance, invariance, and disentanglement, which are assessed across datasets, tasks, and controlled transformations. Our findings reveal inconsistencies between intended and actual semantics of the embeddings, suggesting that current strategies fall short of producing truly disentangled representations, and prompting a re-examination of how controllability is approached in music generation."
+  },
+  {
+    "id": "fathallah2026neongpt",
+    "title": "From GPT to Mistral: Cross-Domain Ontology Learning with NeOn-GPT",
+    "author": [
+      { "family": "Fathallah", "given": "Nadeen" },
+      { "family": "Das", "given": "Arunav" },
+      { "family": "De Giorgis", "given": "Stefano" },
+      { "family": "Poltronieri", "given": "Andrea" },
+      { "family": "Haase", "given": "Peter" },
+      { "family": "Kovriguina", "given": "Liubov" },
+      { "family": "Meroño-Peñuela", "given": "Albert" },
+      { "family": "Simperl", "given": "Elena" },
+      { "family": "Staab", "given": "Steffen" },
+      { "family": "Algergawy", "given": "Alsayed" }
+    ],
+    "container-title": "Semantic Web",
+    "type": "article-journal",
+    "issued": { "date-parts": [[2026]] },
+    "URL": "https://www.semantic-web-journal.net/content/gpt-mistral-cross-domain-ontology-learning-neon-gpt-1",
+    "abstract": "We present the extended NeOn-GPT pipeline, an LLM-powered ontology learning pipeline grounded in the NeOn methodology. NeOn-GPT is a domain-agnostic ontology learning pipeline that comprises two components: (i) ontology draft generation, a multi-step prompting pipeline following the NeOn methodology; and (ii) automated ontology verification and resolution achieved through orchestrated calls to third-party tools complemented by LLM-suggested repairs. We evaluate NeOn-GPT across four distinct domains (Wine, Cheminformatics, Environmental Microbiology, and Sewer Networks) using both proprietary (GPT-4o) and open-source (Mistral, Llama-4, DeepSeek) models. Results demonstrate that LLMs can produce ontologies with high relational expressivity and partial conceptual alignment, though performance varies by domain and model."
+  }
 ]
