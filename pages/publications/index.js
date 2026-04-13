@@ -48,7 +48,26 @@ export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "data", "publications.json");
   const publicationData = await fs.readFile(filePath);
   const data = JSON.parse(publicationData);
-  return { props: { records: data } };
+
+  // Pre-compute APA bibliography server-side to avoid client-side citation-js issues
+  const { default: Cite } = await import("citation-js");
+  const records = data.map((pub) => {
+    try {
+      const cite = new Cite(pub);
+      cite.data[0].URL = "";
+      const bibliography = cite.format("bibliography", {
+        format: "text",
+        template: "apa",
+        lang: "en-US",
+      });
+      return { ...pub, _bibliography: bibliography };
+    } catch (e) {
+      console.error("Citation error for", pub.id, e.message);
+      return { ...pub, _bibliography: "" };
+    }
+  });
+
+  return { props: { records } };
 }
 
 export default Publications;
