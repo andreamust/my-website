@@ -2,31 +2,33 @@ import ContactsLayout from '../components/page-components/contacts/contacts-layo
 import PageTitle from '../components/ui/layout/page-title';
 import Head from 'next/head';
 
-function Contact(props) {
+function Contact() {
   return (
-    (
+    <>
       <Head>
-        <title>Andrea Poltronieri - Contacts</title>
+        <title>Contact — Andrea Poltronieri</title>
         <meta
           name="description"
-          content="Andrea Poltronieri's personal website - Contacts"
+          content="Get in touch with Andrea Poltronieri, Music Information Retrieval researcher at the University of Bologna."
         />
         <meta
           name="keywords"
-          content="andrea, poltronieri, andrea poltronieri, poltronieri andrea, andrea poltronieri website, poltronieri andrea website, andrea poltronieri personal website, poltronieri andrea personal website, andrea poltronieri personal website, poltronieri andrea personal websi, researcher, unibo, university of bologna, bologna, italy, computer science, computer engineering, software engineering, software developer, software, machine learning, artificial intelligence, ai, ml, data science, data, science, data engineer, data engineering, data scientist, data science, data analytics, data analyst, data analysis, data visualization, data visualisation, data visualizer, semantic web, ontology, linked open data, linked data, rdf, owl, owl2, owl2rl, owl2, music, music information retrieval, music information, music technology, music, computational musicoogy, computational art"
-        ></meta>
-        <meta name="author" content="Andrea Poltronieri" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="images/favicon.ico" />
+          content="Andrea Poltronieri contact, email, University of Bologna, music information retrieval researcher"
+        />
+        <link rel="canonical" href="https://andreapoltronieri.com/contact" />
+        <meta property="og:title" content="Contact — Andrea Poltronieri" />
+        <meta
+          property="og:description"
+          content="Get in touch with Andrea Poltronieri, Music Information Retrieval researcher at the University of Bologna."
+        />
+        <meta property="og:url" content="https://andreapoltronieri.com/contact" />
+        <meta property="og:image" content="https://andreapoltronieri.com/images/ap.jpeg" />
       </Head>
-    ),
-    (
       <div className="flex flex-col h-full">
-        <PageTitle title={'Contacts'} />
+        <PageTitle title={'Contact'} />
         <ContactsLayout />
       </div>
-    )
+    </>
   );
 }
 
