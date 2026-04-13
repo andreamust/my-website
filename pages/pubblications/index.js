@@ -1,18 +1,18 @@
-import fs from 'fs/promises';
-import path from 'path';
-import PageTitle from '../../components/ui/layout/page-title';
-import dynamic from 'next/dynamic';
-import { Fragment } from 'react/cjs/react.production.min';
-import Head from 'next/head';
+import fs from "fs/promises";
+import path from "path";
+import PageTitle from "../../components/ui/layout/page-title";
+import dynamic from "next/dynamic";
+import { Fragment } from "react/cjs/react.production.min";
+import Head from "next/head";
 
 const PubblicationsLayout = dynamic(
   () =>
     import(
-      '../../components/page-components/pubblications/pubblications-layout'
+      "../../components/page-components/pubblications/pubblications-layout"
     ),
   {
     ssr: false,
-  }
+  },
 );
 
 function Pubblications(props) {
@@ -20,10 +20,10 @@ function Pubblications(props) {
   return (
     (
       <Head>
-        <title>Andrea Poltronieri - Pubblications</title>
+        <title>Andrea Poltronieri - Publications</title>
         <meta
           name="description"
-          content="Andrea Poltronieri's personal website - Pubblications"
+          content="Andrea Poltronieri's personal website - Publications"
         />
         <meta
           name="keywords"
@@ -37,14 +37,14 @@ function Pubblications(props) {
     ),
     (
       <Fragment>
-        <PageTitle title={'Pubblications'} />
+        <PageTitle title={"Publications"} />
         <PubblicationsLayout pubblications={pubblications} />
       </Fragment>
     )
   );
 }
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), 'data', 'pubblications.json');
+  const filePath = path.join(process.cwd(), "data", "pubblications.json");
   const pubblicationData = await fs.readFile(filePath);
   const data = JSON.parse(pubblicationData);
   return { props: { records: data } };
