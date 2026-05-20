@@ -8,8 +8,8 @@ function HomeHero(props) {
         <div className="flex flex-col flex-initial w-1/2 items-center pt-10 md:pt-0">
           <div className="h-64 w-64 relative rounded-full overflow-hidden shadow-lg">
             <Image
-              src="/images/ap.jpeg"
-              alt="logo"
+              src="/images/AP_square.jpg"
+              alt="Andrea Poltronieri"
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
               priority={true}
